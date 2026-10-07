@@ -1,0 +1,6 @@
+# 期刊/会议简称的展示样式，键要和论文 bib 里的 abbr 字段对上
+# 示例：
+# "TII":
+#   url: https://www.ieee-jas.net
+#   color: "#00468C"
+{}

@@ -1,0 +1,7 @@
+# 合著者信息：填了之后，论文列表里出现这个姓时会自动加上其主页链接
+# 键 = 姓的小写、不带重音。示例：
+#
+# "wang":
+#   - firstname: ["Xiaoming", "X. M."]
+#     url: https://example.com/xiaoming-wang
+{}

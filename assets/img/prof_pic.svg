@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" width="600" height="800" role="img" aria-label="照片占位图">
+  <title>照片占位图</title>
+  <style>
+    .bg { fill: #eceff3; }
+    .frame { fill: none; stroke: #00468C; stroke-width: 4; stroke-dasharray: 18 14; }
+    .mark { fill: none; stroke: #00468C; stroke-width: 6; opacity: .35; }
+    .t1 { fill: #00468C; font: 600 44px/1 "PingFang SC", "Microsoft YaHei", sans-serif; }
+    .t2 { fill: #6b7480; font: 400 26px/1 "PingFang SC", "Microsoft YaHei", sans-serif; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #24262b; }
+      .frame { stroke: #66A0D8; }
+      .mark { stroke: #66A0D8; }
+      .t1 { fill: #66A0D8; }
+      .t2 { fill: #9aa2ad; }
+    }
+  </style>
+  <rect class="bg" width="600" height="800"/>
+  <rect class="frame" x="12" y="12" width="576" height="776" rx="8"/>
+  <circle class="mark" cx="300" cy="330" r="92"/>
+  <path class="mark" d="M168 596c0-73 59-132 132-132s132 59 132 132"/>
+  <text class="t1" x="300" y="672" text-anchor="middle">在这里放你的照片</text>
+  <text class="t2" x="300" y="716" text-anchor="middle">assets/img/prof_pic.jpg</text>
+</svg>

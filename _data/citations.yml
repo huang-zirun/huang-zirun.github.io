@@ -1,0 +1,5 @@
+# Google Scholar 引用数缓存。由上游的 update-citations 工作流自动生成，
+# 那个工作流已删除，这里留空即可；论文卡片上就不会显示引用数徽章。
+metadata:
+  last_updated: ""
+papers: {}

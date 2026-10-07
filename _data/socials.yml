@@ -1,0 +1,30 @@
+# 社交/联系方式图标，显示在首页底部和搜索结果里
+# 只有填了值的键才会出现图标；不需要的整行删掉或保持注释即可。
+# 完整可用键名见 jekyll-socials 插件：https://github.com/george-gca/jekyll-socials
+
+github: huang-zirun
+rss_icon: true # RSS 订阅图标，不想要就删掉这行
+
+# email: [你的邮箱]           # 例：zhangsan@example.com
+# scholar_userid:             # Google Scholar 主页 URL 里 user= 后面那串
+# orcid_id:                   # 例：0000-0002-1825-0097
+# research_gate_id:
+# semantic_scholar_id:
+# inspirehep_id:
+# wechat_qr:                  # 二维码图片文件名，图放 assets/img/ 下，例：wechat-qr.png
+# whatsapp_number:            # 国际格式手机号，去掉 0、括号和横线
+# linkedin_username:
+# x_username:                 # 推特 / X
+# mastodon_username:          # 例：user@mastodon.social
+# instagram_username:
+# threads_username:
+# bluesky_username:
+# medium_username:
+# stackoverflow_id:           # 例：users/1234567/username
+# telegram_username:
+# signal_number:
+# matrix_user:
+# mastodon_url:
+# blog_url:
+# orcid_id:
+# cv_pdf:                     # 简历 PDF 路径，例：/assets/pdf/cv.pdf
