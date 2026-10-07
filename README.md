@@ -92,11 +92,11 @@
 
 ## 三、配色：北洋蓝在哪
 
-在 **`_sass/_variables.scss`**，两行：
+在 **`assets/css/main.scss`** 里 `@use "variables" with ( ... )` 那两行：
 
 ```scss
-$purple-color: #00468c !default;  // 浅色主题的强调色 = 北洋蓝
-$cyan-color:   #66a0d8 !default;  // 深色主题的强调色 = 提亮版
+$purple-color: #00468c,   // 浅色主题的强调色 = 北洋蓝
+$cyan-color:   #66a0d8    // 深色主题的强调色 = 提亮版
 ```
 
 - `#00468C` 是天津大学现行标准（2012《TU VI 手册》：RGB 0/70/140，CMYK C100 M60 Y0 K30），对白底对比度 9.4:1
@@ -107,15 +107,22 @@ $cyan-color:   #66a0d8 !default;  // 深色主题的强调色 = 提亮版
 这两个变量是**唯一的入口**。al-folio v1.x 所有强调色（链接、按钮、导航、悬停、代码块底色）
 都走 CSS 变量 `--global-theme-color`，而那个变量的值就来自这两行。改这里就够了，不用去翻 CSS。
 
-### 为什么是这个文件
+### 为什么是这个文件（踩过的坑，别改回去）
 
 al-folio v1.x 的排版文件在 Ruby gem 里（`al_folio_core`），不在本仓库。
-Jekyll 的规则是：站点里的 `_sass/_variables.scss` 优先于 gem 里的同名文件。
-所以这个文件是 gem 那份的**本地副本 + 改了两行**。
 
-**升级 gem 时要记得**：`Gemfile` 里锁的是 `al_folio_core = 1.0.15`。
-如果哪天升级了版本号，把 gem 里新的 `_variables.scss` 重新复制一份过来再改这两行，
-否则会漏掉新版新增的变量。（`_config.yml` 里 `theme: al_folio_core` 那行也别删。）
+直觉做法是在仓库里放一份 `_sass/_variables.scss` 去覆盖 gem 的同名文件（Jekyll 老文档里的主题覆盖规则）。
+**这一版不成立**：gem 用的是 Sass 新模块语法（`_themes.scss` 里写的是 `v.$purple-color`，即 `@use "variables" as v`），
+站点和 gem 的两个同名 `_variables.scss` 在 Sass 里是**两个不同的模块**；编译 gem 那个入口文件时
+`@use "variables"` 解析到的是 gem 自己那份，站点里的副本根本没被读。
+2026-10-07 首次部署成功之后线上 CSS 里仍然是 gem 默认色 `#b509ac`，就是这个原因。
+
+有效的做法是让**站点的 `assets/css/main.scss` 顶掉 gem 的同名入口文件**（这个是 Jekyll 明确支持的覆盖），
+再用 Sass 的 `with ()` 把颜色配进 `variables` 模块 —— 不管它解析到哪一份都生效。
+
+**升级 gem 时要记得**：`Gemfile` 里锁的是 `al_folio_core = 1.0.15`，而 `assets/css/main.scss` 是 gem 那份的副本。
+哪天升了版本号，要把 gem 里新的 `assets/css/main.scss` 重新复制一份过来，再把 `with ()` 里那两行颜色加回去，
+否则 gem 新增的 `@use` 版块会在这份副本里缺失。（`_config.yml` 里 `theme: al_folio_core` 那行也别删。）
 
 ---
 
