@@ -43,9 +43,9 @@
 | `_config.yml` | `first_name` / `last_name`（顶栏和标题的名字）、`description`（搜索引擎和聊天窗口预览）、`keywords`、`icon`（标签页小图标 emoji） |
 | `_config.yml` | `blog_name` / `blog_description`（博客页顶上的标题副标题）、`scholar.last_name` / `first_name`（论文列表里会把你的名字加粗，填**姓**和**名**） |
 | `_pages/about.md` | 首页正文 + `subtitle` + `more_info`（头像下面那几行，办公室/城市） |
-| `_data/socials.yml` | 邮箱、Google Scholar 等图标。**只有填了值的键才会出现**。GitHub 已经填了 `huang-zirun` |
+| `_data/socials.yml` | 邮箱、Google Scholar 等图标。**只有填了值的键才会出现**。GitHub 已经填了（键名是 `github_username`）<br>⚠️ 键名必须逐字对，写错不是不显示，是**整站构建失败** |
 | `assets/img/prof_pic.jpg` | 你的照片。放进去之后，把 `_pages/about.md` 里的 `image: prof_pic.svg` 改成 `image: prof_pic.jpg` |
-| `_bibliography/papers.bib` | 论文。文件里有一段注释掉的模板，照着抄。没论文就先空着，/publications/ 页面是空的但不报错 |
+| `_bibliography/papers.bib` | 论文。现在是空的，`/publications/` 页面空白但不报错。模板抄下面「论文怎么写」，**别在 .bib 里写 `%` 注释的示例** |
 | `_data/cv.yml` | 简历页 `/cv/` 的数据。RenderCV 格式，**字段名别改，只改值** |
 | `_projects/` | 一个 `.md` 一个项目，自动出现在 /projects/ |
 | `_news/` | 首页顶部的小动态 |
@@ -53,6 +53,35 @@
 
 `url` 和 `baseurl` 已经填好了（`https://huang-zirun.github.io` + 空），**别动**，
 这两个错了整站样式和链接都会 404。
+
+### 论文怎么写
+
+`_bibliography/papers.bib` 保持只有开头那两行 `---`（空文献库是合法的）。有论文了就把下面这段
+**直接贴进去**，不要加 `%` 注释再取消注释 —— ruby-bibtex 解析 `%` 开头的整段模板会失败，
+第二次构建就是这么挂的。
+
+```bibtex
+@article{wang2026example,
+  title         = {论文标题},
+  author        = {你的姓, 名 and 合作者},
+  journal       = {期刊名},
+  year          = {2026},
+  volume        = {1},
+  pages         = {1--10},
+  abbr          = {TII},
+  html          = {https://example.com/paper},
+  pdf           = {paper.pdf},
+  code          = {https://github.com/huang-zirun/仓库名},
+  bibtex_show   = {true},
+  selected      = {true}
+}
+```
+
+字段含义：`abbr` 是期刊/会议简称，会渲染成彩色小标签（颜色在 `_data/venues.yml` 里配）；
+`html` 单条论文的网页链接；`pdf` 是 `assets/pdf/` 下的文件名；`code` 代码仓库；
+`selected: true` 才出现在首页「Selected Publications」；`bibtex_show: true` 才显示 Details 展开按钮；
+`google_scholar_id` 配合 `_data/citations.yml` 显示引用数。会议论文把 `@article` + `journal`
+换成 `@inproceedings` + `booktitle`。
 
 ### 关于内容的一条原则
 
