@@ -1,30 +1,54 @@
-# 社交/联系方式图标，显示在首页底部和搜索结果里
-# 只有填了值的键才会出现图标；不需要的整行删掉或保持注释即可。
-# 完整可用键名见 jekyll-socials 插件：https://github.com/george-gca/jekyll-socials
+# 社交/联系方式图标，显示在首页底部（_pages/about.md 里 social: true）和站内搜索里。
+#
+# ⚠️ 键名必须和下面列出的逐字一致。写错的键不会"不显示就算了"——
+#    插件会把它当成"自定义图标"，然后因为找不到 logo 字段直接让整个 Actions 构建失败。
+#    2026-10-07 第一次构建就是这么挂的：写了 github，实际键名是 github_username。
+#    不用的项整行删掉或保持注释，不要留 "key:" 空值。
+#
+# 全部 49 个合法键名以插件源码为准（这份列表是常用子集）：
+#   https://github.com/george-gca/jekyll-socials/blob/main/lib/jekyll-socials.rb
 
-github: huang-zirun
+github_username: huang-zirun
 rss_icon: true # RSS 订阅图标，不想要就删掉这行
 
-# email: [你的邮箱]           # 例：zhangsan@example.com
-# scholar_userid:             # Google Scholar 主页 URL 里 user= 后面那串
-# orcid_id:                   # 例：0000-0002-1825-0097
-# research_gate_id:
-# semantic_scholar_id:
+# ---- 学术 ----
+# scholar_userid:              # Google Scholar 主页 URL 里 user= 后面那串
+# orcid_id:                    # 例：0000-0002-1825-0097
+# dblp_url:                    # 值填 dblp 个人页的完整 URL，不是 ID
+# arxiv_id:
+# acm_id:
+# ieee_id:
+# semanticscholar_id:          # semantic 和 scholar 之间没有下划线
+# research_gate_profile:       # 不是 research_gate_id
 # inspirehep_id:
-# wechat_qr:                  # 二维码图片文件名，图放 assets/img/ 下，例：wechat-qr.png
-# whatsapp_number:            # 国际格式手机号，去掉 0、括号和横线
+# zotero_username:
+# academia_edu:                # 这个键特殊，必须写成两项
+#   organization: [学校]
+#   username: [用户名]
+
+# ---- 代码 / 技术社区 ----
+# gitlab_username:
+# kaggle_id:
+# leetcode_id:
+# stackoverflow_id:            # 例：users/1234567/username
+# x_username:                  # 推特 / X
+# bluesky_url:                 # 值填完整 URL，不是用户名
+# mastodon_username:           # 例：user@mastodon.social
 # linkedin_username:
-# x_username:                 # 推特 / X
-# mastodon_username:          # 例：user@mastodon.social
-# instagram_username:
-# threads_username:
-# bluesky_username:
 # medium_username:
-# stackoverflow_id:           # 例：users/1234567/username
+# keybase_username:
+# discord_id:
 # telegram_username:
-# signal_number:
-# matrix_user:
-# mastodon_url:
-# blog_url:
-# orcid_id:
-# cv_pdf:                     # 简历 PDF 路径，例：/assets/pdf/cv.pdf
+
+# ---- 国内 / 即时通讯 ----
+# wechat_username:             # 微信号（weixin:// 深链，手机上更有效）
+# whatsapp_number:             # 国际格式，去掉开头的 0、括号和横线
+# facebook_id:
+# instagram_id:                # 不是 instagram_username
+# youtube_id:                  # 例：@channelname
+
+# ---- 简历 / 自定义链接 ----
+# cv_pdf: /assets/pdf/cv.pdf   # 站点内路径，或完整外部 URL
+# email: [你的邮箱]
+# work_url: [作品集/实验室主页完整 URL]
+# blogger_url: [博客完整 URL]
