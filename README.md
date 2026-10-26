@@ -1,66 +1,74 @@
 # Cherry Nav · 树状个人导航站
 
-> 一个朴素、轻快、类似 Cherry 笔记风格的树状个人网址与知识导航中心。支持自动解析网页标题与 Favicon 图标，通过 GitHub API 或本地文件实现无数据库的自动版本化存储。
+> 一个朴素、轻快、类似 Cherry 笔记风格的树状个人网址与知识导航中心。
+> 100% 原生支持 **GitHub Pages** 直接部署，无需任何第三方云函数或外部数据库！
 
 ---
 
 ## ✨ 核心特性
 
 - 🌲 **Cherry 笔记风格目录树**：左侧多层级树状结构，支持无限级子分类、自由折叠/展开、拖拽与排序。
-- ⚡ **智能链接解析**：输入任何 URL，后台自动抓取网页 Title、Favicon 高清图标与 Description 简介，支持弹窗微调确认。
+- ⚡ **纯前端智能链接解析**：输入任何 URL，自动异步抓取网页 Title 标题、Favicon 高清图标（带 Google 图标兜底）与 Description 简介，支持弹窗微调确认。
 - 🔍 **全局毫秒级搜索**：支持顶部快速搜索与快捷键 `Cmd + K` / `Ctrl + K`，实时模糊匹配标题、网址、简介与标签。
-- 💾 **无数据库 / Git 原生持久化**：
-  - 本地开发：直接同步写入 `data/nav-tree.json`。
-  - 线上生产：通过 GitHub REST API 自动提交 commit，免费享有完整的版本回滚和历史追踪能力。
-- 🔐 **管理员口令保护**：普通访客纯只读浏览，输入管理密码解锁添加、编辑、删除与分类调整。
+- 💾 **GitHub 官方 REST API 自动持久化**：
+  - 在网页管理面板中输入一次你的 GitHub Token（安全存储在本地浏览器）。
+  - 在网页端添加、修改或删除链接时，直接调用 GitHub API 提交 commit 更新 `data/nav-tree.json`，并自动触发 GitHub Pages 构建部署！
+  - 本地缓存即时生效，无需等待重新构建即可立刻看到修改后的链接。
 - 📦 **书签导入与导出**：一键导出为标准 JSON 备份，或兼容主流浏览器（Chrome/Edge/Firefox/Safari）的 HTML 书签文件。
 - 🌓 **深色模式**：内置暗黑/亮色主题，随系统自动切换或手动切换。
 
 ---
 
-## 🚀 本地运行
+## 🚀 部署至 GitHub Pages
+
+本项目已经配置好了官方的 GitHub Pages Actions 流水线，只需一次性开启仓库的 Pages 功能：
+
+### 1. 开启 GitHub Pages
+1. 打开你的 GitHub 仓库页面：`https://github.com/huang-zirun/huang-zirun.github.io`
+2. 点击 **Settings** -> **Pages**。
+3. 在 **Build and deployment** 下方的 **Source**，将默认的 `Deploy from a branch` 修改为 **`GitHub Actions`**。
+
+### 2. 推送代码上线
+在本地终端执行：
+```bash
+git push origin main
+```
+GitHub Actions 会自动打包并发布，1 分钟后即可访问你的主页：
+👉 **https://huang-zirun.github.io**
+
+---
+
+## 💻 本地运行与调试
 
 ```bash
 # 安装依赖
 npm install
 
-# 启动本地开发服务 (支持即时添加与保存)
+# 启动本地开发服务
 npm run dev
 ```
-
-在浏览器中打开 [http://localhost:3000](http://localhost:3000) 即可使用。
-
----
-
-## 🌐 部署至 Vercel
-
-本项目为原生 Next.js App Router 架构，推荐一键部署至 [Vercel](https://vercel.com)：
-
-1. 在 Vercel 导入此 GitHub 仓库。
-2. 在 **Settings -> Environment Variables** 中配置以下环境变量：
-   - `ADMIN_PASSWORD`：自定义的管理员操作口令（用于前台解锁管理与后端验证）。
-   - `GITHUB_TOKEN`：具备仓库读写权限的 GitHub Personal Access Token（用于添加链接时自动提交 commit 回仓库）。
-   - `GITHUB_REPO`：格式为 `username/repo`（例如 `huang-zirun/huang-zirun.github.io`）。
-   - `GITHUB_BRANCH`：（可选，默认为 `main`）。
-3. 点击 Deploy 即可上线！
+打开浏览器访问 [http://localhost:3000](http://localhost:3000) 即可体验。
 
 ---
 
 ## 📁 目录与文件说明
 
 ```
+├── .github/workflows/
+│   └── deploy.yml           # GitHub Pages 官方静态构建与部署流水线
 ├── data/
 │   └── nav-tree.json        # 核心导航树数据文件 (版本化管理)
 ├── src/
 │   ├── app/
-│   │   ├── api/
-│   │   │   ├── parse-link/  # 自动抓取网页元数据 (Title / Favicon / Desc)
-│   │   │   └── save/        # 保存导航树并提交至 GitHub 仓库
 │   │   ├── globals.css      # 全局样式与暗黑模式定义
 │   │   ├── layout.tsx       # 根布局
 │   │   └── page.tsx         # 导航站主页面
 │   ├── components/          # 树状侧边栏、卡片流、弹窗交互组件
-│   ├── lib/                 # 树结构操作算法与书签导入导出解析器
+│   ├── lib/
+│   │   ├── github-sync.ts   # 纯前端 GitHub REST API 自动提交流程
+│   │   ├── link-parser.ts   # 纯前端跨域网页元数据与 Favicon 解析器
+│   │   ├── tree-utils.ts    # 树结构增删改查算法
+│   │   └── bookmark-parser.ts # 书签 HTML/JSON 导入导出
 │   └── types/               # TypeScript 类型定义
 └── _legacy_blog/            # 原 al-folio 博客历史文件备份 (亦保存在 backup/legacy-blog 分支)
 ```

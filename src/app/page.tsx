@@ -12,6 +12,7 @@ import {
   deleteCategory,
   moveCategory,
 } from "@/lib/tree-utils";
+import { commitToGitHub } from "@/lib/github-sync";
 import SidebarTree from "@/components/SidebarTree";
 import ContentArea from "@/components/ContentArea";
 import AddEditLinkModal from "@/components/AddEditLinkModal";
@@ -23,9 +24,9 @@ export default function Home() {
   const [navData, setNavData] = useState<NavData>(() => initialNavData as NavData);
   const [activeCategoryId, setActiveCategoryId] = useState<string>(() => initialNavData.root.id);
 
-  // Admin state
+  // Admin and GitHub Token state
   const [isAdmin, setIsAdmin] = useState(false);
-  const [adminPassword, setAdminPassword] = useState("");
+  const [githubToken, setGithubToken] = useState("");
 
   // Dark Mode state
   const [darkMode, setDarkMode] = useState(false);
@@ -42,14 +43,29 @@ export default function Home() {
   const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
   const [isImportExportOpen, setIsImportExportOpen] = useState(false);
 
-  // Initialize Admin and Dark Mode preferences from localStorage
+  // Initialize Admin Token and cached data from localStorage
   useEffect(() => {
-    const savedToken = localStorage.getItem("nav_admin_token");
-    if (savedToken) {
-      setIsAdmin(true);
-      setAdminPassword(savedToken);
+    // 1. Check local cache
+    const cachedTree = localStorage.getItem("nav_local_tree_cache");
+    if (cachedTree) {
+      try {
+        const parsed = JSON.parse(cachedTree);
+        if (parsed.root && parsed.updatedAt >= initialNavData.updatedAt) {
+          setNavData(parsed);
+        }
+      } catch {
+        // ignore
+      }
     }
 
+    // 2. Check saved GitHub Token
+    const savedToken = localStorage.getItem("nav_github_token");
+    if (savedToken) {
+      setIsAdmin(true);
+      setGithubToken(savedToken);
+    }
+
+    // 3. Check theme preference
     const savedTheme = localStorage.getItem("nav_theme");
     const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
     if (savedTheme === "dark" || (!savedTheme && prefersDark)) {
@@ -88,28 +104,25 @@ export default function Home() {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, []);
 
-  // Save changes to API & local state
+  // Save changes to local state, localStorage cache, and GitHub API
   const persistChanges = async (updatedData: NavData) => {
     // 1. Optimistic UI update
     setNavData(updatedData);
 
-    // 2. Send to backend
+    // 2. Local cache update
     try {
-      const res = await fetch("/api/save", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          data: updatedData,
-          adminPassword,
-        }),
-      });
+      localStorage.setItem("nav_local_tree_cache", JSON.stringify(updatedData));
+    } catch {
+      // ignore
+    }
 
-      if (!res.ok) {
-        const errJson = await res.json();
-        console.warn("Backend save warning:", errJson.error);
+    // 3. Commit to GitHub repo if token is configured
+    if (githubToken) {
+      try {
+        await commitToGitHub(updatedData, githubToken);
+      } catch (err) {
+        alert("提交至 GitHub 仓库失败: " + (err instanceof Error ? err.message : "请检查网络或 Token 权限"));
       }
-    } catch (err) {
-      console.error("Failed to sync changes with server:", err);
     }
   };
 
@@ -212,19 +225,20 @@ export default function Home() {
   };
 
   // --- Auth Handlers ---
-  const handleAuthenticate = (password: string): boolean => {
-    // In local dev, any non-empty password is accepted
-    // In production, will be checked against backend API
+  const handleSaveToken = (token: string) => {
     setIsAdmin(true);
-    setAdminPassword(password);
-    localStorage.setItem("nav_admin_token", password);
-    return true;
+    setGithubToken(token);
+    localStorage.setItem("nav_github_token", token);
+  };
+
+  const handleEnableLocalOnly = () => {
+    setIsAdmin(true);
   };
 
   const handleLogout = () => {
     setIsAdmin(false);
-    setAdminPassword("");
-    localStorage.removeItem("nav_admin_token");
+    setGithubToken("");
+    localStorage.removeItem("nav_github_token");
   };
 
   return (
@@ -283,8 +297,10 @@ export default function Home() {
         isOpen={isAuthModalOpen}
         onClose={() => setIsAuthModalOpen(false)}
         isAdmin={isAdmin}
-        onAuthenticate={handleAuthenticate}
+        onSaveToken={handleSaveToken}
+        onEnableLocalOnly={handleEnableLocalOnly}
         onLogout={handleLogout}
+        currentToken={githubToken}
       />
 
       {/* Import / Export Modal */}

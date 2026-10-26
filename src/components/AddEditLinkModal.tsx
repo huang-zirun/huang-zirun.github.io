@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { LinkItem, CategoryNode } from "@/types/nav";
 import { flattenAllCategories } from "@/lib/tree-utils";
+import { parseLinkClient } from "@/lib/link-parser";
 import { X, Sparkles, Loader2, Globe } from "lucide-react";
 
 interface AddEditLinkModalProps {
@@ -56,25 +57,15 @@ export default function AddEditLinkModal({
 
   if (!isOpen) return null;
 
-  // Call the /api/parse-link serverless function
+  // Call the client-side parser
   const handleAutoParse = async () => {
     if (!url.trim()) return;
 
     setIsParsing(true);
-    setParseStatus("正在自动抓取网页标题与图标...");
+    setParseStatus("正在自动解析网页标题与图标...");
 
     try {
-      const res = await fetch("/api/parse-link", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ url: url.trim() }),
-      });
-
-      if (!res.ok) {
-        throw new Error("解析服务响应失败");
-      }
-
-      const data = await res.json();
+      const data = await parseLinkClient(url.trim());
       if (data.title) setTitle(data.title);
       if (data.favicon) setFavicon(data.favicon);
       if (data.description) setDescription(data.description);
