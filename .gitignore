@@ -1,21 +1,29 @@
-_site
-.bundle
-.DS_store
-.idea
-.jekyll-cache
-.jekyll-metadata
-.ruby-version
-.sass-cache
-.tweet-cache
-.venv
-assets/libs/
-assets/rendercv/rendercv_output/*.typ
-al-folio-upgrade-report.md
-node_modules/
-output/playwright/
-test-results/
-vendor
+# Next.js
+.next/
+out/
+build/
+dist/
 
-# Python bytecode from bin/ helper scripts
-__pycache__/
-*.pyc
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Environment Variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# OS / Editor
+.DS_Store
+*.pem
+.idea/
+.vscode/
+
+# Vercel
+.vercel
+
+# Legacy Jekyll Archive (tracked or ignored)
+# _legacy_blog is tracked in git for archival history

@@ -1,0 +1,171 @@
+{
+  "version": "1.0.0",
+  "updatedAt": "2026-10-26T14:30:00.000Z",
+  "root": {
+    "id": "root",
+    "title": "导航中心",
+    "links": [],
+    "children": [
+      {
+        "id": "cat-ai-tools",
+        "title": "人工智能 & LLM",
+        "icon": "Bot",
+        "children": [
+          {
+            "id": "cat-llm-models",
+            "title": "主流大模型与对话",
+            "children": [],
+            "links": [
+              {
+                "id": "link-chatgpt",
+                "title": "ChatGPT",
+                "url": "https://chatgpt.com",
+                "favicon": "https://www.google.com/s2/favicons?domain=chatgpt.com&sz=64",
+                "description": "OpenAI 旗下强大的对话与推理大模型",
+                "tags": ["AI", "LLM", "OpenAI"],
+                "createdAt": "2026-10-26T14:30:00.000Z"
+              },
+              {
+                "id": "link-claude",
+                "title": "Claude",
+                "url": "https://claude.ai",
+                "favicon": "https://www.google.com/s2/favicons?domain=claude.ai&sz=64",
+                "description": "Anthropic 开发的高智能、长上下文对话模型",
+                "tags": ["AI", "Anthropic"],
+                "createdAt": "2026-10-26T14:30:00.000Z"
+              },
+              {
+                "id": "link-gemini",
+                "title": "Google Gemini",
+                "url": "https://gemini.google.com",
+                "favicon": "https://www.google.com/s2/favicons?domain=gemini.google.com&sz=64",
+                "description": "Google 多模态大模型与生产力助手",
+                "tags": ["AI", "Google"],
+                "createdAt": "2026-10-26T14:30:00.000Z"
+              }
+            ]
+          },
+          {
+            "id": "cat-ai-dev",
+            "title": "AI 开发与平台",
+            "children": [],
+            "links": [
+              {
+                "id": "link-huggingface",
+                "title": "Hugging Face",
+                "url": "https://huggingface.co",
+                "favicon": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
+                "description": "AI 领域的 GitHub，汇聚海量开源模型与数据集",
+                "tags": ["OpenSource", "ModelHub"],
+                "createdAt": "2026-10-26T14:30:00.000Z"
+              },
+              {
+                "id": "link-github-copilot",
+                "title": "GitHub",
+                "url": "https://github.com",
+                "favicon": "https://www.google.com/s2/favicons?domain=github.com&sz=64",
+                "description": "全球最大的开源代码托管与协作平台",
+                "tags": ["Code", "Dev"],
+                "createdAt": "2026-10-26T14:30:00.000Z"
+              }
+            ]
+          }
+        ],
+        "links": []
+      },
+      {
+        "id": "cat-dev",
+        "title": "开发技术栈",
+        "icon": "Code2",
+        "children": [
+          {
+            "id": "cat-frontend",
+            "title": "前端开发",
+            "children": [],
+            "links": [
+              {
+                "id": "link-nextjs",
+                "title": "Next.js by Vercel",
+                "url": "https://nextjs.org",
+                "favicon": "https://www.google.com/s2/favicons?domain=nextjs.org&sz=64",
+                "description": "React 生态主流全栈 Web 框架",
+                "tags": ["React", "SSR"],
+                "createdAt": "2026-10-26T14:30:00.000Z"
+              },
+              {
+                "id": "link-tailwindcss",
+                "title": "Tailwind CSS",
+                "url": "https://tailwindcss.com",
+                "favicon": "https://www.google.com/s2/favicons?domain=tailwindcss.com&sz=64",
+                "description": "实用优先的高效原子化 CSS 框架",
+                "tags": ["CSS", "Frontend"],
+                "createdAt": "2026-10-26T14:30:00.000Z"
+              },
+              {
+                "id": "link-react",
+                "title": "React",
+                "url": "https://react.dev",
+                "favicon": "https://www.google.com/s2/favicons?domain=react.dev&sz=64",
+                "description": "用于构建 Web 和原生交互界面的前端库",
+                "tags": ["JavaScript", "UI"],
+                "createdAt": "2026-10-26T14:30:00.000Z"
+              }
+            ]
+          },
+          {
+            "id": "cat-backend",
+            "title": "后端与云原生",
+            "children": [],
+            "links": [
+              {
+                "id": "link-vercel",
+                "title": "Vercel",
+                "url": "https://vercel.com",
+                "favicon": "https://www.google.com/s2/favicons?domain=vercel.com&sz=64",
+                "description": "领先的静态网站与 Serverless 托管平台",
+                "tags": ["Cloud", "Deployment"],
+                "createdAt": "2026-10-26T14:30:00.000Z"
+              },
+              {
+                "id": "link-cloudflare",
+                "title": "Cloudflare",
+                "url": "https://www.cloudflare.com",
+                "favicon": "https://www.google.com/s2/favicons?domain=cloudflare.com&sz=64",
+                "description": "全球内容分发网络、DNS 与边缘计算平台",
+                "tags": ["CDN", "Edge"],
+                "createdAt": "2026-10-26T14:30:00.000Z"
+              }
+            ]
+          }
+        ],
+        "links": []
+      },
+      {
+        "id": "cat-efficiency",
+        "title": "效率与日常工具",
+        "icon": "Sparkles",
+        "children": [],
+        "links": [
+          {
+            "id": "link-v2ex",
+            "title": "V2EX",
+            "url": "https://www.v2ex.com",
+            "favicon": "https://www.google.com/s2/favicons?domain=v2ex.com&sz=64",
+            "description": "创意工作者与程序员的活跃讨论社区",
+            "tags": ["Community"],
+            "createdAt": "2026-10-26T14:30:00.000Z"
+          },
+          {
+            "id": "link-arxiv",
+            "title": "arXiv.org",
+            "url": "https://arxiv.org",
+            "favicon": "https://www.google.com/s2/favicons?domain=arxiv.org&sz=64",
+            "description": "计算机科学、物理与数学领域论文预印本库",
+            "tags": ["Academic", "Paper"],
+            "createdAt": "2026-10-26T14:30:00.000Z"
+          }
+        ]
+      }
+    ]
+  }
+}
