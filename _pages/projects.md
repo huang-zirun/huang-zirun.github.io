@@ -1,8 +1,8 @@
 ---
 layout: page
 permalink: /projects/
-title: Projects
-title_zh: 项目与实习
+title: Experience
+title_zh: 实践经历
 description:
 nav: true
 nav_order: 1
@@ -12,7 +12,9 @@ nav_order: 1
 <!--
   使用说明：
   1. 实习经历 (Internships)：
-     - 左侧胶囊支持放置单位 Logo（<img class="badge-logo" src="...">，图片放在 assets/img/logos/ 下），不需要底部 PDF/Slides 按钮。
+     - 单位 Logo 外置在 <abbr> 胶囊左侧（<img class="abbr-external-logo" src="...">），且完全可选：
+       * 如果需要显示 Logo：在 <abbr> 前面加上 <img class="abbr-external-logo" src="..." /> 即可（如示例 1 ByteDance）；
+       * 如果不需要显示 Logo：直接不写 <img> 标签即可，胶囊依然严格左对齐、尺寸与下方项目/比赛完全一致（如示例 2 AI Lab）。
   2. 项目经历 (Projects)：
      - 底部的 <div class="links">（如 GitHub / Website 按钮）是完全可选的：如果某个项目不需要挂仓库或链接，直接删掉对应的 <div class="links">...</div> 即可。
   3. 中英双语支持：
@@ -26,9 +28,17 @@ nav_order: 1
     <span class="lang-zh">实习经历</span>
   </h2>
   <ol class="bibliography">
+    <!-- 示例 1：带外置单位 Logo 的实习经历（先外置 Logo，再标准尺寸胶囊） -->
     <li>
       <div class="row">
         <div class="col col-sm-2 abbr">
+          <img
+            class="abbr-external-logo"
+            src="{{ '/assets/img/logos/bytedance.svg' | relative_url }}"
+            width="22"
+            height="22"
+            alt="ByteDance"
+          />
           <abbr
             class="badge rounded w-100"
             style="
@@ -40,7 +50,6 @@ nav_order: 1
               --venue-border-dark: #3E607A;
             "
           >
-            <img class="badge-logo" src="{{ '/assets/img/logos/bytedance.svg' | relative_url }}" alt="ByteDance" />
             <div>ByteDance</div>
           </abbr>
         </div>
@@ -65,6 +74,7 @@ nav_order: 1
       </div>
     </li>
 
+    <!-- 示例 2：不带外置 Logo 的实习经历（Logo 是可选的，不加 <img> 即可，胶囊尺寸与对齐保持完全一致） -->
     <li>
       <div class="row">
         <div class="col col-sm-2 abbr">
@@ -79,7 +89,6 @@ nav_order: 1
               --venue-border-dark: #77503F;
             "
           >
-            <img class="badge-logo" src="{{ '/assets/img/logos/ailab.svg' | relative_url }}" alt="AI Lab" />
             <div>AI Lab</div>
           </abbr>
         </div>

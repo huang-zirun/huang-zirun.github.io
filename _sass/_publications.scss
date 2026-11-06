@@ -70,6 +70,25 @@
       .abbr {
         height: 2rem;
         margin-bottom: 0.5rem;
+        position: relative;
+
+        img.abbr-external-logo {
+          height: 1.35rem !important;
+          width: 1.35rem !important;
+          max-width: 1.35rem !important;
+          max-height: 1.35rem !important;
+          object-fit: contain;
+          display: inline-block;
+          vertical-align: middle;
+          margin-right: 0.35rem;
+
+          @media (min-width: 576px) {
+            position: absolute;
+            left: -1.75rem;
+            top: 0;
+            margin-right: 0;
+          }
+        }
 
         abbr {
           align-items: center;
@@ -88,16 +107,6 @@
           padding-right: 1rem;
           text-align: center;
           white-space: nowrap;
-          gap: 0.35rem;
-
-          img.badge-logo {
-            height: 0.95rem;
-            width: 0.95rem;
-            object-fit: contain;
-            flex-shrink: 0;
-            display: inline-block;
-            vertical-align: middle;
-          }
 
           a {
             color: inherit !important;
