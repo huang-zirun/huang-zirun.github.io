@@ -9,6 +9,80 @@
       }
     })();
   </script>
+  <style>
+    /* Bilingual visibility: strictly show only active language (default: en) */
+    html:not([data-lang="zh"]) .lang-zh {
+      display: none !important;
+    }
+    html[data-lang="zh"] .lang-en {
+      display: none !important;
+    }
+
+    /* Language toggle button: aligned with dark/light toggle style */
+    .navbar-nav .toggle-container.lang-toggle-container {
+      display: flex;
+      align-items: center;
+      margin-left: 0.15rem;
+    }
+    #lang-toggle {
+      background: transparent;
+      border: none;
+      padding: 0.25rem 0.35rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--global-text-color);
+      font-family: "Book Antiqua", Palatino, "Palatino Linotype", Georgia, serif;
+      font-size: 0.85rem;
+      line-height: 1;
+      letter-spacing: 0.01em;
+      transition: color 0.15s ease;
+    }
+    #lang-toggle .lang-opt {
+      opacity: 0.42;
+      font-weight: 400;
+      transition: opacity 0.15s ease, color 0.15s ease;
+    }
+    #lang-toggle .lang-sep {
+      opacity: 0.35;
+      margin: 0 0.12rem;
+      font-weight: 400;
+    }
+    html:not([data-lang="zh"]) #lang-toggle .lang-opt-en,
+    html[data-lang="zh"] #lang-toggle .lang-opt-zh {
+      opacity: 1;
+      font-weight: 700;
+    }
+    #lang-toggle:hover,
+    #lang-toggle:hover .lang-opt,
+    #lang-toggle:hover .lang-sep {
+      color: var(--global-theme-color);
+    }
+
+    /* Optional external internship logo outside left of badge */
+    .publications ol.bibliography li .abbr {
+      position: relative;
+    }
+    .publications ol.bibliography li .abbr img.abbr-external-logo {
+      height: 1.35rem !important;
+      width: 1.35rem !important;
+      max-width: 1.35rem !important;
+      max-height: 1.35rem !important;
+      object-fit: contain;
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 0.35rem;
+    }
+    @media (min-width: 576px) {
+      .publications ol.bibliography li .abbr img.abbr-external-logo {
+        position: absolute;
+        left: -1.75rem;
+        top: 0;
+        margin-right: 0;
+      }
+    }
+  </style>
   <!-- Nav Bar -->
   <nav id="navbar" class="navbar navbar-light navbar-expand-sm {% if site.navbar_fixed %}fixed-top{% else %}sticky-top{% endif %}" role="navigation">
     <div class="container">
@@ -150,11 +224,10 @@
               </button>
             </li>
           {% endif %}
-          <!-- Language toggle (EN / ZH) -->
+          <!-- Language toggle (zh/en) -->
           <li class="toggle-container lang-toggle-container">
-            <button id="lang-toggle" type="button" title="Switch language (EN / 中文)" aria-label="Switch language">
-              <span class="lang-toggle-label lang-en">ZH</span>
-              <span class="lang-toggle-label lang-zh">EN</span>
+            <button id="lang-toggle" type="button" title="Switch language (zh/en)" aria-label="Switch language">
+              <span class="lang-opt lang-opt-zh">zh</span><span class="lang-sep">/</span><span class="lang-opt lang-opt-en">en</span>
             </button>
           </li>
         </ul>
