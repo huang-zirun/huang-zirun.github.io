@@ -13,7 +13,80 @@
         document.documentElement.setAttribute("data-lang", "en");
       }
     })();
-  </script> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> <span class="font-weight-bold">Zirun</span> Huang </a> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/"> <span class="lang-en">About</span> <span class="lang-zh">关于</span> </a> </li> <li class="nav-item "> <a class="nav-link" href="/projects/"> <span class="lang-en">Projects</span> <span class="lang-zh">项目与实习</span> </a> </li> <li class="nav-item "> <a class="nav-link" href="/publications/"> <span class="lang-en">Publications</span> <span class="lang-zh">论文发表</span> </a> </li> <li class="nav-item "> <a class="nav-link" href="/assets/pdf/CV.pdf"> <span class="lang-en">CV</span> <span class="lang-zh">简历</span> </a> </li> <li class="toggle-container"> <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> <li class="toggle-container lang-toggle-container"> <button id="lang-toggle" type="button" title="Switch language (EN / 中文)" aria-label="Switch language"> <span class="lang-toggle-label lang-en">ZH</span> <span class="lang-toggle-label lang-zh">EN</span> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> <script>
+  </script> <style>
+    /* Bilingual visibility: strictly show only active language (default: en) */
+    html:not([data-lang="zh"]) .lang-zh {
+      display: none !important;
+    }
+    html[data-lang="zh"] .lang-en {
+      display: none !important;
+    }
+
+    /* Language toggle button: aligned with dark/light toggle style */
+    .navbar-nav .toggle-container.lang-toggle-container {
+      display: flex;
+      align-items: center;
+      margin-left: 0.15rem;
+    }
+    #lang-toggle {
+      background: transparent;
+      border: none;
+      padding: 0.25rem 0.35rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--global-text-color);
+      font-family: "Book Antiqua", Palatino, "Palatino Linotype", Georgia, serif;
+      font-size: 0.85rem;
+      line-height: 1;
+      letter-spacing: 0.01em;
+      transition: color 0.15s ease;
+    }
+    #lang-toggle .lang-opt {
+      opacity: 0.42;
+      font-weight: 400;
+      transition: opacity 0.15s ease, color 0.15s ease;
+    }
+    #lang-toggle .lang-sep {
+      opacity: 0.35;
+      margin: 0 0.12rem;
+      font-weight: 400;
+    }
+    html:not([data-lang="zh"]) #lang-toggle .lang-opt-en,
+    html[data-lang="zh"] #lang-toggle .lang-opt-zh {
+      opacity: 1;
+      font-weight: 700;
+    }
+    #lang-toggle:hover,
+    #lang-toggle:hover .lang-opt,
+    #lang-toggle:hover .lang-sep {
+      color: var(--global-theme-color);
+    }
+
+    /* Optional external internship logo outside left of badge */
+    .publications ol.bibliography li .abbr {
+      position: relative;
+    }
+    .publications ol.bibliography li .abbr img.abbr-external-logo {
+      height: 1.35rem !important;
+      width: 1.35rem !important;
+      max-width: 1.35rem !important;
+      max-height: 1.35rem !important;
+      object-fit: contain;
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 0.35rem;
+    }
+    @media (min-width: 576px) {
+      .publications ol.bibliography li .abbr img.abbr-external-logo {
+        position: absolute;
+        left: -1.75rem;
+        top: 0;
+        margin-right: 0;
+      }
+    }
+  </style> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> <span class="font-weight-bold">Zirun</span> Huang </a> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/"> <span class="lang-en">About</span> <span class="lang-zh">关于</span> </a> </li> <li class="nav-item "> <a class="nav-link" href="/projects/"> <span class="lang-en">Experience</span> <span class="lang-zh">实践经历</span> </a> </li> <li class="nav-item "> <a class="nav-link" href="/publications/"> <span class="lang-en">Publications</span> <span class="lang-zh">论文发表</span> </a> </li> <li class="nav-item "> <a class="nav-link" href="/assets/pdf/CV.pdf"> <span class="lang-en">CV</span> <span class="lang-zh">简历</span> </a> </li> <li class="toggle-container"> <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> <li class="toggle-container lang-toggle-container"> <button id="lang-toggle" type="button" title="Switch language (zh/en)" aria-label="Switch language"> <span class="lang-opt lang-opt-zh">zh</span><span class="lang-sep">/</span><span class="lang-opt lang-opt-en">en</span> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> <script>
     document.addEventListener("DOMContentLoaded", function () {
       var btn = document.getElementById("lang-toggle");
       if (!btn) return;
@@ -27,7 +100,7 @@
         window.dispatchEvent(new Event("resize"));
       });
     });
-  </script> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">News</h1> <p class="post-description"></p> </header> <article> <div class="news"> <div class="table-responsive"> <table class="table table-sm table-borderless"> <tr> <th scope="row" style="width: 20%">Sep 15, 2026</th> <td> <span class="lang-en">One paper on post-training dynamics was accepted to <b>ICML 2026</b> as an Oral Presentation!</span><span class="lang-zh">一篇关于大模型后训练动态的论文被 <b>ICML 2026</b> 录用为 Oral Presentation！</span> </td> </tr> <tr> <th scope="row" style="width: 20%">Jun 20, 2026</th> <td> <span class="lang-en">I gave an invited talk on sample-efficient reinforcement learning at the AI &amp; Reasoning Seminar.</span><span class="lang-zh">受邀在 AI &amp; Reasoning 研讨会上作关于样本高效强化学习的报告。</span> </td> </tr> <tr> <th scope="row" style="width: 20%">May 18, 2026</th> <td> <span class="lang-en">I started my summer internship at ByteDance working on high-throughput distributed infrastructure.</span><span class="lang-zh">在字节跳动（ByteDance）开启暑期实习，从事高吞吐分布式基础架构研发。</span> </td> </tr> <tr> <th scope="row" style="width: 20%">Mar 10, 2026</th> <td> <span class="lang-en">Our collaborative work on uncertainty-aware planning was accepted to <b>TMLR 2026</b>!</span><span class="lang-zh">关于不确定性感知规划的合作论文被 <b>TMLR 2026</b> 录用！</span> </td> </tr> <tr> <th scope="row" style="width: 20%">Dec 05, 2025</th> <td> <span class="lang-en">Presented our spotlight paper at <b>NeurIPS 2025</b> in San Diego! Great discussions with researchers.</span><span class="lang-zh">在圣地亚哥 <b>NeurIPS 2025</b> 现场展示 Spotlight 论文，与各位学者深入交流。</span> </td> </tr> </table> </div> </div> </article> </div> </div> <footer class="sticky-bottom mt-5" role="contentinfo"> <div class="container"> © 2026 Zirun Huang. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a>. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. Last updated: November 06, 2026. </div> </footer> <script>
+  </script> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title"> <span class="lang-en">News</span> <span class="lang-zh">News</span> </h1> <p class="post-description"></p> </header> <article> <div class="news"> <div class="table-responsive"> <table class="table table-sm table-borderless"> <tr> <th scope="row" style="width: 20%">Sep 15, 2026</th> <td> <span class="lang-en">One paper on post-training dynamics was accepted to <b>ICML 2026</b> as an Oral Presentation!</span><span class="lang-zh">一篇关于大模型后训练动态的论文被 <b>ICML 2026</b> 录用为 Oral Presentation！</span> </td> </tr> <tr> <th scope="row" style="width: 20%">Jun 20, 2026</th> <td> <span class="lang-en">I gave an invited talk on sample-efficient reinforcement learning at the AI &amp; Reasoning Seminar.</span><span class="lang-zh">受邀在 AI &amp; Reasoning 研讨会上作关于样本高效强化学习的报告。</span> </td> </tr> <tr> <th scope="row" style="width: 20%">May 18, 2026</th> <td> <span class="lang-en">I started my summer internship at ByteDance working on high-throughput distributed infrastructure.</span><span class="lang-zh">在字节跳动（ByteDance）开启暑期实习，从事高吞吐分布式基础架构研发。</span> </td> </tr> <tr> <th scope="row" style="width: 20%">Mar 10, 2026</th> <td> <span class="lang-en">Our collaborative work on uncertainty-aware planning was accepted to <b>TMLR 2026</b>!</span><span class="lang-zh">关于不确定性感知规划的合作论文被 <b>TMLR 2026</b> 录用！</span> </td> </tr> <tr> <th scope="row" style="width: 20%">Dec 05, 2025</th> <td> <span class="lang-en">Presented our spotlight paper at <b>NeurIPS 2025</b> in San Diego! Great discussions with researchers.</span><span class="lang-zh">在圣地亚哥 <b>NeurIPS 2025</b> 现场展示 Spotlight 论文，与各位学者深入交流。</span> </td> </tr> </table> </div> </div> </article> </div> </div> <footer class="sticky-bottom mt-5" role="contentinfo"> <div class="container"> © 2026 Zirun Huang. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a>. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. Last updated: November 06, 2026. </div> </footer> <script>
   window.alFolio = {
     compatBootstrap: false
   };

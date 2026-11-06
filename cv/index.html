@@ -13,7 +13,80 @@
         document.documentElement.setAttribute("data-lang", "en");
       }
     })();
-  </script> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> <span class="font-weight-bold">Zirun</span> Huang </a> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/"> <span class="lang-en">About</span> <span class="lang-zh">关于</span> </a> </li> <li class="nav-item "> <a class="nav-link" href="/projects/"> <span class="lang-en">Projects</span> <span class="lang-zh">项目与实习</span> </a> </li> <li class="nav-item "> <a class="nav-link" href="/publications/"> <span class="lang-en">Publications</span> <span class="lang-zh">论文发表</span> </a> </li> <li class="nav-item active"> <a class="nav-link" href="/assets/pdf/CV.pdf"> <span class="lang-en">CV</span> <span class="lang-zh">简历</span> <span class="sr-only">(current)</span> </a> </li> <li class="toggle-container"> <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> <li class="toggle-container lang-toggle-container"> <button id="lang-toggle" type="button" title="Switch language (EN / 中文)" aria-label="Switch language"> <span class="lang-toggle-label lang-en">ZH</span> <span class="lang-toggle-label lang-zh">EN</span> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> <script>
+  </script> <style>
+    /* Bilingual visibility: strictly show only active language (default: en) */
+    html:not([data-lang="zh"]) .lang-zh {
+      display: none !important;
+    }
+    html[data-lang="zh"] .lang-en {
+      display: none !important;
+    }
+
+    /* Language toggle button: aligned with dark/light toggle style */
+    .navbar-nav .toggle-container.lang-toggle-container {
+      display: flex;
+      align-items: center;
+      margin-left: 0.15rem;
+    }
+    #lang-toggle {
+      background: transparent;
+      border: none;
+      padding: 0.25rem 0.35rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--global-text-color);
+      font-family: "Book Antiqua", Palatino, "Palatino Linotype", Georgia, serif;
+      font-size: 0.85rem;
+      line-height: 1;
+      letter-spacing: 0.01em;
+      transition: color 0.15s ease;
+    }
+    #lang-toggle .lang-opt {
+      opacity: 0.42;
+      font-weight: 400;
+      transition: opacity 0.15s ease, color 0.15s ease;
+    }
+    #lang-toggle .lang-sep {
+      opacity: 0.35;
+      margin: 0 0.12rem;
+      font-weight: 400;
+    }
+    html:not([data-lang="zh"]) #lang-toggle .lang-opt-en,
+    html[data-lang="zh"] #lang-toggle .lang-opt-zh {
+      opacity: 1;
+      font-weight: 700;
+    }
+    #lang-toggle:hover,
+    #lang-toggle:hover .lang-opt,
+    #lang-toggle:hover .lang-sep {
+      color: var(--global-theme-color);
+    }
+
+    /* Optional external internship logo outside left of badge */
+    .publications ol.bibliography li .abbr {
+      position: relative;
+    }
+    .publications ol.bibliography li .abbr img.abbr-external-logo {
+      height: 1.35rem !important;
+      width: 1.35rem !important;
+      max-width: 1.35rem !important;
+      max-height: 1.35rem !important;
+      object-fit: contain;
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 0.35rem;
+    }
+    @media (min-width: 576px) {
+      .publications ol.bibliography li .abbr img.abbr-external-logo {
+        position: absolute;
+        left: -1.75rem;
+        top: 0;
+        margin-right: 0;
+      }
+    }
+  </style> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> <span class="font-weight-bold">Zirun</span> Huang </a> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/"> <span class="lang-en">About</span> <span class="lang-zh">关于</span> </a> </li> <li class="nav-item "> <a class="nav-link" href="/projects/"> <span class="lang-en">Experience</span> <span class="lang-zh">实践经历</span> </a> </li> <li class="nav-item "> <a class="nav-link" href="/publications/"> <span class="lang-en">Publications</span> <span class="lang-zh">论文发表</span> </a> </li> <li class="nav-item active"> <a class="nav-link" href="/assets/pdf/CV.pdf"> <span class="lang-en">CV</span> <span class="lang-zh">简历</span> <span class="sr-only">(current)</span> </a> </li> <li class="toggle-container"> <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> <li class="toggle-container lang-toggle-container"> <button id="lang-toggle" type="button" title="Switch language (zh/en)" aria-label="Switch language"> <span class="lang-opt lang-opt-zh">zh</span><span class="lang-sep">/</span><span class="lang-opt lang-opt-en">en</span> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> <script>
     document.addEventListener("DOMContentLoaded", function () {
       var btn = document.getElementById("lang-toggle");
       if (!btn) return;
