@@ -8,6 +8,14 @@ nav_order: 2
 ---
 
 <!-- _pages/projects.md -->
+<!--
+  使用说明：
+  1. 实习经历 (Internships)：
+     - 左侧胶囊支持放置单位 Logo（<img class="badge-logo" src="...">，图片放在 assets/img/logos/ 下），不需要底部 PDF/Slides 按钮。
+  2. 项目经历 (Projects)：
+     - 标题支持直接带 GitHub 仓库链接，也支持纯文本标题；
+     - 底部的 <div class="links">（如 GitHub / Website / PDF 按钮）是完全可选的：如果某个项目不需要挂仓库或链接，直接删掉或注释掉对应的 <div class="links">...</div> 即可。
+-->
 
 <div class="publications">
 
@@ -27,6 +35,7 @@ nav_order: 2
               --venue-border-dark: #3E607A;
             "
           >
+            <img class="badge-logo" src="{{ '/assets/img/logos/bytedance.svg' | relative_url }}" alt="ByteDance" />
             <div>ByteDance</div>
           </abbr>
         </div>
@@ -35,10 +44,6 @@ nav_order: 2
           <div class="author"><em>Zirun Huang</em>, mentored by Alex Smith</div>
           <div class="periodical"><em>ByteDance Inc., Beijing, China</em>, Jun 2026 – Sep 2026</div>
           <div class="periodical">Redesigned the high-throughput streaming ingestion pipeline with zero-copy batching, reducing cluster CPU usage by <b>28%</b> and P99 latency from <b>120ms to 45ms</b>.</div>
-          <div class="links">
-            <a href="https://github.com/huang-zirun" class="btn btn-sm z-depth-0" role="button">Code</a>
-            <a href="https://example.com/slides.pdf" class="btn btn-sm z-depth-0" role="button">Slides</a>
-          </div>
         </div>
       </div>
     </li>
@@ -57,6 +62,7 @@ nav_order: 2
               --venue-border-dark: #77503F;
             "
           >
+            <img class="badge-logo" src="{{ '/assets/img/logos/ailab.svg' | relative_url }}" alt="AI Lab" />
             <div>AI Lab</div>
           </abbr>
         </div>
@@ -65,10 +71,6 @@ nav_order: 2
           <div class="author"><em>Zirun Huang</em> and David Miller</div>
           <div class="periodical"><em>Foundational AI Research Lab</em>, Oct 2025 – Mar 2026</div>
           <div class="periodical">Optimized multi-modal LLM serving with AWQ/FP8 quantization and continuous batching, cutting time-to-first-token (TTFT) by <b>40%</b> on long-context workloads.</div>
-          <div class="links">
-            <a href="https://example.com/report.pdf" class="btn btn-sm z-depth-0" role="button">PDF</a>
-            <a href="https://github.com/huang-zirun" class="btn btn-sm z-depth-0" role="button">Code</a>
-          </div>
         </div>
       </div>
     </li>
@@ -76,6 +78,7 @@ nav_order: 2
 
   <h2 class="bibliography">Projects</h2>
   <ol class="bibliography">
+    <!-- 示例 1：挂有 GitHub 仓库按钮与在线链接的开源项目 -->
     <li>
       <div class="row">
         <div class="col col-sm-2 abbr">
@@ -99,14 +102,14 @@ nav_order: 2
           <div class="periodical"><em>Open-Source Distributed Systems Project</em>, 2025 – 2026</div>
           <div class="periodical">Built a fault-tolerant distributed task scheduler based on Raft consensus and hierarchical timing wheels with work-stealing queues, achieving <b>1.4x</b> throughput over baseline engines (<b>400+ GitHub Stars</b>).</div>
           <div class="links">
-            <a href="https://github.com/huang-zirun" class="btn btn-sm z-depth-0" role="button">Code</a>
+            <a href="https://github.com/huang-zirun/distributed-workflow" class="btn btn-sm z-depth-0" role="button"><i class="fa-brands fa-github"></i> GitHub</a>
             <a href="https://example.com" class="btn btn-sm z-depth-0" role="button">Website</a>
-            <a href="https://example.com/doc.pdf" class="btn btn-sm z-depth-0" role="button">PDF</a>
           </div>
         </div>
       </div>
     </li>
 
+    <!-- 示例 2：不挂任何外部链接/GitHub 仓库的内部或课程系统项目（完全省略 <div class="links"> 即可） -->
     <li>
       <div class="row">
         <div class="col col-sm-2 abbr">
@@ -129,15 +132,11 @@ nav_order: 2
           <div class="author"><em>Zirun Huang</em>, Alex Smith, and Elena Rostova</div>
           <div class="periodical"><em>Systems Engineering Project</em>, 2025</div>
           <div class="periodical">Designed a low-contention slab and page allocator for hybrid DRAM/NVM tiers, improving tail throughput by <b>2.1x</b> under concurrent mixed read-write benchmarks.</div>
-          <div class="links">
-            <a href="https://github.com/huang-zirun" class="btn btn-sm z-depth-0" role="button">Code</a>
-            <a href="https://example.com/report.pdf" class="btn btn-sm z-depth-0" role="button">PDF</a>
-            <a href="https://example.com/slides.pdf" class="btn btn-sm z-depth-0" role="button">Slides</a>
-          </div>
         </div>
       </div>
     </li>
 
+    <!-- 示例 3：仅挂 GitHub 仓库按钮的项目 -->
     <li>
       <div class="row">
         <div class="col col-sm-2 abbr">
@@ -161,8 +160,7 @@ nav_order: 2
           <div class="periodical"><em>Full-Stack Web Application</em>, 2026</div>
           <div class="periodical">Serverless tree-structured bookmark manager with automated metadata extraction, instant fuzzy search, and native GitHub REST API synchronization.</div>
           <div class="links">
-            <a href="https://github.com/huang-zirun" class="btn btn-sm z-depth-0" role="button">Code</a>
-            <a href="https://example.com" class="btn btn-sm z-depth-0" role="button">Website</a>
+            <a href="https://github.com/huang-zirun/huang-zirun.github.io" class="btn btn-sm z-depth-0" role="button"><i class="fa-brands fa-github"></i> GitHub</a>
           </div>
         </div>
       </div>
@@ -193,9 +191,6 @@ nav_order: 2
           <div class="author"><em>Zirun Huang</em>, Teammate A, and Teammate B</div>
           <div class="periodical"><em>ICPC Asia Regional Contest</em>, 2024</div>
           <div class="periodical">Awarded <b>Gold Medal</b></div>
-          <div class="links">
-            <a href="https://example.com" class="btn btn-sm z-depth-0" role="button">Website</a>
-          </div>
         </div>
       </div>
     </li>
@@ -223,9 +218,7 @@ nav_order: 2
           <div class="periodical"><em>Ministry of Education Computer Science Steering Committee</em>, 2025</div>
           <div class="periodical">Awarded <b>National First Prize (Top 2%)</b></div>
           <div class="links">
-            <a href="https://github.com/huang-zirun" class="btn btn-sm z-depth-0" role="button">Code</a>
-            <a href="https://example.com/report.pdf" class="btn btn-sm z-depth-0" role="button">PDF</a>
-            <a href="https://example.com/slides.pdf" class="btn btn-sm z-depth-0" role="button">Slides</a>
+            <a href="https://github.com/huang-zirun" class="btn btn-sm z-depth-0" role="button"><i class="fa-brands fa-github"></i> GitHub</a>
           </div>
         </div>
       </div>

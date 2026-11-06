@@ -88,6 +88,17 @@
           padding-right: 1rem;
           text-align: center;
           white-space: nowrap;
+          gap: 0.35rem;
+
+          img.badge-logo {
+            height: 0.95rem;
+            width: 0.95rem;
+            object-fit: contain;
+            flex-shrink: 0;
+            display: inline-block;
+            vertical-align: middle;
+          }
+
           a {
             color: inherit !important;
 
