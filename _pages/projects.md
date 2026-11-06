@@ -293,6 +293,44 @@ nav_order: 1
           <abbr
             class="badge rounded w-100"
             style="
+              --venue-bg-light: #E0EFFD;
+              --venue-text-light: #2F6AA2;
+              --venue-border-light: #C0DDF6;
+              --venue-bg-dark: #243849;
+              --venue-text-dark: #C8DFF2;
+              --venue-border-dark: #3E607A;
+            "
+          >
+            <div>Feishu AI</div>
+          </abbr>
+        </div>
+        <div class="col-sm-8">
+          <div class="title">
+            <span class="lang-en">2026 Feishu (Lark) AI Campus Challenge</span>
+            <span class="lang-zh">2026 飞书 AI 校园挑战赛</span>
+          </div>
+          <div class="author">
+            <span class="lang-en"><em>Huang Yuchang</em></span>
+            <span class="lang-zh"><em>黄宇场</em></span>
+          </div>
+          <div class="periodical">
+            <span class="lang-en"><em>ByteDance &amp; Feishu (Lark) Campus Recruitment</em>, May 2026</span>
+            <span class="lang-zh"><em>字节跳动 · 飞书（字节跳动校园招聘）主办</em>，2026.05</span>
+          </div>
+          <div class="periodical">
+            <span class="lang-en">Awarded <b>AI Rising Star Certificate</b> and <b>Fast-Track to Final Interview</b> for end-to-end AI application engineering in real-world enterprise collaboration scenarios.</span>
+            <span class="lang-zh">荣获 <b>AI 新星证书</b> 及 <b>字节跳动校招直通终面奖励</b>（立足真实 AI 办公与业务场景，完成从创意构想到可运行 AI 项目落地的全流程实战）。</span>
+          </div>
+        </div>
+      </div>
+    </li>
+
+    <li>
+      <div class="row">
+        <div class="col col-sm-2 abbr">
+          <abbr
+            class="badge rounded w-100"
+            style="
               --venue-bg-light: #FEE4E1;
               --venue-text-light: #9F3236;
               --venue-border-light: #F9C2BE;
