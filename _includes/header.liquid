@@ -18,9 +18,44 @@
       display: none !important;
     }
 
+    /* Ensure navbar container and items stay on a single horizontal row on desktop */
+    @media (min-width: 576px) {
+      #navbar > .container {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+      }
+      #navbar .navbar-brand.social {
+        margin-bottom: 0 !important;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+        flex-shrink: 0;
+      }
+      #navbar #navbarNav {
+        display: flex !important;
+        flex-basis: auto !important;
+        flex-grow: 0 !important;
+        align-items: center !important;
+        margin-left: auto !important;
+      }
+      #navbar .navbar-nav.navbar-menu-list {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        align-items: center !important;
+        margin-left: auto !important;
+        margin-bottom: 0 !important;
+      }
+    }
+
     /* Language toggle button: aligned with dark/light toggle style */
+    .navbar-nav .toggle-container {
+      display: inline-flex;
+      align-items: center;
+    }
     .navbar-nav .toggle-container.lang-toggle-container {
-      display: flex;
+      display: inline-flex;
       align-items: center;
       margin-left: 0.15rem;
     }
@@ -38,6 +73,7 @@
       line-height: 1;
       letter-spacing: 0.01em;
       transition: color 0.15s ease;
+      white-space: nowrap;
     }
     #lang-toggle .lang-opt {
       opacity: 0.42;
