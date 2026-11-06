@@ -32,6 +32,7 @@
 |---|---|---|
 | **个人基本信息** | `_config.yml` | 修改 `first_name`、`last_name`、`description`（一句话介绍）、`scholar.first_name`、`scholar.last_name`（用于论文列表中自动加粗本人） |
 | **主页个人简介** | `_pages/about.md` | 个人介绍段落、研究兴趣方向、导师与毕业院校、个人爱好与外部链接，右侧卡片 `more_info`（办公室与邮箱） |
+| **工程、实习与竞赛** | `_pages/projects.md` | 核心工程实践页面，按「实习经历 / 重点工程与开源 / 竞赛获奖」结构化展示 |
 | **社交学术平台** | `_data/socials.yml` | 填入你的真实账号（邮箱、Google Scholar ID、DBLP、LinkedIn、X、GitHub 等）。不需要的行直接注释或删除 |
 | **论文列表** | `_bibliography/papers.bib` | 标准 BibTeX 格式论文数据。带有 `selected={true}` 的论文会自动展示在首页，所有论文展示在 `/publications/` |
 | **最新动态** | `_news/` | 每一个 `.md` 文件对应一条动态（按日期倒序展示）。包含 `date` 与内联内容 |

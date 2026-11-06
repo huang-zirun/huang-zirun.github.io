@@ -26,8 +26,10 @@ latest_posts:
   limit: 3
 ---
 
-I am [Your Name] ([中文姓名]), a [Ph.D. student / Graduate student / Researcher] in [Department] at [University / Institution], where I am advised by [Professor A] and [Professor B]. Prior to that, I completed my Bachelor's degree in [Major] at [Undergraduate University].
+I am [Your Name] ([中文姓名]), a [Graduate student / Software Engineer / Researcher] in [Department] at [University / Institution]. Prior to that, I completed my Bachelor's degree in [Major] at [Undergraduate University].
 
-My research focuses on [Research Interest 1, e.g. Machine Learning Systems], [Research Interest 2, e.g. Post-training Algorithms], and [Research Interest 3, e.g. Foundational Models]. See my <a href="{{ '/assets/pdf/CV.pdf' | relative_url }}">CV</a>, <a href="{{ '/publications/' | relative_url }}">publications</a> and [Google Scholar](https://scholar.google.com/) for more details.
+My interests center on **[System Architecture / Distributed Systems / High-Performance Computing / ML Systems]** and building reliable, scalable software in practice. I have industry engineering experience from internships at **[Company A / ByteDance]** and **[Company B]**, and actively develop open-source systems.
 
-Besides research, I enjoy [Hobbies / Competitions / Sports]. You can also find me on [GitHub](https://github.com/huang-zirun), [X / Twitter](https://twitter.com/), or reach out directly via email.
+See my **<a href="{{ '/projects/' | relative_url }}">projects & experience</a>**, <a href="{{ '/publications/' | relative_url }}">publications</a>, <a href="{{ '/assets/pdf/CV.pdf' | relative_url }}">CV</a>, and [GitHub](https://github.com/huang-zirun) for more details.
+
+Besides engineering and research, I actively participate in [Competitive Programming / Hackathons / Sports / Hobbies]. Feel free to connect via [LinkedIn](https://linkedin.com/), [GitHub](https://github.com/huang-zirun), or reach out directly by email.
