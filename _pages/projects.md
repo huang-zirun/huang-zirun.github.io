@@ -268,20 +268,20 @@ nav_order: 1
         </div>
         <div class="col-sm-8">
           <div class="title">
-            <span class="lang-en">2nd Alibaba "AI for Good" Innovation Challenge — Project "Sonara: 声生万物"</span>
-            <span class="lang-zh">阿里巴巴第二届“小有可为” AI 向善创新挑战赛（参赛作品：Sonara: 声生万物）</span>
+            <span class="lang-en">The 2nd Alibaba "AI for Good" Innovation Challenge (Project: Sonara)</span>
+            <span class="lang-zh">阿里巴巴第二届“小有可为” AI 向善创新挑战赛（参赛作品：Sonara 声生万物）</span>
           </div>
           <div class="author">
             <span class="lang-en"><em>Huang Yuchang</em> (Team Member)</span>
             <span class="lang-zh"><em>黄宇场</em>（团队成员）</span>
           </div>
           <div class="periodical">
-            <span class="lang-en"><em>Alibaba ATH Business Group, Alibaba Philanthropy &amp; Alibaba Cloud Model Studio (Bailian)</em>, Sep 2026</span>
+            <span class="lang-en"><em>Alibaba Group &amp; Alibaba Philanthropy</em>, Sep 2026</span>
             <span class="lang-zh"><em>阿里巴巴 ATH 事业群、阿里巴巴公益、阿里云百炼联合发起</em>，2026.09</span>
           </div>
           <div class="periodical">
-            <span class="lang-en">Awarded <b>Open Source Contribution Award</b> in the <em>Rural Education: AI Classes in the Mountains</em> track (<b>10 winners nationwide</b> out of 1,111 registered teams and 558 Qwen-based AI submissions).</span>
-            <span class="lang-zh">于「乡村教育：大山里的 AI 课」赛道荣获 <b>开源贡献奖</b>（基于千问大模型构建乡村音乐启蒙与 AI 教育工具，全国 1,111 支报名团队、558 份作品中共评出 <b>10 项</b>）。</span>
+            <span class="lang-en">Awarded <b>Open Source Contribution Award</b> in the Rural Education Track (<b>10 teams nationwide</b> out of 1,111 registered teams)</span>
+            <span class="lang-zh">荣获 <b>开源贡献奖</b>（乡村教育赛道，全国 1,111 支参赛团队中评出 <b>10 项</b>）</span>
           </div>
         </div>
       </div>
@@ -306,7 +306,7 @@ nav_order: 1
         </div>
         <div class="col-sm-8">
           <div class="title">
-            <span class="lang-en">2026 Feishu (Lark) AI Campus Challenge</span>
+            <span class="lang-en">2026 Feishu AI Campus Challenge</span>
             <span class="lang-zh">2026 飞书 AI 校园挑战赛</span>
           </div>
           <div class="author">
@@ -314,12 +314,12 @@ nav_order: 1
             <span class="lang-zh"><em>黄宇场</em></span>
           </div>
           <div class="periodical">
-            <span class="lang-en"><em>ByteDance &amp; Feishu (Lark) Campus Recruitment</em>, May 2026</span>
+            <span class="lang-en"><em>ByteDance (Feishu / Lark)</em>, May 2026</span>
             <span class="lang-zh"><em>字节跳动 · 飞书（字节跳动校园招聘）主办</em>，2026.05</span>
           </div>
           <div class="periodical">
-            <span class="lang-en">Awarded <b>AI Rising Star Certificate</b> and <b>Fast-Track to Final Interview</b> for end-to-end AI application engineering in real-world enterprise collaboration scenarios.</span>
-            <span class="lang-zh">荣获 <b>AI 新星证书</b> 及 <b>字节跳动校招直通终面奖励</b>（立足真实 AI 办公与业务场景，完成从创意构想到可运行 AI 项目落地的全流程实战）。</span>
+            <span class="lang-en">Awarded <b>AI Rising Star Certificate</b> &amp; <b>Final Interview Fast-Track</b></span>
+            <span class="lang-zh">荣获 <b>AI 新星证书</b> 及 <b>直通终面奖励</b></span>
           </div>
         </div>
       </div>
@@ -345,7 +345,7 @@ nav_order: 1
         <div class="col-sm-8">
           <div class="title">
             <span class="lang-en">The 17th Chinese Mathematics Competition (CMC)</span>
-            <span class="lang-zh">第十七届全国大学生数学竞赛（广东赛区）</span>
+            <span class="lang-zh">第十七届全国大学生数学竞赛</span>
           </div>
           <div class="author">
             <span class="lang-en"><em>Huang Yuchang</em></span>
@@ -369,12 +369,12 @@ nav_order: 1
           <abbr
             class="badge rounded w-100"
             style="
-              --venue-bg-light: #E0EFFD;
-              --venue-text-light: #2F6AA2;
-              --venue-border-light: #C0DDF6;
-              --venue-bg-dark: #243849;
-              --venue-text-dark: #C8DFF2;
-              --venue-border-dark: #3E677A;
+              --venue-bg-light: #FFEED4;
+              --venue-text-light: #9E540A;
+              --venue-border-light: #FBD7A2;
+              --venue-bg-dark: #4A321D;
+              --venue-text-dark: #F3D3A3;
+              --venue-border-dark: #7B5430;
             "
           >
             <div>CUMCM 2023</div>
@@ -382,8 +382,8 @@ nav_order: 1
         </div>
         <div class="col-sm-8">
           <div class="title">
-            <span class="lang-en">2023 Contemporary Undergraduate Mathematical Contest in Modeling (CUMCM)</span>
-            <span class="lang-zh">2023 年高教社杯全国大学生数学建模竞赛</span>
+            <span class="lang-en">Contemporary Undergraduate Mathematical Contest in Modeling (CUMCM)</span>
+            <span class="lang-zh">全国大学生数学建模竞赛</span>
           </div>
           <div class="author">
             <span class="lang-en"><em>Huang Yuchang</em> (Team Member)</span>
@@ -394,7 +394,7 @@ nav_order: 1
             <span class="lang-zh"><em>中国工业与应用数学学会（CSIAM）主办</em>，2023.09</span>
           </div>
           <div class="periodical">
-            <span class="lang-en">Awarded <b>Second Prize in Guangdong Division</b></span>
+            <span class="lang-en">Awarded <b>Second Prize in Guangdong Province</b></span>
             <span class="lang-zh">荣获 <b>广东省分赛二等奖</b></span>
           </div>
         </div>
@@ -420,8 +420,8 @@ nav_order: 1
         </div>
         <div class="col-sm-8">
           <div class="title">
-            <span class="lang-en">2023 GE Lean &amp; Green Challenge</span>
-            <span class="lang-zh">2023 GE 精益绿色挑战赛</span>
+            <span class="lang-en">GE Lean &amp; Green Challenge</span>
+            <span class="lang-zh">GE 精益绿色挑战赛</span>
           </div>
           <div class="author">
             <span class="lang-en"><em>Huang Yuchang</em> (Team Member)</span>
@@ -432,8 +432,8 @@ nav_order: 1
             <span class="lang-zh"><em>通用电气（GE）主办</em>，2023.07</span>
           </div>
           <div class="periodical">
-            <span class="lang-en">Awarded <b>National Champion (1st Place Nationwide)</b> for lean manufacturing process optimization and green low-carbon operational design.</span>
-            <span class="lang-zh">荣获 <b>全国冠军（National Champion）</b>（聚焦精益生产流程持续改善与绿色低碳运营方案设计）。</span>
+            <span class="lang-en">Awarded <b>National Champion</b></span>
+            <span class="lang-zh">荣获 <b>全国冠军</b></span>
           </div>
         </div>
       </div>
@@ -458,8 +458,8 @@ nav_order: 1
         </div>
         <div class="col-sm-8">
           <div class="title">
-            <span class="lang-en">2022 Contemporary Undergraduate Mathematical Contest in Modeling (CUMCM)</span>
-            <span class="lang-zh">2022 年高教社杯全国大学生数学建模竞赛</span>
+            <span class="lang-en">Contemporary Undergraduate Mathematical Contest in Modeling (CUMCM)</span>
+            <span class="lang-zh">全国大学生数学建模竞赛</span>
           </div>
           <div class="author">
             <span class="lang-en"><em>Huang Yuchang</em> (Team Member)</span>
@@ -470,7 +470,7 @@ nav_order: 1
             <span class="lang-zh"><em>中国工业与应用数学学会（CSIAM）主办</em>，2022.09</span>
           </div>
           <div class="periodical">
-            <span class="lang-en">Awarded <b>Second Prize in Guangdong Division</b></span>
+            <span class="lang-en">Awarded <b>Second Prize in Guangdong Province</b></span>
             <span class="lang-zh">荣获 <b>广东省分赛二等奖</b></span>
           </div>
         </div>
