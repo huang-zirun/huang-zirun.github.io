@@ -255,6 +255,82 @@ nav_order: 1
           <abbr
             class="badge rounded w-100"
             style="
+              --venue-bg-light: #ECE5FC;
+              --venue-text-light: #5B41A2;
+              --venue-border-light: #D7CAF6;
+              --venue-bg-dark: #332A4D;
+              --venue-text-dark: #DCD3F4;
+              --venue-border-dark: #554679;
+            "
+          >
+            <div>AI for Good</div>
+          </abbr>
+        </div>
+        <div class="col-sm-8">
+          <div class="title">
+            <span class="lang-en">2nd Alibaba "AI for Good" Innovation Challenge — Project "Sonara: 声生万物"</span>
+            <span class="lang-zh">阿里巴巴第二届“小有可为” AI 向善创新挑战赛（参赛作品：Sonara: 声生万物）</span>
+          </div>
+          <div class="author">
+            <span class="lang-en"><em>Zirun Huang</em> (Team Member)</span>
+            <span class="lang-zh"><em>Zirun Huang</em>（团队成员）</span>
+          </div>
+          <div class="periodical">
+            <span class="lang-en"><em>Alibaba ATH Business Group, Alibaba Philanthropy &amp; Alibaba Cloud Model Studio (Bailian)</em>, Sep 2026</span>
+            <span class="lang-zh"><em>阿里巴巴 ATH 事业群、阿里巴巴公益、阿里云百炼联合发起</em>，2026.09</span>
+          </div>
+          <div class="periodical">
+            <span class="lang-en">Awarded <b>Open Source Contribution Award</b> in the <em>Rural Education: AI Classes in the Mountains</em> track (<b>10 winners nationwide</b> out of 1,111 registered teams and 558 Qwen-based AI submissions).</span>
+            <span class="lang-zh">于「乡村教育：大山里的 AI 课」赛道荣获 <b>开源贡献奖</b>（基于千问大模型构建乡村音乐启蒙与 AI 教育工具，全国 1,111 支报名团队、558 份作品中共评出 <b>10 项</b>）。</span>
+          </div>
+        </div>
+      </div>
+    </li>
+
+    <li>
+      <div class="row">
+        <div class="col col-sm-2 abbr">
+          <abbr
+            class="badge rounded w-100"
+            style="
+              --venue-bg-light: #DEF7F0;
+              --venue-text-light: #2C7766;
+              --venue-border-light: #B7EBDD;
+              --venue-bg-dark: #243D37;
+              --venue-text-dark: #C2E4DC;
+              --venue-border-dark: #3D675D;
+            "
+          >
+            <div>GE 2024</div>
+          </abbr>
+        </div>
+        <div class="col-sm-8">
+          <div class="title">
+            <span class="lang-en">2024 GE Lean &amp; Green Challenge</span>
+            <span class="lang-zh">2024 GE 精益绿色挑战赛</span>
+          </div>
+          <div class="author">
+            <span class="lang-en"><em>Zirun Huang</em> (Team Member)</span>
+            <span class="lang-zh"><em>Zirun Huang</em>（团队成员）</span>
+          </div>
+          <div class="periodical">
+            <span class="lang-en"><em>General Electric (GE)</em>, 2024</span>
+            <span class="lang-zh"><em>通用电气（GE）主办</em>，2024</span>
+          </div>
+          <div class="periodical">
+            <span class="lang-en">Awarded <b>National Champion (1st Place Nationwide)</b> for lean manufacturing process optimization and green low-carbon operational design.</span>
+            <span class="lang-zh">荣获 <b>全国冠军（National Champion）</b>（聚焦精益生产流程持续改善与绿色低碳运营方案设计）。</span>
+          </div>
+        </div>
+      </div>
+    </li>
+
+    <li>
+      <div class="row">
+        <div class="col col-sm-2 abbr">
+          <abbr
+            class="badge rounded w-100"
+            style="
               --venue-bg-light: #FEE4E1;
               --venue-text-light: #9F3236;
               --venue-border-light: #F9C2BE;
@@ -263,25 +339,63 @@ nav_order: 1
               --venue-border-dark: #7D3C40;
             "
           >
-            <div>ICPC 2024</div>
+            <div>CMC 2024</div>
           </abbr>
         </div>
         <div class="col-sm-8">
           <div class="title">
-            <span class="lang-en">ACM-ICPC International Collegiate Programming Contest Regional</span>
-            <span class="lang-zh">ACM-ICPC 国际大学生程序设计竞赛区域赛</span>
+            <span class="lang-en">The 16th Chinese Mathematics Competition (CMC)</span>
+            <span class="lang-zh">2024 年第十六届全国大学生数学竞赛（广东赛区）</span>
           </div>
           <div class="author">
-            <span class="lang-en"><em>Zirun Huang</em>, Teammate A, and Teammate B</span>
-            <span class="lang-zh"><em>Zirun Huang</em>，队友 A，队友 B</span>
+            <span class="lang-en"><em>Zirun Huang</em></span>
+            <span class="lang-zh"><em>Zirun Huang</em></span>
           </div>
           <div class="periodical">
-            <span class="lang-en"><em>ICPC Asia Regional Contest</em>, 2024</span>
-            <span class="lang-zh"><em>ICPC 亚洲区域赛</em>，2024</span>
+            <span class="lang-en"><em>Chinese Mathematical Society (CMS)</em>, 2024</span>
+            <span class="lang-zh"><em>中国数学会（CMS）主办</em>，2024</span>
           </div>
           <div class="periodical">
-            <span class="lang-en">Awarded <b>Gold Medal</b></span>
-            <span class="lang-zh">荣获 <b>金奖 (Gold Medal)</b></span>
+            <span class="lang-en">Awarded <b>First Prize in Guangdong Province (Top 5%)</b></span>
+            <span class="lang-zh">荣获 <b>广东省一等奖（Top 5%）</b></span>
+          </div>
+        </div>
+      </div>
+    </li>
+
+    <li>
+      <div class="row">
+        <div class="col col-sm-2 abbr">
+          <abbr
+            class="badge rounded w-100"
+            style="
+              --venue-bg-light: #E0EFFD;
+              --venue-text-light: #2F6AA2;
+              --venue-border-light: #C0DDF6;
+              --venue-bg-dark: #243849;
+              --venue-text-dark: #C8DFF2;
+              --venue-border-dark: #3E677A;
+            "
+          >
+            <div>CUMCM 2023</div>
+          </abbr>
+        </div>
+        <div class="col-sm-8">
+          <div class="title">
+            <span class="lang-en">2023 Contemporary Undergraduate Mathematical Contest in Modeling (CUMCM)</span>
+            <span class="lang-zh">2023 年高教社杯全国大学生数学建模竞赛</span>
+          </div>
+          <div class="author">
+            <span class="lang-en"><em>Zirun Huang</em> (Team Member)</span>
+            <span class="lang-zh"><em>Zirun Huang</em>（团队成员）</span>
+          </div>
+          <div class="periodical">
+            <span class="lang-en"><em>China Society for Industrial and Applied Mathematics (CSIAM)</em>, 2023</span>
+            <span class="lang-zh"><em>中国工业与应用数学学会（CSIAM）主办</em>，2023</span>
+          </div>
+          <div class="periodical">
+            <span class="lang-en">Awarded <b>Second Prize in Guangdong Division</b></span>
+            <span class="lang-zh">荣获 <b>广东省分赛二等奖</b></span>
           </div>
         </div>
       </div>
@@ -301,28 +415,25 @@ nav_order: 1
               --venue-border-dark: #454D7A;
             "
           >
-            <div>OS Comp</div>
+            <div>CUMCM 2022</div>
           </abbr>
         </div>
         <div class="col-sm-8">
           <div class="title">
-            <span class="lang-en">National College Computer System Capability Challenge (OS Kernel Track)</span>
-            <span class="lang-zh">全国大学生计算机系统能力大赛（操作系统内核赛道）</span>
+            <span class="lang-en">2022 Contemporary Undergraduate Mathematical Contest in Modeling (CUMCM)</span>
+            <span class="lang-zh">2022 年高教社杯全国大学生数学建模竞赛</span>
           </div>
           <div class="author">
-            <span class="lang-en"><em>Zirun Huang</em>, Alex Smith, and Elena Rostova</span>
-            <span class="lang-zh"><em>Zirun Huang</em>, Alex Smith, Elena Rostova</span>
+            <span class="lang-en"><em>Zirun Huang</em> (Team Member)</span>
+            <span class="lang-zh"><em>Zirun Huang</em>（团队成员）</span>
           </div>
           <div class="periodical">
-            <span class="lang-en"><em>Ministry of Education Computer Science Steering Committee</em>, 2025</span>
-            <span class="lang-zh"><em>教育部高等学校计算机类专业教学指导委员会</em>，2025</span>
+            <span class="lang-en"><em>China Society for Industrial and Applied Mathematics (CSIAM)</em>, 2022</span>
+            <span class="lang-zh"><em>中国工业与应用数学学会（CSIAM）主办</em>，2022</span>
           </div>
           <div class="periodical">
-            <span class="lang-en">Awarded <b>National First Prize (Top 2%)</b></span>
-            <span class="lang-zh">荣获 <b>全国一等奖（前 2%）</b></span>
-          </div>
-          <div class="links">
-            <a href="https://github.com/huang-zirun" class="btn btn-sm z-depth-0" role="button"><i class="fa-brands fa-github"></i> GitHub</a>
+            <span class="lang-en">Awarded <b>Second Prize in Guangdong Division</b></span>
+            <span class="lang-zh">荣获 <b>广东省分赛二等奖</b></span>
           </div>
         </div>
       </div>
