@@ -1,0 +1,16 @@
+# Co-authors configuration:
+# When an author in papers.bib matches this last name & first name,
+# their name will be rendered as a hyperlink to their personal page.
+# Key = lower-case author last name without accents.
+
+"smith":
+  - firstname: ["Alex", "A."]
+    url: https://example.com/~asmith
+
+"miller":
+  - firstname: ["David", "D."]
+    url: https://example.com/~dmiller
+
+"rostova":
+  - firstname: ["Elena", "E."]
+    url: https://example.com/~erostova

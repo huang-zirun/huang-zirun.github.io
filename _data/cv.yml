@@ -1,0 +1,56 @@
+# =============================================================================
+# 简历页数据（对应 /cv/ 这个页面）
+# 方括号 [ ... ] 全是占位符，换成你自己的；用不上的整块删掉。
+# 这一份是 RenderCV 格式，字段名别改（institution / position / start_date ...），
+# 只改值。sections 下面的键名决定版块顺序和标题。
+# =============================================================================
+cv:
+  name: "[你的姓名]"
+  label: "[一句话身份，例：电子信息工程硕士研究生 @ 天津大学]"
+  email: "[你的邮箱]"
+  location: "[城市，例：天津]"
+  image: ""
+  summary: "[两三句话的自我概括：方向 + 会什么 + 在找什么]"
+
+  social_networks:
+    - network: GitHub
+      username: huang-zirun
+    # - network: LinkedIn
+    #   username: "[你的 linkedin 用户名]"
+
+  sections:
+    Education:
+      - institution: "[学校全称]"
+        location: "[城市]"
+        area: "[专业方向]"
+        studyType: "[硕士 / 学士]"
+        start_date: "[入学年份]"
+        end_date: "[毕业年份]"
+        score: ""
+        highlights:
+          - "[课程 / 毕设 / 论文，一条一行；没有就整个删掉]"
+
+    Experience:
+      - company: "[单位全称]"
+        position: "[岗位]"
+        location: "[城市]"
+        start_date: "[开始，例：2026-01]"
+        end_date: "[结束，例：2026-06；在职就写 Present]"
+        summary: "[一句话说明你在这里做什么]"
+        highlights:
+          - "[可量化的成果 1]"
+          - "[可量化的成果 2]"
+
+    # 下面这些想用再取消注释，格式照上面抄
+    # Skills:
+    #   - label: "[分类，例：编程]"
+    #     skill:
+    #       - "[Python]"
+    #       - "[C]"
+    # Languages:
+    #   - language: "[中文]"
+    #     proficiency: "[母语]"
+    # Projects:
+    #   - name: "[项目名]"
+    #     url: "[链接]"
+    #     summary: "[一句话]"

@@ -1,0 +1,6 @@
+# GitHub 仓库展示数据（/repositories/ 页面已删，这里留空占位）
+# github_users: 想抓取哪些人的仓库
+# github_repos: 想单独展示的仓库，格式 owner/repo
+github_users: []
+github_repos: []
+repo_description_lines_max: 2
