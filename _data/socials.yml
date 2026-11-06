@@ -1,12 +1,12 @@
 # Social links are displayed in this order by jekyll-socials.
 # Customize with your own accounts or comment out any you do not use.
-email: contact@example.edu
+email: huangyuchang@tju.edu.cn
 wechat:
   logo: fa-brands fa-weixin
   title: WeChat QR code
   url: /assets/img/wechat.jpg
-scholar_userid: # your Google Scholar user ID (e.g. viloxoAAAAAJ)
-dblp_url: # your DBLP URL (e.g. https://dblp.org/pid/...)
-linkedin_username: # your LinkedIn username
-x_username: # your X / Twitter handle
+scholar_userid: placeholder # temporarily disabled in frontend JS so clicking does not jump
+dblp_url: "#" # temporarily disabled in frontend JS so clicking does not jump
+linkedin_username: huangyuchang
+x_username: placeholder # temporarily disabled in frontend JS so clicking does not jump
 github_username: huang-zirun

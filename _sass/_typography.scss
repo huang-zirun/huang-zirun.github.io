@@ -18,28 +18,40 @@ html[data-lang="zh"] .lang-en {
 }
 
 .lang-toggle-container {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  margin-left: 0.25rem;
+  margin-left: 0.2rem;
 
   #lang-toggle {
-    background: transparent;
-    border: 1px solid var(--global-divider-color);
-    border-radius: 4px;
+    background: transparent !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
     color: var(--global-text-color);
     cursor: pointer;
     font-family: "Book Antiqua", Palatino, "Palatino Linotype", Georgia, serif;
-    font-size: 0.78rem;
-    font-weight: 700;
+    font-size: 0.9rem;
     line-height: 1;
-    padding: 0.28rem 0.45rem;
-    transition: all 0.15s ease;
+    padding: 0 0.25rem;
+    transition: color 0.15s ease;
 
-    &:hover {
+    &:hover,
+    &:focus,
+    &:active {
+      background: transparent !important;
+      border: none !important;
+      outline: none !important;
+      box-shadow: none !important;
       color: var(--global-theme-color);
-      border-color: var(--global-theme-color);
     }
   }
+}
+
+#navbar #light-toggle i {
+  padding: 0 !important;
+  margin: 0 !important;
+  line-height: 1 !important;
+  vertical-align: middle !important;
 }
 
 p,
