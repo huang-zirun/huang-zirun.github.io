@@ -2,9 +2,10 @@
 layout: page
 permalink: /publications/
 title: Publications
+title_zh: 论文发表
 description:
 nav: true
-nav_order: 1
+nav_order: 2
 ---
 
 <!-- _pages/publications.md -->

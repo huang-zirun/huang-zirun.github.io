@@ -8,6 +8,40 @@ body {
   font-family: Georgia, serif;
 }
 
+/* Language Toggle (EN default / ZH switchable) */
+html:not([data-lang="zh"]) .lang-zh {
+  display: none !important;
+}
+
+html[data-lang="zh"] .lang-en {
+  display: none !important;
+}
+
+.lang-toggle-container {
+  display: flex;
+  align-items: center;
+  margin-left: 0.25rem;
+
+  #lang-toggle {
+    background: transparent;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 4px;
+    color: var(--global-text-color);
+    cursor: pointer;
+    font-family: "Book Antiqua", Palatino, "Palatino Linotype", Georgia, serif;
+    font-size: 0.78rem;
+    font-weight: 700;
+    line-height: 1;
+    padding: 0.28rem 0.45rem;
+    transition: all 0.15s ease;
+
+    &:hover {
+      color: var(--global-theme-color);
+      border-color: var(--global-theme-color);
+    }
+  }
+}
+
 p,
 h1,
 h2,
