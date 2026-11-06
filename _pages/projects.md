@@ -169,4 +169,67 @@ nav_order: 2
     </li>
   </ol>
 
+  <h2 class="bibliography">Competitions</h2>
+  <ol class="bibliography">
+    <li>
+      <div class="row">
+        <div class="col col-sm-2 abbr">
+          <abbr
+            class="badge rounded w-100"
+            style="
+              --venue-bg-light: #FEE4E1;
+              --venue-text-light: #9F3236;
+              --venue-border-light: #F9C2BE;
+              --venue-bg-dark: #4A2628;
+              --venue-text-dark: #F4C4C2;
+              --venue-border-dark: #7D3C40;
+            "
+          >
+            <div>ICPC 2024</div>
+          </abbr>
+        </div>
+        <div class="col-sm-8">
+          <div class="title">ACM-ICPC International Collegiate Programming Contest Regional</div>
+          <div class="author"><em>Zirun Huang</em>, Teammate A, and Teammate B</div>
+          <div class="periodical"><em>ICPC Asia Regional Contest</em>, 2024</div>
+          <div class="periodical">Awarded <b>Gold Medal</b></div>
+          <div class="links">
+            <a href="https://example.com" class="btn btn-sm z-depth-0" role="button">Website</a>
+          </div>
+        </div>
+      </div>
+    </li>
+
+    <li>
+      <div class="row">
+        <div class="col col-sm-2 abbr">
+          <abbr
+            class="badge rounded w-100"
+            style="
+              --venue-bg-light: #E5E8FA;
+              --venue-text-light: #4550A1;
+              --venue-border-light: #C9CEF2;
+              --venue-bg-dark: #292E4C;
+              --venue-text-dark: #D0D4F0;
+              --venue-border-dark: #454D7A;
+            "
+          >
+            <div>OS Comp</div>
+          </abbr>
+        </div>
+        <div class="col-sm-8">
+          <div class="title">National College Computer System Capability Challenge (OS Kernel Track)</div>
+          <div class="author"><em>Zirun Huang</em>, Alex Smith, and Elena Rostova</div>
+          <div class="periodical"><em>Ministry of Education Computer Science Steering Committee</em>, 2025</div>
+          <div class="periodical">Awarded <b>National First Prize (Top 2%)</b></div>
+          <div class="links">
+            <a href="https://github.com/huang-zirun" class="btn btn-sm z-depth-0" role="button">Code</a>
+            <a href="https://example.com/report.pdf" class="btn btn-sm z-depth-0" role="button">PDF</a>
+            <a href="https://example.com/slides.pdf" class="btn btn-sm z-depth-0" role="button">Slides</a>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ol>
+
 </div>
