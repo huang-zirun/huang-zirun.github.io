@@ -26,10 +26,8 @@ latest_posts:
   limit: 3
 ---
 
-I am [Your Name] ([中文姓名]), a [Graduate student / Software Engineer / Researcher] in [Department] at [University / Institution]. Prior to that, I completed my Bachelor's degree in [Major] at [Undergraduate University].
+I am [Your Name] ([中文姓名]), a [Ph.D. student / Graduate student / Software Engineer] in [Department] at [University / Institution], where I am advised by [Professor A] and [Professor B]. Prior to that, I completed my Bachelor's degree in [Major] at [Undergraduate University].
 
-My interests center on **[System Architecture / Distributed Systems / High-Performance Computing / ML Systems]** and building reliable, scalable software in practice. I have industry engineering experience from internships at **[Company A / ByteDance]** and **[Company B]**, and actively develop open-source systems.
+My research and engineering interests focus on [Machine Learning Systems], [Post-training Algorithms], and [Distributed Infrastructure]. See my <a href="{{ '/assets/pdf/CV.pdf' | relative_url }}">CV</a>, <a href="{{ '/publications/' | relative_url }}">publications</a>, <a href="{{ '/projects/' | relative_url }}">projects</a>, and [Google Scholar](https://scholar.google.com/) for more details.
 
-See my **<a href="{{ '/projects/' | relative_url }}">projects & experience</a>**, <a href="{{ '/publications/' | relative_url }}">publications</a>, <a href="{{ '/assets/pdf/CV.pdf' | relative_url }}">CV</a>, and [GitHub](https://github.com/huang-zirun) for more details.
-
-Besides engineering and research, I actively participate in [Competitive Programming / Hackathons / Sports / Hobbies]. Feel free to connect via [LinkedIn](https://linkedin.com/), [GitHub](https://github.com/huang-zirun), or reach out directly by email.
+Besides research and systems building, I used to actively participate in competitive programming and hackathons. You can also find me on [GitHub](https://github.com/huang-zirun), [Codeforces](https://codeforces.com/), and [LinkedIn](https://linkedin.com/).
