@@ -34,7 +34,7 @@ latest_posts:
 ---
 
 <div class="lang-en" markdown="1">
-I am [Your Name] ([中文姓名]), a [Ph.D. student / Graduate student / Software Engineer] in [Department] at [University / Institution], where I am advised by [Professor A] and [Professor B]. Prior to that, I completed my Bachelor's degree in [Major] at [Undergraduate University].
+I am Huang Yuchang (黄宇场), a [Ph.D. student / Graduate student / Software Engineer] in [Department] at [University / Institution], where I am advised by [Professor A] and [Professor B]. Prior to that, I completed my Bachelor's degree in [Major] at [Undergraduate University].
 
 My research and engineering interests focus on [Machine Learning Systems], [Post-training Algorithms], and [Distributed Infrastructure]. See my <a href="{{ '/assets/pdf/CV_en.pdf' | relative_url }}">CV</a>, <a href="{{ '/projects/' | relative_url }}">experience</a>, <a href="{{ '/publications/' | relative_url }}">publications</a>, and [Google Scholar](https://scholar.google.com/) for more details.
 
@@ -42,7 +42,7 @@ Besides research and systems building, I used to actively participate in competi
 </div>
 
 <div class="lang-zh" markdown="1">
-我是 [中文姓名]（Zirun Huang），目前是 [某大学 / 机构] [院系名称] 的 [硕士研究生 / 博士生 / 研发工程师]，师从 [导师 A] 与 [导师 B]。此前，我在 [本科院校] 获得了 [计算机科学与技术] 学士学位。
+我是黄宇场（Huang Yuchang），目前是 [某大学 / 机构] [院系名称] 的 [硕士研究生 / 博士生 / 研发工程师]，师从 [导师 A] 与 [导师 B]。此前，我在 [本科院校] 获得了 [计算机科学与技术] 学士学位。
 
 我的研究与工程方向聚焦于 [机器学习系统]、[大模型后训练算法] 以及 [高性能分布式基础架构]。更多详情可参阅我的 <a href="{{ '/assets/pdf/CV_zh.pdf' | relative_url }}">简历 (CV)</a>、<a href="{{ '/projects/' | relative_url }}">实践经历</a>、<a href="{{ '/publications/' | relative_url }}">论文发表</a> 以及 [Google Scholar](https://scholar.google.com/)。
 

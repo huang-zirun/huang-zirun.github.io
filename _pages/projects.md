@@ -59,8 +59,8 @@ nav_order: 1
             <span class="lang-zh">软件研发实习生 · 基础架构与核心系统</span>
           </div>
           <div class="author">
-            <span class="lang-en"><em>Zirun Huang</em>, mentored by Alex Smith</span>
-            <span class="lang-zh"><em>Zirun Huang</em>，导师：Alex Smith</span>
+            <span class="lang-en"><em>Huang Yuchang</em>, mentored by Alex Smith</span>
+            <span class="lang-zh"><em>黄宇场</em>，导师：Alex Smith</span>
           </div>
           <div class="periodical">
             <span class="lang-en"><em>ByteDance Inc., Beijing, China</em>, Jun 2026 – Sep 2026</span>
@@ -98,8 +98,8 @@ nav_order: 1
             <span class="lang-zh">算法与系统工程实习生 · 大模型推理系统</span>
           </div>
           <div class="author">
-            <span class="lang-en"><em>Zirun Huang</em> and David Miller</span>
-            <span class="lang-zh"><em>Zirun Huang</em>，合作导师：David Miller</span>
+            <span class="lang-en"><em>Huang Yuchang</em> and David Miller</span>
+            <span class="lang-zh"><em>黄宇场</em>，合作导师：David Miller</span>
           </div>
           <div class="periodical">
             <span class="lang-en"><em>Foundational AI Research Lab</em>, Oct 2025 – Mar 2026</span>
@@ -143,8 +143,8 @@ nav_order: 1
             <span class="lang-zh">Distributed-Workflow：高吞吐分布式异步任务编排与调度系统</span>
           </div>
           <div class="author">
-            <span class="lang-en"><em>Zirun Huang</em> (Creator & Lead Maintainer)</span>
-            <span class="lang-zh"><em>Zirun Huang</em>（独立作者 & 核心维护者）</span>
+            <span class="lang-en"><em>Huang Yuchang</em> (Creator & Lead Maintainer)</span>
+            <span class="lang-zh"><em>黄宇场</em>（独立作者 & 核心维护者）</span>
           </div>
           <div class="periodical">
             <span class="lang-en"><em>Open-Source Distributed Systems Project</em>, 2025 – 2026</span>
@@ -186,8 +186,8 @@ nav_order: 1
             <span class="lang-zh">面向异构内存架构的内核级无锁缓存分配器</span>
           </div>
           <div class="author">
-            <span class="lang-en"><em>Zirun Huang</em>, Alex Smith, and Elena Rostova</span>
-            <span class="lang-zh"><em>Zirun Huang</em>, Alex Smith, Elena Rostova</span>
+            <span class="lang-en"><em>Huang Yuchang</em>, Alex Smith, and Elena Rostova</span>
+            <span class="lang-zh"><em>黄宇场</em>, Alex Smith, Elena Rostova</span>
           </div>
           <div class="periodical">
             <span class="lang-en"><em>Systems Engineering Project</em>, 2025</span>
@@ -225,8 +225,8 @@ nav_order: 1
             <span class="lang-zh">Cherry Nav：树状知识索引与个人网址导航中心</span>
           </div>
           <div class="author">
-            <span class="lang-en"><em>Zirun Huang</em></span>
-            <span class="lang-zh"><em>Zirun Huang</em></span>
+            <span class="lang-en"><em>Huang Yuchang</em></span>
+            <span class="lang-zh"><em>黄宇场</em></span>
           </div>
           <div class="periodical">
             <span class="lang-en"><em>Full-Stack Web Application</em>, 2026</span>
@@ -272,8 +272,8 @@ nav_order: 1
             <span class="lang-zh">阿里巴巴第二届“小有可为” AI 向善创新挑战赛（参赛作品：Sonara: 声生万物）</span>
           </div>
           <div class="author">
-            <span class="lang-en"><em>Zirun Huang</em> (Team Member)</span>
-            <span class="lang-zh"><em>Zirun Huang</em>（团队成员）</span>
+            <span class="lang-en"><em>Huang Yuchang</em> (Team Member)</span>
+            <span class="lang-zh"><em>黄宇场</em>（团队成员）</span>
           </div>
           <div class="periodical">
             <span class="lang-en"><em>Alibaba ATH Business Group, Alibaba Philanthropy &amp; Alibaba Cloud Model Studio (Bailian)</em>, Sep 2026</span>
@@ -293,44 +293,6 @@ nav_order: 1
           <abbr
             class="badge rounded w-100"
             style="
-              --venue-bg-light: #DEF7F0;
-              --venue-text-light: #2C7766;
-              --venue-border-light: #B7EBDD;
-              --venue-bg-dark: #243D37;
-              --venue-text-dark: #C2E4DC;
-              --venue-border-dark: #3D675D;
-            "
-          >
-            <div>GE 2024</div>
-          </abbr>
-        </div>
-        <div class="col-sm-8">
-          <div class="title">
-            <span class="lang-en">2024 GE Lean &amp; Green Challenge</span>
-            <span class="lang-zh">2024 GE 精益绿色挑战赛</span>
-          </div>
-          <div class="author">
-            <span class="lang-en"><em>Zirun Huang</em> (Team Member)</span>
-            <span class="lang-zh"><em>Zirun Huang</em>（团队成员）</span>
-          </div>
-          <div class="periodical">
-            <span class="lang-en"><em>General Electric (GE)</em>, 2024</span>
-            <span class="lang-zh"><em>通用电气（GE）主办</em>，2024</span>
-          </div>
-          <div class="periodical">
-            <span class="lang-en">Awarded <b>National Champion (1st Place Nationwide)</b> for lean manufacturing process optimization and green low-carbon operational design.</span>
-            <span class="lang-zh">荣获 <b>全国冠军（National Champion）</b>（聚焦精益生产流程持续改善与绿色低碳运营方案设计）。</span>
-          </div>
-        </div>
-      </div>
-    </li>
-
-    <li>
-      <div class="row">
-        <div class="col col-sm-2 abbr">
-          <abbr
-            class="badge rounded w-100"
-            style="
               --venue-bg-light: #FEE4E1;
               --venue-text-light: #9F3236;
               --venue-border-light: #F9C2BE;
@@ -339,21 +301,21 @@ nav_order: 1
               --venue-border-dark: #7D3C40;
             "
           >
-            <div>CMC 2024</div>
+            <div>CMC 2025</div>
           </abbr>
         </div>
         <div class="col-sm-8">
           <div class="title">
-            <span class="lang-en">The 16th Chinese Mathematics Competition (CMC)</span>
-            <span class="lang-zh">2024 年第十六届全国大学生数学竞赛（广东赛区）</span>
+            <span class="lang-en">The 17th Chinese Mathematics Competition (CMC)</span>
+            <span class="lang-zh">第十七届全国大学生数学竞赛（广东赛区）</span>
           </div>
           <div class="author">
-            <span class="lang-en"><em>Zirun Huang</em></span>
-            <span class="lang-zh"><em>Zirun Huang</em></span>
+            <span class="lang-en"><em>Huang Yuchang</em></span>
+            <span class="lang-zh"><em>黄宇场</em></span>
           </div>
           <div class="periodical">
-            <span class="lang-en"><em>Chinese Mathematical Society (CMS)</em>, 2024</span>
-            <span class="lang-zh"><em>中国数学会（CMS）主办</em>，2024</span>
+            <span class="lang-en"><em>Chinese Mathematical Society (CMS)</em>, Nov 2025</span>
+            <span class="lang-zh"><em>中国数学会（CMS）主办</em>，2025.11</span>
           </div>
           <div class="periodical">
             <span class="lang-en">Awarded <b>First Prize in Guangdong Province (Top 5%)</b></span>
@@ -386,16 +348,54 @@ nav_order: 1
             <span class="lang-zh">2023 年高教社杯全国大学生数学建模竞赛</span>
           </div>
           <div class="author">
-            <span class="lang-en"><em>Zirun Huang</em> (Team Member)</span>
-            <span class="lang-zh"><em>Zirun Huang</em>（团队成员）</span>
+            <span class="lang-en"><em>Huang Yuchang</em> (Team Member)</span>
+            <span class="lang-zh"><em>黄宇场</em>（团队成员）</span>
           </div>
           <div class="periodical">
-            <span class="lang-en"><em>China Society for Industrial and Applied Mathematics (CSIAM)</em>, 2023</span>
-            <span class="lang-zh"><em>中国工业与应用数学学会（CSIAM）主办</em>，2023</span>
+            <span class="lang-en"><em>China Society for Industrial and Applied Mathematics (CSIAM)</em>, Sep 2023</span>
+            <span class="lang-zh"><em>中国工业与应用数学学会（CSIAM）主办</em>，2023.09</span>
           </div>
           <div class="periodical">
             <span class="lang-en">Awarded <b>Second Prize in Guangdong Division</b></span>
             <span class="lang-zh">荣获 <b>广东省分赛二等奖</b></span>
+          </div>
+        </div>
+      </div>
+    </li>
+
+    <li>
+      <div class="row">
+        <div class="col col-sm-2 abbr">
+          <abbr
+            class="badge rounded w-100"
+            style="
+              --venue-bg-light: #DEF7F0;
+              --venue-text-light: #2C7766;
+              --venue-border-light: #B7EBDD;
+              --venue-bg-dark: #243D37;
+              --venue-text-dark: #C2E4DC;
+              --venue-border-dark: #3D675D;
+            "
+          >
+            <div>GE 2023</div>
+          </abbr>
+        </div>
+        <div class="col-sm-8">
+          <div class="title">
+            <span class="lang-en">2023 GE Lean &amp; Green Challenge</span>
+            <span class="lang-zh">2023 GE 精益绿色挑战赛</span>
+          </div>
+          <div class="author">
+            <span class="lang-en"><em>Huang Yuchang</em> (Team Member)</span>
+            <span class="lang-zh"><em>黄宇场</em>（团队成员）</span>
+          </div>
+          <div class="periodical">
+            <span class="lang-en"><em>General Electric (GE)</em>, Jul 2023</span>
+            <span class="lang-zh"><em>通用电气（GE）主办</em>，2023.07</span>
+          </div>
+          <div class="periodical">
+            <span class="lang-en">Awarded <b>National Champion (1st Place Nationwide)</b> for lean manufacturing process optimization and green low-carbon operational design.</span>
+            <span class="lang-zh">荣获 <b>全国冠军（National Champion）</b>（聚焦精益生产流程持续改善与绿色低碳运营方案设计）。</span>
           </div>
         </div>
       </div>
@@ -424,12 +424,12 @@ nav_order: 1
             <span class="lang-zh">2022 年高教社杯全国大学生数学建模竞赛</span>
           </div>
           <div class="author">
-            <span class="lang-en"><em>Zirun Huang</em> (Team Member)</span>
-            <span class="lang-zh"><em>Zirun Huang</em>（团队成员）</span>
+            <span class="lang-en"><em>Huang Yuchang</em> (Team Member)</span>
+            <span class="lang-zh"><em>黄宇场</em>（团队成员）</span>
           </div>
           <div class="periodical">
-            <span class="lang-en"><em>China Society for Industrial and Applied Mathematics (CSIAM)</em>, 2022</span>
-            <span class="lang-zh"><em>中国工业与应用数学学会（CSIAM）主办</em>，2022</span>
+            <span class="lang-en"><em>China Society for Industrial and Applied Mathematics (CSIAM)</em>, Sep 2022</span>
+            <span class="lang-zh"><em>中国工业与应用数学学会（CSIAM）主办</em>，2022.09</span>
           </div>
           <div class="periodical">
             <span class="lang-en">Awarded <b>Second Prize in Guangdong Division</b></span>
