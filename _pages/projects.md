@@ -15,8 +15,14 @@ nav_order: 1
      - 单位 Logo 外置在 <abbr> 胶囊左侧（<img class="abbr-external-logo" src="...">），且完全可选：
        * 如果需要显示 Logo：在 <abbr> 前面加上 <img class="abbr-external-logo" src="..." /> 即可（如示例 1 ByteDance）；
        * 如果不需要显示 Logo：直接不写 <img> 标签即可，胶囊依然严格左对齐、尺寸与下方项目/比赛完全一致（如示例 2 AI Lab）。
-  2. 项目经历 (Projects)：
-     - 底部的 <div class="links">（如 GitHub / Website 按钮）是完全可选的：如果某个项目不需要挂仓库或链接，直接删掉对应的 <div class="links">...</div> 即可。
+  2. 项目经历 (Projects) 6 层结构：
+     - 左侧徽章 (<abbr>)：主要编程语言（如 Python / Go / C++）
+     - 第 1 行 (title)：项目名称
+     - 第 2 行 (author)：作者
+     - 第 3 行 (periodical)：维护起止时间
+     - 第 4 行 (project-tech-stack)：技术栈独立小方框标签（<span class="tech-tag">...</span>）
+     - 第 5 行 (periodical)：摘要式宏观描述（背景、设计思想、方法实现）
+     - 第 6 行 (links，可选)：GitHub 仓库 / Website 按钮（不需要时直接省略 <div class="links">）
   3. 中英双语支持：
      - <span class="lang-en">...</span> 放英文（默认显示），<span class="lang-zh">...</span> 放中文（点击顶栏 ZH/EN 按钮切换）。
 -->
@@ -119,7 +125,6 @@ nav_order: 1
     <span class="lang-zh">项目经历</span>
   </h2>
   <ol class="bibliography">
-    <!-- 示例 1：挂有 GitHub 仓库按钮与在线链接的开源项目 -->
     <li>
       <div class="row">
         <div class="col col-sm-2 abbr">
@@ -134,110 +139,36 @@ nav_order: 1
               --venue-border-dark: #7B5430;
             "
           >
-            <div>Go / Raft</div>
+            <div>Python</div>
           </abbr>
         </div>
         <div class="col-sm-8">
           <div class="title">
-            <span class="lang-en">Distributed-Workflow: High-Throughput Asynchronous Task Orchestrator</span>
-            <span class="lang-zh">Distributed-Workflow：高吞吐分布式异步任务编排与调度系统</span>
-          </div>
-          <div class="author">
-            <span class="lang-en"><em>Huang Yuchang</em> (Creator & Lead Maintainer)</span>
-            <span class="lang-zh"><em>黄宇场</em>（独立作者 & 核心维护者）</span>
-          </div>
-          <div class="periodical">
-            <span class="lang-en"><em>Open-Source Distributed Systems Project</em>, 2025 – 2026</span>
-            <span class="lang-zh"><em>开源分布式系统项目</em>，2025 – 2026</span>
-          </div>
-          <div class="periodical">
-            <span class="lang-en">Built a fault-tolerant distributed task scheduler based on Raft consensus and hierarchical timing wheels with work-stealing queues, achieving <b>1.4x</b> throughput over baseline engines (<b>400+ GitHub Stars</b>).</span>
-            <span class="lang-zh">基于 Raft 共识算法、多层时间轮与工作窃取队列设计的高可用分布式任务调度引擎，吞吐量达主流基线方案的 <b>1.4 倍</b>（累计获 <b>400+ GitHub Stars</b>）。</span>
-          </div>
-          <div class="links">
-            <a href="https://github.com/huang-zirun/distributed-workflow" class="btn btn-sm z-depth-0" role="button"><i class="fa-brands fa-github"></i> GitHub</a>
-            <a href="https://example.com" class="btn btn-sm z-depth-0" role="button">Website</a>
-          </div>
-        </div>
-      </div>
-    </li>
-
-    <!-- 示例 2：不挂任何外部链接/GitHub 仓库的内部或课程系统项目（完全省略 <div class="links"> 即可） -->
-    <li>
-      <div class="row">
-        <div class="col col-sm-2 abbr">
-          <abbr
-            class="badge rounded w-100"
-            style="
-              --venue-bg-light: #ECE5FC;
-              --venue-text-light: #5B41A2;
-              --venue-border-light: #D7CAF6;
-              --venue-bg-dark: #332A4D;
-              --venue-text-dark: #DCD3F4;
-              --venue-border-dark: #554679;
-            "
-          >
-            <div>C++ / Linux</div>
-          </abbr>
-        </div>
-        <div class="col-sm-8">
-          <div class="title">
-            <span class="lang-en">Kernel-Level Lock-Free Cache Allocator for Heterogeneous Memory</span>
-            <span class="lang-zh">面向异构内存架构的内核级无锁缓存分配器</span>
-          </div>
-          <div class="author">
-            <span class="lang-en"><em>Huang Yuchang</em>, Alex Smith, and Elena Rostova</span>
-            <span class="lang-zh"><em>黄宇场</em>, Alex Smith, Elena Rostova</span>
-          </div>
-          <div class="periodical">
-            <span class="lang-en"><em>Systems Engineering Project</em>, 2025</span>
-            <span class="lang-zh"><em>系统工程研发项目</em>，2025</span>
-          </div>
-          <div class="periodical">
-            <span class="lang-en">Designed a low-contention slab and page allocator for hybrid DRAM/NVM tiers, improving tail throughput by <b>2.1x</b> under concurrent mixed read-write benchmarks.</span>
-            <span class="lang-zh">针对混合 DRAM/NVM 存储层级设计低锁竞争的 Slab 与页分配机制，在高并发混合读写基准测试中将尾延迟吞吐提升 <b>2.1 倍</b>。</span>
-          </div>
-        </div>
-      </div>
-    </li>
-
-    <!-- 示例 3：仅挂 GitHub 仓库按钮的项目 -->
-    <li>
-      <div class="row">
-        <div class="col col-sm-2 abbr">
-          <abbr
-            class="badge rounded w-100"
-            style="
-              --venue-bg-light: #DEF7F0;
-              --venue-text-light: #2C7766;
-              --venue-border-light: #B7EBDD;
-              --venue-bg-dark: #243D37;
-              --venue-text-dark: #C2E4DC;
-              --venue-border-dark: #3D675D;
-            "
-          >
-            <div>TypeScript</div>
-          </abbr>
-        </div>
-        <div class="col-sm-8">
-          <div class="title">
-            <span class="lang-en">Cherry Nav: Hierarchical Knowledge & Bookmark Navigation Engine</span>
-            <span class="lang-zh">Cherry Nav：树状知识索引与个人网址导航中心</span>
+            <span class="lang-en">DevFlow Engine: AI-Driven End-to-End Requirement-to-Delivery Pipeline</span>
+            <span class="lang-zh">DevFlow Engine：AI 驱动的研发需求交付全流程引擎</span>
           </div>
           <div class="author">
             <span class="lang-en"><em>Huang Yuchang</em></span>
             <span class="lang-zh"><em>黄宇场</em></span>
           </div>
           <div class="periodical">
-            <span class="lang-en"><em>Full-Stack Web Application</em>, 2026</span>
-            <span class="lang-zh"><em>全栈 Web 应用项目</em>，2026</span>
+            <span class="lang-en"><em>Apr 2026 – May 2026</em></span>
+            <span class="lang-zh"><em>2026.04 – 2026.05</em></span>
+          </div>
+          <div class="project-tech-stack">
+            <span class="tech-tag">LangGraph</span>
+            <span class="tech-tag">Python AST</span>
+            <span class="tech-tag">Tree-sitter</span>
+            <span class="tech-tag">lark-cli WebSocket</span>
+            <span class="tech-tag">JSON Schema</span>
+            <span class="tech-tag">OpenAPI 3.0</span>
           </div>
           <div class="periodical">
-            <span class="lang-en">Serverless tree-structured bookmark manager with automated metadata extraction, instant fuzzy search, and native GitHub REST API synchronization.</span>
-            <span class="lang-zh">无后端树状书签与知识管理工具，支持网页元数据自动解析、毫秒级模糊检索及基于 GitHub REST API 的自动持久化同步。</span>
+            <span class="lang-en">Addressing the gap between natural-language requirements and code delivery as well as the unreliability of unconstrained autonomous agents, this project introduces a <b>"deterministic pipeline skeleton, specialized agent execution, and human-in-the-loop governance"</b> architecture. It decomposes the software delivery lifecycle into a 6-stage state graph (intake, solution design, code generation, testing, code review, and delivery packaging) decoupled via strict versioned JSON contracts. In implementation, it combines incremental syntax-tree semantic indexing with workspace-sandboxed toolchains for context-aware coding, paired with a bounded review-to-code self-repair loop and dual Feishu approval checkpoints for controllable end-to-end delivery.</span>
+            <span class="lang-zh">针对传统软件研发中自然语言需求到代码落地链路割裂、纯自主 Agent 在复杂工程中易失控偏离的问题，提出<b>「确定性流水线为骨架、专职智能体为执行单元、关键节点由人类决策」</b>的架构设计思想。系统通过有向状态图将研发全周期解耦为需求分析、方案设计、代码生成、测试验证、代码评审与交付打包 6 个阶段，并由严格的版本化 JSON 契约约束各阶段输入输出边界；在实现上结合增量代码库语义索引与受限工作区沙盒实现上下文感知的代码生成，同时引入评审阻塞缺陷自动回流修复机制与飞书双检查点审批状态机，完成从群聊需求输入到可交付代码产出的端到端可控闭环。</span>
           </div>
           <div class="links">
-            <a href="https://github.com/huang-zirun/huang-zirun.github.io" class="btn btn-sm z-depth-0" role="button"><i class="fa-brands fa-github"></i> GitHub</a>
+            <a href="https://github.com/huang-zirun/lark-agent" class="btn btn-sm z-depth-0" role="button"><i class="fa-brands fa-github"></i> GitHub</a>
           </div>
         </div>
       </div>

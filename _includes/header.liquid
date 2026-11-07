@@ -187,6 +187,26 @@
         margin-right: 0;
       }
     }
+
+    /* Tech stack tags in individual small boxes */
+    .publications ol.bibliography li .project-tech-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.38rem;
+      margin: 0.3rem 0 0.38rem 0;
+    }
+    .publications ol.bibliography li .project-tech-stack .tech-tag {
+      display: inline-block;
+      font-family: "Book Antiqua", Palatino, "Palatino Linotype", Georgia, serif;
+      font-size: 0.76rem;
+      line-height: 1.25;
+      padding: 0.12rem 0.48rem;
+      border-radius: 3px;
+      border: 1px solid var(--global-divider-color);
+      background-color: rgba(128, 128, 128, 0.06);
+      color: var(--global-text-color);
+      white-space: nowrap;
+    }
   </style>
   <!-- Nav Bar -->
   <nav id="navbar" class="navbar navbar-light navbar-expand-sm {% if site.navbar_fixed %}fixed-top{% else %}sticky-top{% endif %}" role="navigation">
