@@ -13,8 +13,8 @@ nav_order: 1
   使用说明：
   1. 实习经历 (Internships)：
      - 单位 Logo 外置在 <abbr> 胶囊左侧（<img class="abbr-external-logo" src="...">），且完全可选：
-       * 如果需要显示 Logo：在 <abbr> 前面加上 <img class="abbr-external-logo" src="..." /> 即可（如示例 1 ByteDance）；
-       * 如果不需要显示 Logo：直接不写 <img> 标签即可，胶囊依然严格左对齐、尺寸与下方项目/比赛完全一致（如示例 2 AI Lab）。
+       * 如果需要显示 Logo：在 <abbr> 前面加上 <img class="abbr-external-logo" src="..." /> 即可（如 ByteDance）；
+       * 如果不需要显示 Logo：直接不写 <img> 标签即可，胶囊依然严格左对齐、尺寸与下方项目/比赛完全一致。
   2. 项目经历 (Projects) 6 层结构：
      - 左侧徽章 (<abbr>)：主要编程语言（如 Python / Go / C++）
      - 第 1 行 (title)：项目名称
@@ -34,7 +34,6 @@ nav_order: 1
     <span class="lang-zh">实习经历</span>
   </h2>
   <ol class="bibliography">
-    <!-- 示例 1：带外置单位 Logo 的实习经历（先外置 Logo，再标准尺寸胶囊） -->
     <li>
       <div class="row">
         <div class="col col-sm-2 abbr">
@@ -61,59 +60,20 @@ nav_order: 1
         </div>
         <div class="col-sm-8">
           <div class="title">
-            <span class="lang-en">Software Engineering Intern, Infrastructure & Core Systems</span>
-            <span class="lang-zh">软件研发实习生 · 基础架构与核心系统</span>
+            <span class="lang-en">R&amp;D Intern, Feishu (Lark)</span>
+            <span class="lang-zh">研发实习生 · 飞书（Feishu / Lark）</span>
           </div>
           <div class="author">
-            <span class="lang-en"><em>Huang Yuchang</em>, mentored by Alex Smith</span>
-            <span class="lang-zh"><em>黄宇场</em>，导师：Alex Smith</span>
+            <span class="lang-en"><em>Huang Yuchang</em></span>
+            <span class="lang-zh"><em>黄宇场</em></span>
           </div>
           <div class="periodical">
-            <span class="lang-en"><em>ByteDance Inc., Beijing, China</em>, Jun 2026 – Sep 2026</span>
-            <span class="lang-zh"><em>字节跳动 · 中国北京</em>，2026.06 – 2026.09</span>
+            <span class="lang-en"><em>ByteDance Inc.</em>, Jun 2026 – Present</span>
+            <span class="lang-zh"><em>字节跳动（飞书）</em>，2026.06 – 至今</span>
           </div>
           <div class="periodical">
-            <span class="lang-en">Redesigned the high-throughput streaming ingestion pipeline with zero-copy batching, reducing cluster CPU usage by <b>28%</b> and P99 latency from <b>120ms to 45ms</b>.</span>
-            <span class="lang-zh">重构高吞吐流式数据接入流水线，引入零拷贝与批量聚合机制，将集群单机 CPU 开销降低 <b>28%</b>，P99 延迟由 <b>120ms 降至 45ms</b>。</span>
-          </div>
-        </div>
-      </div>
-    </li>
-
-    <!-- 示例 2：不带外置 Logo 的实习经历（Logo 是可选的，不加 <img> 即可，胶囊尺寸与对齐保持完全一致） -->
-    <li>
-      <div class="row">
-        <div class="col col-sm-2 abbr">
-          <abbr
-            class="badge rounded w-100"
-            style="
-              --venue-bg-light: #FEE7DC;
-              --venue-text-light: #9E502E;
-              --venue-border-light: #F8CDB9;
-              --venue-bg-dark: #482D25;
-              --venue-text-dark: #F1CCBB;
-              --venue-border-dark: #77503F;
-            "
-          >
-            <div>AI Lab</div>
-          </abbr>
-        </div>
-        <div class="col-sm-8">
-          <div class="title">
-            <span class="lang-en">Research & Engineering Intern, LLM Inference Systems</span>
-            <span class="lang-zh">算法与系统工程实习生 · 大模型推理系统</span>
-          </div>
-          <div class="author">
-            <span class="lang-en"><em>Huang Yuchang</em> and David Miller</span>
-            <span class="lang-zh"><em>黄宇场</em>，合作导师：David Miller</span>
-          </div>
-          <div class="periodical">
-            <span class="lang-en"><em>Foundational AI Research Lab</em>, Oct 2025 – Mar 2026</span>
-            <span class="lang-zh"><em>前沿人工智能实验室</em>，2025.10 – 2026.03</span>
-          </div>
-          <div class="periodical">
-            <span class="lang-en">Optimized multi-modal LLM serving with AWQ/FP8 quantization and continuous batching, cutting time-to-first-token (TTFT) by <b>40%</b> on long-context workloads.</span>
-            <span class="lang-zh">参与多模态大模型推理服务优化，结合 AWQ/FP8 权重量化与 Continuous Batching，将长上下文场景首字延迟（TTFT）降低 <b>40%</b>。</span>
+            <span class="lang-en">Building and maintaining the team's end-to-end requirement delivery harness, and designing, developing, and iterating on internal AI agents to streamline engineering workflows and automated code delivery.</span>
+            <span class="lang-zh">参与团队内端到端需求交付 Harness 的架构搭建与工程落地，负责团队智能体（AI Agents）的设计、搭建与持续迭代，赋能研发协同与需求交付全流程自动化。</span>
           </div>
         </div>
       </div>
