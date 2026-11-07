@@ -131,6 +131,54 @@ nav_order: 1
           <abbr
             class="badge rounded w-100"
             style="
+              --venue-bg-light: #DEF7F0;
+              --venue-text-light: #2C7766;
+              --venue-border-light: #B7EBDD;
+              --venue-bg-dark: #243D37;
+              --venue-text-dark: #C2E4DC;
+              --venue-border-dark: #3D675D;
+            "
+          >
+            <div>Python</div>
+          </abbr>
+        </div>
+        <div class="col-sm-8">
+          <div class="title">
+            <span class="lang-en">DearAlpha: Intelligent Quantitative Alpha Factor Mining Framework</span>
+            <span class="lang-zh">DearAlpha：面向 WorldQuant Brain 的智能量化 Alpha 因子挖掘框架</span>
+          </div>
+          <div class="author">
+            <span class="lang-en"><em>Huang Yuchang</em></span>
+            <span class="lang-zh"><em>黄宇场</em></span>
+          </div>
+          <div class="periodical">
+            <span class="lang-en"><em>Apr 2026 – Sep 2026</em></span>
+            <span class="lang-zh"><em>2026.04 – 2026.09</em></span>
+          </div>
+          <div class="project-tech-stack">
+            <span class="tech-tag">WorldQuant Brain API</span>
+            <span class="tech-tag">Optuna TPE</span>
+            <span class="tech-tag">Bayesian Optimization</span>
+            <span class="tech-tag">Multi-LLM</span>
+            <span class="tech-tag">Pandas</span>
+          </div>
+          <div class="periodical">
+            <span class="lang-en">To address the massive search space, high simulation overhead of brute-force enumeration, and structural rigidity in quantitative factor discovery, this framework is built around an <b>"AI-driven hypothesis generation, programmatic verification, and human final judgment"</b> architecture. For structural discovery, it uses multi-backend LLMs guided by economic themes (momentum, value, volatility) to synthesize template-free raw alpha expressions; for systematic search and tuning, it combines a 3-stage progressive expansion pipeline (time-series operators, cross-sectional grouping, and trade-event conditioning), two-pass layered pruning (cutting redundant simulations by <b>~50%</b>), and Optuna TPE Bayesian hyperparameter optimization. Coupled with checkpoint resumption and multi-metric quality gates (Sharpe, Fitness, Turnover, and correlation filtering), it delivers an end-to-end automated workflow from factor generation to rate-limited submission.</span>
+            <span class="lang-zh">针对量化因子挖掘中搜索空间庞大、纯模板穷举算力开销高且缺乏新结构探索能力的痛点，提出<b>「AI 直觉生成信号、代码系统枚举验证、人类做最终决策」</b>的混合架构设计思想。框架在信号发现层利用多后端 LLM 围绕动量、价值、波动率等经济学主题生成突破固定模板约束的裸信号表达式；在系统搜索与调优层集成三阶递进展开流水线（一阶时序变换 → 二阶截面分组 → 三阶交易事件过滤）、两阶段分层粗筛剪枝（削减约 <b>50%</b> 无效回测模拟）以及基于 Optuna TPE 的贝叶斯连续参数寻优；底层配套断点续跑状态机与多维质量门控（Sharpe、Fitness、Turnover 与相关性校验），实现从因子假设生成、自动化回测评估到限速提交的全链路闭环。</span>
+          </div>
+          <div class="links">
+            <a href="https://github.com/huang-zirun/DearAlpha" class="btn btn-sm z-depth-0" role="button"><i class="fa-brands fa-github"></i> GitHub</a>
+          </div>
+        </div>
+      </div>
+    </li>
+
+    <li>
+      <div class="row">
+        <div class="col col-sm-2 abbr">
+          <abbr
+            class="badge rounded w-100"
+            style="
               --venue-bg-light: #FFEED4;
               --venue-text-light: #9E540A;
               --venue-border-light: #FBD7A2;
