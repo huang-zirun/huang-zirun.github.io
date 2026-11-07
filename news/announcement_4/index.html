@@ -206,12 +206,13 @@
       var initialLang = document.documentElement.getAttribute("data-lang") || "en";
       syncBilingualLinks(initialLang);
 
-      // Only allow jumping on configured accounts (Email, WeChat QR, LinkedIn); prevent navigation on others
+      // Only allow jumping on configured accounts (Email, WeChat QR, LinkedIn, GitHub); prevent navigation on others
       document.querySelectorAll(".navbar-brand.social a, .contact-icons a").forEach(function (a) {
         var href = (a.getAttribute("href") || "").trim();
         var isConfigured =
           href.indexOf("mailto:") === 0 ||
           href.indexOf("linkedin.com/in/huangyuchang") !== -1 ||
+          href.indexOf("github.com/huang-zirun") !== -1 ||
           href.indexOf("wechat.jpg") !== -1;
         if (!isConfigured) {
           a.setAttribute("href", "javascript:void(0)");
@@ -237,7 +238,7 @@
         window.dispatchEvent(new Event("resize"));
       });
     });
-  </script> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">Announcement_4</h1> <p class="post-meta"> Created on March 10, 2026 </p> <p class="post-tags"> <i class="fa-solid fa-calendar fa-sm"></i> 2026 </p> </header> <article class="post-content"> <div id="markdown-content"> <p><span class="lang-en">Our collaborative work on uncertainty-aware planning was accepted to <b>TMLR 2026</b>!</span><span class="lang-zh">关于不确定性感知规划的合作论文被 <b>TMLR 2026</b> 录用！</span></p> </div> </article> </div> </div> <footer class="sticky-bottom mt-5" role="contentinfo"> <div class="container"> © 2026 Huang Yuchang. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a>. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. Last updated: November 06, 2026. </div> </footer> <script>
+  </script> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">Announcement_4</h1> <p class="post-meta"> Created on March 10, 2026 </p> <p class="post-tags"> <i class="fa-solid fa-calendar fa-sm"></i> 2026 </p> </header> <article class="post-content"> <div id="markdown-content"> <p><span class="lang-en">Our collaborative work on uncertainty-aware planning was accepted to <b>TMLR 2026</b>!</span><span class="lang-zh">关于不确定性感知规划的合作论文被 <b>TMLR 2026</b> 录用！</span></p> </div> </article> </div> </div> <footer class="sticky-bottom mt-5" role="contentinfo"> <div class="container"> © 2026 Huang Yuchang. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a>. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. Last updated: November 07, 2026. </div> </footer> <script>
   window.alFolio = {
     compatBootstrap: false
   };
