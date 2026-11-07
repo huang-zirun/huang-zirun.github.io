@@ -1,59 +1,81 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
   <defs>
-    <!-- Deep Ink-Navy Background Gradient -->
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#141E30" />
-      <stop offset="55%" stop-color="#1B2A42" />
-      <stop offset="100%" stop-color="#243B55" />
-    </linearGradient>
-    <!-- Warm Champagne-Gold Gradient -->
-    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#F6E2A8" />
-      <stop offset="50%" stop-color="#DFB860" />
-      <stop offset="100%" stop-color="#B98A32" />
-    </linearGradient>
-    <!-- Soft Ivory Gradient -->
-    <linearGradient id="ivoryGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#FFFFFF" />
-      <stop offset="100%" stop-color="#E6E1D3" />
-    </linearGradient>
-    <!-- Subtle Inner Border Glow -->
-    <linearGradient id="rimGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#F6E2A8" stop-opacity="0.55" />
-      <stop offset="50%" stop-color="#DFB860" stop-opacity="0.15" />
-      <stop offset="100%" stop-color="#F6E2A8" stop-opacity="0.45" />
+    <!-- Authentic Cinnabar Vermilion Red (朱砂印泥红) -->
+    <linearGradient id="sealRed" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#BA241B" />
+      <stop offset="100%" stop-color="#9A1811" />
     </linearGradient>
   </defs>
 
-  <!-- Squircle Base -->
-  <rect x="8" y="8" width="240" height="240" rx="56" ry="56" fill="url(#bgGrad)" />
-  <rect x="13" y="13" width="230" height="230" rx="51" ry="51" fill="none" stroke="url(#rimGrad)" stroke-width="2.2" />
+  <!-- Outer Carved Stone Seal Body -->
+  <rect x="10" y="10" width="236" height="236" rx="22" ry="22" fill="url(#sealRed)" />
 
-  <!-- Subtle AI / Science Geometric Constellation Accent -->
-  <g stroke="url(#goldGrad)" stroke-width="1.4" stroke-opacity="0.42" fill="none">
-    <line x1="128" y1="74" x2="102" y2="112" />
-    <line x1="128" y1="74" x2="154" y2="112" />
-    <line x1="102" y1="112" x2="154" y2="112" />
+  <!-- Inner Seal Frame & 2x2 Four-Grid (四宫格界格) -->
+  <rect x="24" y="24" width="208" height="208" rx="10" ry="10" fill="none" stroke="#FAF6EE" stroke-width="6.5" />
+  <line x1="128" y1="24" x2="128" y2="232" stroke="#FAF6EE" stroke-width="5.2" />
+  <line x1="24" y1="128" x2="232" y2="128" stroke="#FAF6EE" stroke-width="5.2" />
+
+  <!-- Traditional Chinese Seal Reading Order (Right-to-Left, Top-to-Bottom):
+       Top-Right: 黃 (黄) | Top-Left: 場 (场)
+       Bottom-Right: 宇   | Bottom-Left: 印
+  -->
+  <g fill="none" stroke="#FAF6EE" stroke-width="7.8" stroke-linecap="round" stroke-linejoin="round">
+
+    <!-- [1] Top-Right Grid (128..232, 24..128): 小篆「黃」 -->
+    <g>
+      <!-- Upper 廿 / 艹 structure -->
+      <path d="M148 45 H212" />
+      <path d="M165 36 V54 C165 57, 195 57, 195 54 V36" />
+      <!-- Middle wide horizontal bar -->
+      <path d="M142 65 H218" />
+      <!-- Central rounded 田 chamber -->
+      <rect x="152" y="75" width="56" height="26" rx="8" />
+      <line x1="180" y1="56" x2="180" y2="101" />
+      <line x1="152" y1="88" x2="208" y2="88" />
+      <!-- Lower legs (八) -->
+      <path d="M167 109 C161 114, 154 117, 147 119" />
+      <path d="M193 109 C199 114, 206 117, 213 119" />
+    </g>
+
+    <!-- [2] Bottom-Right Grid (128..232, 128..232): 小篆「宇」 -->
+    <g>
+      <!-- 宀 (Xiaozhuan dome roof) -->
+      <path d="M180 140 V151" />
+      <path d="M146 174 C147 156, 154 151, 180 151 C206 151, 213 156, 214 174" />
+      <!-- 于 (Two horizontal bars + curved vertical stem) -->
+      <path d="M159 169 H201" />
+      <path d="M148 189 H212" />
+      <path d="M180 169 V208 C180 216, 174 220, 162 221" />
+    </g>
+
+    <!-- [3] Top-Left Grid (24..128, 24..128): 小篆「場」 -->
+    <g>
+      <!-- Left 土 radical -->
+      <path d="M38 64 H64" />
+      <path d="M51 42 V94" />
+      <path d="M38 98 L65 89" />
+      <!-- Right 昜 structure: upper rounded 日 -->
+      <rect x="74" y="40" width="36" height="26" rx="8" />
+      <line x1="74" y1="53" x2="110" y2="53" />
+      <!-- Middle horizontal bar -->
+      <path d="M68 77 H116" />
+      <!-- Lower 勿 with 3 sweeping Xiaozhuan strokes -->
+      <path d="M84 77 C79 88, 72 96, 64 102" />
+      <path d="M81 86 H111 C112 103, 108 115, 100 119" />
+      <path d="M90 86 C85 98, 77 107, 68 113" />
+      <path d="M101 86 C96 100, 88 111, 79 118" />
+    </g>
+
+    <!-- [4] Bottom-Left Grid (24..128, 128..232): 小篆「印」 -->
+    <g>
+      <!-- Left component of 印 -->
+      <path d="M74 143 C64 147, 54 150, 46 152 V203" />
+      <path d="M46 173 H70" />
+      <path d="M44 203 L73 198" />
+      <!-- Right 卩 component of 印 -->
+      <path d="M84 150 V218" />
+      <path d="M84 153 H110 C111 178, 110 198, 104 203 C100 206, 96 205, 93 203" />
+    </g>
+
   </g>
-  <circle cx="128" cy="74" r="3.5" fill="url(#goldGrad)" />
-  <circle cx="102" cy="112" r="2.6" fill="#F6E2A8" opacity="0.75" />
-  <circle cx="154" cy="112" r="2.6" fill="#F6E2A8" opacity="0.75" />
-
-  <!-- Serif "H" Pillars & Crossbar -->
-  <!-- Left Pillar of H -->
-  <path d="M54 68 H86 V74 H76 V182 H86 V188 H54 V182 H64 V74 H54 Z" fill="url(#ivoryGrad)" />
-  <!-- Right Pillar of H -->
-  <path d="M170 68 H202 V74 H192 V182 H202 V188 H170 V182 H180 V74 H170 Z" fill="url(#ivoryGrad)" />
-  <!-- H Crossbar (split cleanly around the central Y stem) -->
-  <rect x="76" y="123" width="38" height="8" fill="url(#ivoryGrad)" />
-  <rect x="142" y="123" width="38" height="8" fill="url(#ivoryGrad)" />
-
-  <!-- Intertwined Serif "Y" in Champagne Gold -->
-  <!-- Y Upper-Left & Upper-Right Arms + Central Stem -->
-  <path d="
-    M82 68 H112 V74 H103 L128 118 L153 74 H144 V68 H174 V74 H165 L134 128 V188 H146 V194 H110 V188 H122 V128 L91 74 H82 Z
-  " fill="url(#goldGrad)" />
-
-  <!-- Four-Point AI Spark Star at Top Right -->
-  <path d="M196 46 Q196 56 206 56 Q196 56 196 66 Q196 56 186 56 Q196 56 196 46 Z" fill="url(#goldGrad)" opacity="0.9" />
 </svg>
