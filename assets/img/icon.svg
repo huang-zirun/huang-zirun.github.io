@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <defs>
+    <!-- Deep Ink-Navy Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#141E30" />
+      <stop offset="55%" stop-color="#1B2A42" />
+      <stop offset="100%" stop-color="#243B55" />
+    </linearGradient>
+    <!-- Warm Champagne-Gold Gradient -->
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F6E2A8" />
+      <stop offset="50%" stop-color="#DFB860" />
+      <stop offset="100%" stop-color="#B98A32" />
+    </linearGradient>
+    <!-- Soft Ivory Gradient -->
+    <linearGradient id="ivoryGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#E6E1D3" />
+    </linearGradient>
+    <!-- Subtle Inner Border Glow -->
+    <linearGradient id="rimGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F6E2A8" stop-opacity="0.55" />
+      <stop offset="50%" stop-color="#DFB860" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#F6E2A8" stop-opacity="0.45" />
+    </linearGradient>
+  </defs>
+
+  <!-- Squircle Base -->
+  <rect x="8" y="8" width="240" height="240" rx="56" ry="56" fill="url(#bgGrad)" />
+  <rect x="13" y="13" width="230" height="230" rx="51" ry="51" fill="none" stroke="url(#rimGrad)" stroke-width="2.2" />
+
+  <!-- Subtle AI / Science Geometric Constellation Accent -->
+  <g stroke="url(#goldGrad)" stroke-width="1.4" stroke-opacity="0.42" fill="none">
+    <line x1="128" y1="74" x2="102" y2="112" />
+    <line x1="128" y1="74" x2="154" y2="112" />
+    <line x1="102" y1="112" x2="154" y2="112" />
+  </g>
+  <circle cx="128" cy="74" r="3.5" fill="url(#goldGrad)" />
+  <circle cx="102" cy="112" r="2.6" fill="#F6E2A8" opacity="0.75" />
+  <circle cx="154" cy="112" r="2.6" fill="#F6E2A8" opacity="0.75" />
+
+  <!-- Serif "H" Pillars & Crossbar -->
+  <!-- Left Pillar of H -->
+  <path d="M54 68 H86 V74 H76 V182 H86 V188 H54 V182 H64 V74 H54 Z" fill="url(#ivoryGrad)" />
+  <!-- Right Pillar of H -->
+  <path d="M170 68 H202 V74 H192 V182 H202 V188 H170 V182 H180 V74 H170 Z" fill="url(#ivoryGrad)" />
+  <!-- H Crossbar (split cleanly around the central Y stem) -->
+  <rect x="76" y="123" width="38" height="8" fill="url(#ivoryGrad)" />
+  <rect x="142" y="123" width="38" height="8" fill="url(#ivoryGrad)" />
+
+  <!-- Intertwined Serif "Y" in Champagne Gold -->
+  <!-- Y Upper-Left & Upper-Right Arms + Central Stem -->
+  <path d="
+    M82 68 H112 V74 H103 L128 118 L153 74 H144 V68 H174 V74 H165 L134 128 V188 H146 V194 H110 V188 H122 V128 L91 74 H82 Z
+  " fill="url(#goldGrad)" />
+
+  <!-- Four-Point AI Spark Star at Top Right -->
+  <path d="M196 46 Q196 56 206 56 Q196 56 196 66 Q196 56 186 56 Q196 56 196 46 Z" fill="url(#goldGrad)" opacity="0.9" />
+</svg>
