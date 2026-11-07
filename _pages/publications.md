@@ -10,8 +10,10 @@ nav_order: 2
 
 <!-- _pages/publications.md -->
 
-{% include bib_search.liquid %}
-
 <div class="publications">
+  <p class="text-muted" style="margin-top: 1rem;">
+    <span class="lang-en">No publications yet — stay tuned.</span>
+    <span class="lang-zh">暂无已发表论文，敬请期待。</span>
+  </p>
   {% bibliography %}
 </div>

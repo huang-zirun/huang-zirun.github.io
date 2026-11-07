@@ -19,7 +19,7 @@ profile:
       <p>huangyuchang [at] tju.edu.cn</p>
     </div>
 
-selected_papers: true # includes a list of papers marked as "selected={true}"
+selected_papers: false # includes a list of papers marked as "selected={true}"
 social: false # social links are already displayed in the navbar
 
 announcements:

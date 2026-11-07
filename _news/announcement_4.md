@@ -1,7 +1,7 @@
 ---
 layout: post
-date: 2026-03-10 14:00:00
+date: 2026-07-15 09:00:00
 inline: true
 ---
 
-<span class="lang-en">Our collaborative work on uncertainty-aware planning was accepted to <b>TMLR 2026</b>!</span><span class="lang-zh">关于不确定性感知规划的合作论文被 <b>TMLR 2026</b> 录用！</span>
+<span class="lang-en">Participated in the <b>2026 Xiaomi Hackathon</b> (University Track).</span><span class="lang-zh">参加 <b>2026 小米集团黑客马拉松</b>（高校赛区）。</span>
