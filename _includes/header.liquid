@@ -207,6 +207,34 @@
       color: var(--global-text-color);
       white-space: nowrap;
     }
+
+    /* Compact profile photo on About page to balance with left bio text */
+    @media (min-width: 576px) {
+      .post .profile {
+        width: 21% !important;
+        max-width: 162px !important;
+        margin-left: 1.5rem !important;
+        margin-bottom: 0.5rem !important;
+      }
+    }
+    .post .profile figure,
+    .post .profile picture {
+      margin-bottom: 0.45rem !important;
+    }
+    .post .profile img {
+      width: 100% !important;
+      aspect-ratio: 3 / 4 !important;
+      object-fit: cover !important;
+      object-position: center 6% !important;
+    }
+    .post .profile .more-info {
+      font-size: 0.85rem !important;
+      line-height: 1.45 !important;
+      margin-top: 0.35rem !important;
+    }
+    .post .profile .more-info p {
+      margin-bottom: 0.15rem !important;
+    }
   </style>
   <!-- Nav Bar -->
   <nav id="navbar" class="navbar navbar-light navbar-expand-sm {% if site.navbar_fixed %}fixed-top{% else %}sticky-top{% endif %}" role="navigation">
