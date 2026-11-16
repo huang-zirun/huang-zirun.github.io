@@ -1,6 +1,7 @@
 ---
 layout: about
 title: About
+title_zh: 关于我
 permalink: /
 
 profile:
