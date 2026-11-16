@@ -10,12 +10,12 @@ profile:
   image_circular: false # crops the image to make it circular
   more_info: >
     <div class="lang-en">
-      <p>International Joint Institute, Fuzhou</p>
       <p>Tianjin University</p>
+      <p>M.Eng. in Electronic Information</p>
       <p>huangyuchang [at] tju.edu.cn</p>
     </div>
     <div class="lang-zh">
-      <p>天津大学福州国际联合学院</p>
+      <p>天津大学</p>
       <p>电子信息 · 硕士研究生</p>
       <p>huangyuchang [at] tju.edu.cn</p>
     </div>
@@ -35,7 +35,7 @@ latest_posts:
 ---
 
 <div class="lang-en" markdown="1">
-I am Huang Yuchang (黄宇场), an M.Eng. student in Electronic Information at the [International Joint Institute of Tianjin University, Fuzhou](https://fz.tju.edu.cn/) (enrolled in Sep 2025). Currently, I am an R&D Intern at **ByteDance (Feishu / Lark)**, where I participate in building the team's end-to-end requirement delivery harness and developing internal AI agents.
+I am Huang Yuchang (黄宇场), an M.Eng. student in Electronic Information at **Tianjin University** (enrolled in Sep 2025). Currently, I am an R&D Intern at **ByteDance (Feishu / Lark)**, where I participate in building the team's end-to-end requirement delivery harness and developing internal AI agents.
 
 My research and engineering interests focus on **AI for Software Engineering (AI4SE)** and **AI for Science (AI4Science)**. Specifically, I explore combining deterministic engineering workflows with bounded multi-agent autonomy for automated software delivery, alongside data-driven scientific and quantitative modeling. See my <a href="{{ '/assets/pdf/CV_en.pdf' | relative_url }}">CV</a> and <a href="{{ '/projects/' | relative_url }}">experience</a> for more details.
 
@@ -43,7 +43,7 @@ Beyond daily research and engineering, I actively participate in AI hackathons, 
 </div>
 
 <div class="lang-zh" markdown="1">
-我是黄宇场（Huang Yuchang），目前是[天津大学福州国际联合学院](https://fz.tju.edu.cn/)电子信息专业的硕士研究生（2025 年 9 月入学）。目前，我在**字节跳动（飞书）**开启日常实习，主要参与团队内端到端需求交付 Harness 的搭建，以及团队智能体的搭建与持续迭代。
+我是黄宇场（Huang Yuchang），目前是**天津大学**电子信息专业的硕士研究生（2025 年 9 月入学）。目前，我在**字节跳动（飞书）**开启日常实习，主要参与团队内端到端需求交付 Harness 的搭建，以及团队智能体的搭建与持续迭代。
 
 我的研究与工程方向聚焦于 **AI for Software Engineering（AI4SE）** 与 **AI for Science（AI4Science）**，致力于探索「确定性工程流水线与受控多智能体自治」在软件工程全链路中的落地范式，以及数据驱动的科学计算与智能建模方法。更多详情可参阅我的 <a href="{{ '/assets/pdf/CV_zh.pdf' | relative_url }}">简历 (CV)</a> 与 <a href="{{ '/projects/' | relative_url }}">实践经历</a>。
 
