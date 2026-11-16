@@ -194,6 +194,44 @@ nav_order: 1
           <abbr
             class="badge rounded w-100"
             style="
+              --venue-bg-light: #DEF7F0;
+              --venue-text-light: #2C7766;
+              --venue-border-light: #B7EBDD;
+              --venue-bg-dark: #243D37;
+              --venue-text-dark: #C2E4DC;
+              --venue-border-dark: #3D675D;
+            "
+          >
+            <div>RUC AI</div>
+          </abbr>
+        </div>
+        <div class="col-sm-8">
+          <div class="title">
+            <span class="lang-en">2026 Global AI Innovation, Governance, and Safety Competition (Project: Maestro AI)</span>
+            <span class="lang-zh">2026 全球人工智能创新·治理·安全大赛（参赛作品：妙手 Maestro AI）</span>
+          </div>
+          <div class="author">
+            <span class="lang-en"><em>Huang Yuchang</em> (Team Member)</span>
+            <span class="lang-zh"><em>黄宇场</em>（团队成员）</span>
+          </div>
+          <div class="periodical">
+            <span class="lang-en"><em>Gaoling School of Artificial Intelligence, Renmin University of China</em>, Nov 2026</span>
+            <span class="lang-zh"><em>中国人民大学高瓴人工智能学院主办</em>，2026.11</span>
+          </div>
+          <div class="periodical">
+            <span class="lang-en">Awarded <b>Second Prize</b> in the AI Agent Application Track (<b>10 track finalists</b> / <b>30 finalists</b> out of 118 teams worldwide)</span>
+            <span class="lang-zh">荣获 <b>二等奖</b>（AI 智能体应用赛道，全球 118 支参赛队伍中 <b>30 支晋级决赛</b>）</span>
+          </div>
+        </div>
+      </div>
+    </li>
+
+    <li>
+      <div class="row">
+        <div class="col col-sm-2 abbr">
+          <abbr
+            class="badge rounded w-100"
+            style="
               --venue-bg-light: #ECE5FC;
               --venue-text-light: #5B41A2;
               --venue-border-light: #D7CAF6;
