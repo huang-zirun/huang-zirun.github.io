@@ -1,0 +1,107 @@
+\documentclass[10pt,letterpaper]{article}
+
+\usepackage[UTF8,fontset=macnew,linespread=1.02]{ctex}
+\usepackage[T1]{fontenc}
+\usepackage[top=0.52in,bottom=0.52in,left=0.7in,right=0.7in]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+
+% Section formatting matching classic academic CV layout
+\titleformat{\section}
+  {\large\bfseries\raggedright}
+  {}{0em}
+  {}
+  [\titlerule]
+\titlespacing*{\section}{0pt}{6.5pt}{3.5pt}
+
+% Compact bullet list matching 10pt hanging indent
+\setlist[itemize]{
+  leftmargin=10pt,
+  label=\textbullet,
+  itemsep=2pt,
+  parsep=0.5pt,
+  topsep=1pt
+}
+
+\begin{document}
+
+% ==================== HEADER ====================
+\begin{center}
+  {\Huge\bfseries 黄宇场} \\[5pt]
+  \texttt{huangyuchang@tju.edu.cn}
+  \textbf{~$\cdot$~}
+  \texttt{huang-zirun.github.io}
+  \textbf{~$\cdot$~}
+  \texttt{github.com/huang-zirun} \\[2pt]
+  天津大学福州国际联合学院 \textbf{~$\cdot$~} 电子信息硕士研究生 \textbf{~$\cdot$~} 更新时间：2026 年 11 月 16 日
+\end{center}
+
+\vspace{-4pt}
+
+% ==================== EDUCATION ====================
+\section{教育背景}
+
+\textbf{天津大学（天津大学福州国际联合学院）} \hfill 2025.09 -- 至今 \\
+电子信息专业 $\cdot$ 工学硕士研究生 \\
+研究与工程方向：AI for Software Engineering (AI4SE)、AI for Science (AI4Science)
+
+% ==================== PROFESSIONAL EXPERIENCE ====================
+\section{实习经历}
+
+\begin{itemize}
+  \item \textbf{字节跳动 $\cdot$ 飞书（ByteDance, Feishu / Lark）} \hfill 2026.06 -- 至今 \\
+  研发实习生。参与团队内端到端需求交付 Harness 的架构搭建与工程落地，负责团队智能体（AI Agents）的设计、搭建与持续迭代，赋能研发协同与需求交付全流程自动化。
+\end{itemize}
+
+% ==================== PROJECTS ====================
+\section{项目经历}
+
+\begin{itemize}
+  \item \textbf{DearAlpha：面向 WorldQuant Brain 的智能量化 Alpha 因子挖掘框架} \hfill 2026.04 -- 2026.09 \\
+  \emph{技术栈：Python, WorldQuant Brain API, Optuna TPE, Bayesian Optimization, Multi-LLM, Pandas} \\
+  针对量化因子挖掘中搜索空间庞大、纯模板穷举算力开销高且缺乏新结构探索能力的痛点，提出\textbf{「AI 直觉生成信号、代码系统枚举验证、人类做最终决策」}的混合架构设计思想（\texttt{huang-zirun/DearAlpha}）。在信号发现层利用多后端 LLM 围绕动量、价值、波动率等经济学主题生成突破固定模板约束的裸信号表达式；在系统搜索与调优层集成三阶递进展开流水线（时序变换 $\rightarrow$ 截面分组 $\rightarrow$ 交易事件过滤）、两阶段分层粗筛剪枝（削减约 \textbf{50\%} 无效回测模拟）及基于 Optuna TPE 的贝叶斯连续参数寻优，配套断点续跑状态机与多维质量门控（Sharpe、Fitness、Turnover 与相关性校验）。
+
+  \item \textbf{DevFlow Engine：AI 驱动的研发需求交付全流程引擎} \hfill 2026.04 -- 2026.05 \\
+  \emph{技术栈：Python, LangGraph, Python AST, Tree-sitter, lark-cli WebSocket, JSON Schema, OpenAPI 3.0} \\
+  针对传统软件研发中自然语言需求到代码落地链路割裂、纯自主 Agent 在复杂工程中易失控偏离的问题，提出\textbf{「确定性流水线为骨架、专职智能体为执行单元、关键节点由人类决策」}的架构设计思想（\texttt{huang-zirun/lark-agent}）。通过有向状态图将研发全周期解耦为需求分析、方案设计、代码生成、测试验证、代码评审与交付打包 6 个阶段，由严格的版本化 JSON 契约约束各阶段输入输出边界；结合增量代码库语义索引与受限工作区沙盒实现上下文感知的代码生成，并引入评审阻塞缺陷自动回流修复机制与飞书双检查点审批状态机。
+\end{itemize}
+
+% ==================== COMPETITIONS AND AWARDS ====================
+\section{竞赛获奖}
+
+\begin{itemize}
+  \item \textbf{2026 全球人工智能创新$\cdot$治理$\cdot$安全大赛，二等奖} \hfill 2026.11 \\
+  AI 智能体应用赛道（作品：\textbf{妙手 Maestro AI}；全球 118 支队伍中 \textbf{30 支晋级决赛}），中国人民大学主办（团队成员）
+
+  \item \textbf{阿里巴巴第二届「小有可为」AI 向善创新挑战赛，开源贡献奖} \hfill 2026.09 \\
+  乡村教育赛道（作品：\textbf{Sonara 声生万物}；全国 1,111 支团队中评出 \textbf{10 项}），阿里巴巴集团联合发起（团队成员）
+
+  \item \textbf{2026 飞书 AI 校园挑战赛，AI 新星证书及直通终面奖励} \hfill 2026.05 \\
+  参赛课题：「基于 AI 驱动的需求交付流程引擎」，字节跳动 $\cdot$ 飞书（字节跳动校园招聘）主办
+
+  \item \textbf{第十七届全国大学生数学竞赛（CMC），广东省一等奖（Top 5\%）} \hfill 2025.11 \\
+  中国数学会（CMS）主办
+
+  \item \textbf{全国大学生数学建模竞赛（CUMCM），广东省分赛二等奖} \hfill 2023.09 \\
+  中国工业与应用数学学会（CSIAM）主办（团队成员）
+
+  \item \textbf{GE 精益绿色挑战赛，全国冠军} \hfill 2023.07 \\
+  通用电气（GE）主办（团队成员）
+
+  \item \textbf{全国大学生数学建模竞赛（CUMCM），广东省分赛二等奖} \hfill 2022.09 \\
+  中国工业与应用数学学会（CSIAM）主办（团队成员）
+\end{itemize}
+
+% ==================== TECHNICAL SKILLS ====================
+\section{专业技能}
+
+\begin{itemize}
+  \item \textbf{智能体与软件工程（AI4SE）}：Python、LangGraph、多智能体与端到端交付 Harness 架构设计、AST / Tree-sitter 代码语义索引、JSON Schema 契约驱动开发、OpenAPI 3.0、飞书开放平台（\texttt{lark-cli}）
+  \item \textbf{科学计算与智能建模（AI4Science）}：多后端大模型协同编排、Optuna TPE 贝叶斯超参数优化、量化 Alpha 因子挖掘、Pandas、数学建模与优化算法
+\end{itemize}
+
+\end{document}
