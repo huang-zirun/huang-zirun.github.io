@@ -164,8 +164,8 @@ nav_order: 1
         </div>
         <div class="col-sm-8">
           <div class="title">
-            <span class="lang-en">DearAlpha: Intelligent Quantitative Alpha Factor Mining Framework</span>
-            <span class="lang-zh">DearAlpha：面向 WorldQuant Brain 的智能量化 Alpha 因子挖掘框架</span>
+            <span class="lang-en">DearAlpha: Quantitative Alpha Factor Mining Framework for WorldQuant Brain</span>
+            <span class="lang-zh">DearAlpha：面向 WorldQuant Brain 的量化 Alpha 因子挖掘框架</span>
           </div>
           <div class="author">
             <span class="lang-en"><em>Huang Yuchang</em></span>
@@ -176,15 +176,14 @@ nav_order: 1
             <span class="lang-zh"><em>2026.04 – 2026.09</em></span>
           </div>
           <div class="project-tech-stack">
+            <span class="tech-tag">Python</span>
             <span class="tech-tag">WorldQuant Brain API</span>
             <span class="tech-tag">Optuna TPE</span>
-            <span class="tech-tag">Bayesian Optimization</span>
             <span class="tech-tag">Multi-LLM</span>
-            <span class="tech-tag">Pandas</span>
           </div>
           <div class="periodical">
-            <span class="lang-en">To address the massive search space, high simulation overhead of brute-force enumeration, and structural rigidity in quantitative factor discovery, this framework is built around an <b>"AI-driven hypothesis generation, programmatic verification, and human final judgment"</b> architecture. For structural discovery, it uses multi-backend LLMs guided by economic themes (momentum, value, volatility) to synthesize template-free raw alpha expressions; for systematic search and tuning, it combines a 3-stage progressive expansion pipeline (time-series operators, cross-sectional grouping, and trade-event conditioning), two-pass layered pruning (cutting redundant simulations by <b>~50%</b>), and Optuna TPE Bayesian hyperparameter optimization. Coupled with checkpoint resumption and multi-metric quality gates (Sharpe, Fitness, Turnover, and correlation filtering), it delivers an end-to-end automated workflow from factor generation to rate-limited submission.</span>
-            <span class="lang-zh">针对量化因子挖掘中搜索空间庞大、纯模板穷举算力开销高且缺乏新结构探索能力的痛点，提出<b>「AI 直觉生成信号、代码系统枚举验证、人类做最终决策」</b>的混合架构设计思想。框架在信号发现层利用多后端 LLM 围绕动量、价值、波动率等经济学主题生成突破固定模板约束的裸信号表达式；在系统搜索与调优层集成三阶递进展开流水线（一阶时序变换 → 二阶截面分组 → 三阶交易事件过滤）、两阶段分层粗筛剪枝（削减约 <b>50%</b> 无效回测模拟）以及基于 Optuna TPE 的贝叶斯连续参数寻优；底层配套断点续跑状态机与多维质量门控（Sharpe、Fitness、Turnover 与相关性校验），实现从因子假设生成、自动化回测评估到限速提交的全链路闭环。</span>
+            <span class="lang-en"><b>Context:</b> Brute-force template enumeration on WorldQuant Brain quickly hits API rate limits on large search spaces and cannot discover new structures, whereas asking an LLM to write full alphas directly often leads to syntax errors or overfitted expressions lacking economic logic. <b>Actions:</b> Built 6 mining modes around an "AI generates raw signals, code enumerates and verifies, humans make final decisions" workflow: (1) integrated multi-backend LLMs (OpenRouter / Anthropic / Ollama) rotating across 10 economic themes (momentum, value, volatility, etc.) to propose template-free raw factor expressions; (2) implemented a 3-stage progressive pipeline (<em>1st-order time-series ops → 2nd-order cross-sectional grouping → 3rd-order trade-event filtering</em>) keeping Top-N expressions per field, designed two-pass layered pruning (<em>shortlisting Top-K fields with representative windows → full window grid</em>), and used Optuna TPE Bayesian sampling to tune window and decay parameters; (3) added checkpoint resumption (<code>progress.json</code>) and pre-submission checks (Sharpe, Fitness, Turnover, Prod Correlation) for rate-limited batch submission. <b>Results:</b> Two-pass pruning <b>cut redundant backtest simulations by ~50%</b> compared with full Cartesian enumeration, automating the local loop from LLM hypothesis generation and batch parameter tuning to quality-gated submission.</span>
+            <span class="lang-zh"><b>背景：</b>在 WorldQuant Brain 挖量化因子时，传统模板笛卡尔积穷举在搜索空间变大后极易卡死在平台回测限流上且写不出新结构，而直接让大模型写完整因子又常因语法错误或缺乏经济学逻辑过拟合，需要一套把「大模型出思路」和「代码批量搜索调参」结合起来的自动化工具。<b>动作：</b>按「AI 生成裸信号、代码枚举验证、人做最终判断」开发 6 种挖掘模式：（1）接入多后端 LLM（OpenRouter / Anthropic / Ollama），按动量、价值、波动率等 10 类经济学主题轮询生成不受固定模板限制的原始因子表达式；（2）把经典挖掘流程做成「一阶时序算子 → 二阶截面分组 → 三阶交易事件过滤」三级流水线，各阶按 Sharpe 与 Fitness 阈值过滤且同字段仅留 Top-N 进入下一阶；针对大字段集设计「少量代表性窗口粗筛 Top-K 字段 → 完整窗口网格」两阶段剪枝，并用 Optuna TPE 贝叶斯采样对窗口长度和 Decay 等连续参数做自动精调；（3）实现基于进度快照（<code>progress.json</code>）的断点续跑，并在提交前自动校验 Sharpe、Fitness、Turnover 与线上相关性（Prod Correlation）以批量限速提交。<b>结果：</b>两阶段剪枝相比全量笛卡尔积穷举<b>减少了约 50% 的无效回测请求</b>；打通从 LLM 提因子假设、多模式批量回测调参、中断自动续跑到质量门控提交的本地自动化闭环。</span>
           </div>
           <div class="links">
             <a href="https://github.com/huang-zirun/DearAlpha" class="btn btn-sm z-depth-0" role="button"><i class="fa-brands fa-github"></i> GitHub</a>
@@ -212,8 +211,8 @@ nav_order: 1
         </div>
         <div class="col-sm-8">
           <div class="title">
-            <span class="lang-en">DevFlow Engine: AI-Driven End-to-End Requirement-to-Delivery Pipeline</span>
-            <span class="lang-zh">DevFlow Engine：AI 驱动的研发需求交付全流程引擎</span>
+            <span class="lang-en">DevFlow Engine: AI-Driven Requirement-to-Delivery Workflow Engine</span>
+            <span class="lang-zh">DevFlow Engine：AI 驱动的研发需求交付流程引擎</span>
           </div>
           <div class="author">
             <span class="lang-en"><em>Huang Yuchang</em></span>
@@ -224,16 +223,15 @@ nav_order: 1
             <span class="lang-zh"><em>2026.04 – 2026.05</em></span>
           </div>
           <div class="project-tech-stack">
+            <span class="tech-tag">Python</span>
             <span class="tech-tag">LangGraph</span>
             <span class="tech-tag">Python AST</span>
             <span class="tech-tag">Tree-sitter</span>
             <span class="tech-tag">lark-cli WebSocket</span>
-            <span class="tech-tag">JSON Schema</span>
-            <span class="tech-tag">OpenAPI 3.0</span>
           </div>
           <div class="periodical">
-            <span class="lang-en">Addressing the gap between natural-language requirements and code delivery as well as the unreliability of unconstrained autonomous agents, this project introduces a <b>"deterministic pipeline skeleton, specialized agent execution, and human-in-the-loop governance"</b> architecture. It decomposes the software delivery lifecycle into a 6-stage state graph (intake, solution design, code generation, testing, code review, and delivery packaging) decoupled via strict versioned JSON contracts. In implementation, it combines incremental syntax-tree semantic indexing with workspace-sandboxed toolchains for context-aware coding, paired with a bounded review-to-code self-repair loop and dual Feishu approval checkpoints for controllable end-to-end delivery.</span>
-            <span class="lang-zh">针对传统软件研发中自然语言需求到代码落地链路割裂、纯自主 Agent 在复杂工程中易失控偏离的问题，提出<b>「确定性流水线为骨架、专职智能体为执行单元、关键节点由人类决策」</b>的架构设计思想。系统通过有向状态图将研发全周期解耦为需求分析、方案设计、代码生成、测试验证、代码评审与交付打包 6 个阶段，并由严格的版本化 JSON 契约约束各阶段输入输出边界；在实现上结合增量代码库语义索引与受限工作区沙盒实现上下文感知的代码生成，同时引入评审阻塞缺陷自动回流修复机制与飞书双检查点审批状态机，完成从群聊需求输入到可交付代码产出的端到端可控闭环。</span>
+            <span class="lang-en"><b>Context:</b> Unconstrained single-agent coding often modifies files blindly without understanding repository structure, while natural-language requirements in Feishu groups usually require manual PRD writing, technical design, and coding across disconnected tools. Built a "fixed pipeline controls flow, specialized agents execute, humans approve key checkpoints" delivery engine (<b>2026 Feishu AI Campus Challenge AI Rising Star &amp; Final Interview Fast-Track</b>). <b>Actions:</b> (1) Used LangGraph to split delivery into 6 dedicated Agent stages (<em>intake → solution design → code generation → test generation &amp; execution → code review → delivery packaging</em>); connected <code>lark-cli</code> WebSocket to listen to Feishu group messages, auto-create PRD docs and interactive cards, and enforce 2 human approval checkpoints (after solution design and after code review, supporting Approve/Reject and checkpoint recovery); (2) extracted symbol definitions, references, and call chains via Python <code>ast</code> and <code>tree-sitter</code> (Python / JS / TS) before coding so agents understand existing code structure within workspace-bounded file tools, and added a read-only code review stage that automatically feeds blocking issues back to the coding node for one self-repair pass. <b>Results:</b> Enabled an end-to-end loop where sending a single requirement message in a Feishu group drives requirement clarification, solution approval, coding, unit testing, self-review repair, and merge-ready delivery packaging, preventing blind file edits and keeping code changes controllable.</span>
+            <span class="lang-zh"><b>背景：</b>用纯自主 Coding Agent 开发复杂需求时，模型容易在不了解代码库结构的情况下乱改文件、一步错步步错；而飞书群里提的自然语言需求平时要靠人手写 PRD、拆技术方案再去改代码，中间链路很割裂。为此开发「固定流水线控流程、专门 Agent 干活、关键节点由人拍板」的需求交付引擎（获 <b>2026 飞书 AI 校园挑战赛 AI 新星证书及直通终面奖励</b>）。<b>动作：</b>（1）基于 LangGraph 将研发流程拆成「需求分析 → 方案设计 → 代码生成 → 测试生成与执行 → 代码评审 → 交付打包」6 个独立 Agent 阶段；通过 <code>lark-cli</code> WebSocket 长连接监听飞书群消息，自动生成 PRD 文档与交互卡片，并在「方案设计后」与「代码评审后」设置 2 处飞书人工审批检查点（支持 Approve / Reject 与断点恢复）；（2）在写代码前先用 Python <code>ast</code> 和 <code>tree-sitter</code>（支持 Python / JS / TS）提取代码库符号定义、引用关系与调用链，让方案与代码 Agent 先看懂现有代码结构再动手，并限制文件工具仅能在工作区目录内读写；在代码评审阶段采用只读审查，发现阻塞性 Bug 时自动把评审意见塞回代码生成节点重跑一次自修复。<b>结果：</b>实现「在飞书群发一条需求消息，即可跑完需求澄清、方案审批、写代码跑单测、代码自审修复到产出合并交付包」的完整闭环；通过 AST 索引和两处人工审批卡点，解决了单 Agent 乱改代码和过程不可控的问题。</span>
           </div>
           <div class="links">
             <a href="https://github.com/huang-zirun/lark-agent" class="btn btn-sm z-depth-0" role="button"><i class="fa-brands fa-github"></i> GitHub</a>

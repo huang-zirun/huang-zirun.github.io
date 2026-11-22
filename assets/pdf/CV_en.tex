@@ -76,14 +76,22 @@ B.Eng. in Mechatronic Engineering \textbf{~$\cdot$~} \emph{Honors:} Outstanding 
 % ==================== PROJECTS ====================
 \section{Selected Projects}
 
-\begin{itemize}
-  \item \textbf{DearAlpha: Intelligent Quantitative Alpha Factor Mining Framework} \hfill 2026.04 -- 2026.09 \\
-  \emph{Tech Stack: Python, WorldQuant Brain API, Optuna TPE, Bayesian Optimization, Multi-LLM, Pandas} \\
-  Built around an ``AI-driven hypothesis generation, programmatic verification, and human final judgment'' architecture (\texttt{huang-zirun/DearAlpha}). Uses multi-backend LLMs guided by economic themes (momentum, value, volatility) to synthesize template-free raw alpha expressions; integrates a 3-stage progressive expansion pipeline, two-pass layered pruning (cutting redundant backtest simulations by $\sim$50\%), Optuna TPE Bayesian hyperparameter optimization, and multi-metric quality gates (Sharpe, Fitness, Turnover, and correlation filtering).
+\begin{itemize}[leftmargin=10pt]
+  \item \textbf{DearAlpha: Quantitative Alpha Factor Mining Framework for WorldQuant Brain} \hfill 2026.04 -- 2026.09 \\
+  \emph{Tech Stack: Python, WorldQuant Brain API, Optuna TPE, Multi-LLM} (\texttt{huang-zirun/DearAlpha})
+  \begin{itemize}[leftmargin=10pt,label=$\circ$,itemsep=1pt,topsep=1pt]
+    \item \textbf{Context}: When mining quantitative factors on WorldQuant Brain, brute-force template enumeration quickly hits API rate limits on large search spaces and cannot discover new structures, whereas asking an LLM to write full alphas directly often leads to syntax errors or overfitted expressions lacking economic grounding.
+    \item \textbf{Actions}: Built 6 mining modes around an ``AI generates raw signals, code enumerates and verifies, humans make final decisions'' workflow: (1) integrated multi-backend LLMs (OpenRouter / Anthropic / Ollama) rotating across 10 economic themes (momentum, value, volatility, etc.) to propose template-free raw factor expressions; (2) implemented a 3-stage progressive pipeline (\emph{1st-order time-series ops $\rightarrow$ 2nd-order cross-sectional grouping $\rightarrow$ 3rd-order trade-event filtering}) keeping only Top-N expressions per field across Sharpe/Fitness thresholds, designed a two-pass layered pruning strategy (\emph{representative windows to shortlist Top-K fields $\rightarrow$ full window grid}), and used Optuna TPE Bayesian sampling to tune continuous window and decay parameters; (3) added snapshot-based checkpoint resumption (\texttt{progress.json}) and automated pre-submission checks (Sharpe, Fitness, Turnover, and Prod Correlation) for rate-limited batch submission.
+    \item \textbf{Results}: Two-pass pruning \textbf{cut redundant backtest simulations by $\sim$50\%} compared with full Cartesian enumeration, automating the local loop from LLM hypothesis generation, batch backtesting, and crash recovery to quality-gated submission.
+  \end{itemize}
 
-  \item \textbf{DevFlow Engine: AI-Driven End-to-End Requirement-to-Delivery Pipeline} \hfill 2026.04 -- 2026.05 \\
-  \emph{Tech Stack: Python, LangGraph, Python AST, Tree-sitter, lark-cli WebSocket, JSON Schema, OpenAPI 3.0} \\
-  Designed a ``deterministic pipeline skeleton, specialized agent execution, and human-in-the-loop governance'' architecture (\texttt{huang-zirun/lark-agent}) that decomposes the software delivery lifecycle into a 6-stage state graph (intake, solution design, code generation, testing, code review, and delivery packaging) decoupled via versioned JSON contracts. Combines incremental syntax-tree semantic indexing with workspace-sandboxed toolchains, a bounded review-to-code self-repair loop, and dual Feishu approval checkpoints.
+  \item \textbf{DevFlow Engine: AI-Driven Requirement-to-Delivery Workflow Engine} \hfill 2026.04 -- 2026.05 \\
+  \emph{Tech Stack: Python, LangGraph, Python AST, Tree-sitter, lark-cli WebSocket} (\texttt{huang-zirun/lark-agent})
+  \begin{itemize}[leftmargin=10pt,label=$\circ$,itemsep=1pt,topsep=1pt]
+    \item \textbf{Context}: Unconstrained single-agent coding often modifies files blindly without understanding repository structure, while natural-language requirements posted in Feishu groups usually require manual PRD writing, technical design, and coding across disconnected tools. Built a ``fixed pipeline controls flow, specialized agents execute, humans approve key checkpoints'' delivery engine (\textbf{2026 Feishu AI Campus Challenge AI Rising Star \& Final Interview Fast-Track}).
+    \item \textbf{Actions}: (1) Used LangGraph to split delivery into 6 dedicated Agent stages (\emph{intake $\rightarrow$ solution design $\rightarrow$ code generation $\rightarrow$ test generation \& execution $\rightarrow$ code review $\rightarrow$ delivery packaging}); connected \texttt{lark-cli} WebSocket to listen to Feishu group messages, auto-create PRD docs and interactive cards, and enforce 2 human approval checkpoints (after solution design and after code review, supporting Approve/Reject and checkpoint recovery); (2) extracted symbol definitions, references, and call chains via Python \texttt{ast} and \texttt{tree-sitter} (Python / JS / TS) before coding so agents understand existing code structure within workspace-bounded file tools, and added a read-only code review stage that automatically feeds blocking issues back to the coding node for one self-repair pass.
+    \item \textbf{Results}: Enabled an end-to-end loop where sending a single requirement message in a Feishu group drives requirement clarification, solution approval, coding, unit testing, self-review repair, and merge-ready delivery packaging, preventing blind file edits and keeping complex code changes controllable.
+  \end{itemize}
 \end{itemize}
 
 % ==================== COMPETITIONS AND AWARDS ====================
