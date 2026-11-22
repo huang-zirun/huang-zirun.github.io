@@ -60,20 +60,80 @@ nav_order: 1
         </div>
         <div class="col-sm-8">
           <div class="title">
-            <span class="lang-en">R&amp;D Intern, Feishu (Lark)</span>
-            <span class="lang-zh">研发实习生 · 飞书（Feishu / Lark）</span>
+            <span class="lang-en">Backend Development Intern, Volcano Engine</span>
+            <span class="lang-zh">后端开发实习生 · 火山引擎</span>
           </div>
           <div class="author">
             <span class="lang-en"><em>Huang Yuchang</em></span>
             <span class="lang-zh"><em>黄宇场</em></span>
           </div>
           <div class="periodical">
-            <span class="lang-en"><em>ByteDance Inc.</em>, Jun 2026 – Present</span>
-            <span class="lang-zh"><em>字节跳动（飞书）</em>，2026.06 – 至今</span>
+            <span class="lang-en"><em>ByteDance Inc. (Volcano Engine)</em>, Oct 2026 – Present</span>
+            <span class="lang-zh"><em>字节跳动 · 火山引擎</em>，2026.10 – 至今</span>
+          </div>
+          <div class="project-tech-stack">
+            <span class="tech-tag">Go</span>
+            <span class="tech-tag">PostgreSQL</span>
+            <span class="tech-tag">Hermes ACP</span>
+            <span class="tech-tag">Codex Runtime</span>
+            <span class="tech-tag">Knowledge Distillation</span>
           </div>
           <div class="periodical">
-            <span class="lang-en">Building and maintaining the team's end-to-end requirement delivery harness, and designing, developing, and iterating on internal AI agents to streamline engineering workflows and automated code delivery.</span>
-            <span class="lang-zh">参与团队内端到端需求交付 Harness 的架构搭建与工程落地，负责团队智能体（AI Agents）的设计、搭建与持续迭代，赋能研发协同与需求交付全流程自动化。</span>
+            <span class="lang-en">(1) <b>Fornax Evaluation Self-Iteration Pipeline</b>: Built an automated diagnosis-to-verification loop in Go (<code>fornaxiteration</code>) for the daily 176-case Team Assistant benchmark. Used a 1M-context model to diff traces across current, previous-day, and weekly baseline runs into 10 root-cause categories, synthesized unit-test-backed fixes in an offline sandbox prioritized by <em>Go code/scripts &gt; Skills &gt; Prompts</em>, paired with interactive Feishu card approval and a two-stage fast replay on an isolated candidate instance and database—compressing regression verification from <b>4–6 hours to ~30 minutes</b>. (2) <b>Knowledge Base Distillation &amp; Cross-System Integration</b>: Co-built a two-tier knowledge architecture (<em>central navigation KB + repo-level subsystem KBs</em>) across <b>103 backend repositories</b> and core docs with automated group-thread knowledge capture (<code>knowledgecapture</code>); integrated business query CLIs, Argos log monitoring, and TCC config toolchains with dynamic routing, and curated a <b>171-case</b> Volcano benchmark suite to empower self-service rule verification and troubleshooting for PM, Operations, and Technical Operations (TO).</span>
+            <span class="lang-zh">（1）<b>Fornax 评测自迭代进化链路</b>：针对团队助理每日 176 道核心题全量评测耗时 4–6 小时、人工排查日志与回归耗时高的问题，基于 Go 搭建「三期日志对比找根因 → 离线沙箱按 Go 代码/脚本 &gt; Skill &gt; 提示词优先级自动生成补丁与单测 → 飞书卡片交互确认 → 独立候选测试进程与隔离数据库两轮快速回放」闭环，将修复后的回归验证耗时从 <b>4–6 小时压缩至约 30 分钟</b>。（2）<b>知识库蒸馏与火山引擎业务接入</b>：遵循「代码定事实、文档定业务含义」搭建「中央导航知识库 + 子系统代码仓知识库」两层结构，完成火山侧 <b>103 个后端代码仓库</b>与核心文档知识蒸馏及群聊排障自动沉淀（<code>knowledgecapture</code>）；打通业务查询 CLI、Argos 日志监控与 TCC 配置中心动态路由，清洗并构建 <b>171 道</b>火山基准评测题，支撑产品、运营与技术运营（TO）在飞书群内自助核对跨系统规则与排查数据异常。</span>
+          </div>
+        </div>
+      </div>
+    </li>
+
+    <li>
+      <div class="row">
+        <div class="col col-sm-2 abbr">
+          <img
+            class="abbr-external-logo"
+            src="{{ '/assets/img/logos/bytedance.svg' | relative_url }}"
+            width="22"
+            height="22"
+            alt="ByteDance"
+          />
+          <abbr
+            class="badge rounded w-100"
+            style="
+              --venue-bg-light: #E0EFFD;
+              --venue-text-light: #2F6AA2;
+              --venue-border-light: #C0DDF6;
+              --venue-bg-dark: #243849;
+              --venue-text-dark: #C8DFF2;
+              --venue-border-dark: #3E607A;
+            "
+          >
+            <div>ByteDance</div>
+          </abbr>
+        </div>
+        <div class="col-sm-8">
+          <div class="title">
+            <span class="lang-en">Backend Development Intern, Feishu (Lark)</span>
+            <span class="lang-zh">后端开发实习生 · 飞书</span>
+          </div>
+          <div class="author">
+            <span class="lang-en"><em>Huang Yuchang</em></span>
+            <span class="lang-zh"><em>黄宇场</em></span>
+          </div>
+          <div class="periodical">
+            <span class="lang-en"><em>ByteDance Inc. (Feishu / Lark)</em>, Jun 2026 – Oct 2026</span>
+            <span class="lang-zh"><em>字节跳动 · 飞书</em>，2026.06 – 2026.10</span>
+          </div>
+          <div class="project-tech-stack">
+            <span class="tech-tag">Go</span>
+            <span class="tech-tag">PostgreSQL</span>
+            <span class="tech-tag">Multica</span>
+            <span class="tech-tag">Hermes ACP</span>
+            <span class="tech-tag">Codex Runtime</span>
+            <span class="tech-tag">MCP</span>
+          </div>
+          <div class="periodical">
+            <span class="lang-en">(1) <b>Requirement Delivery Harness (Built on Open-Source Multica)</b>: Contributed to the Go + PostgreSQL workflow backend (<em>parent requirement issue → stage containers → in-stage DAG execution nodes</em>) with versioned artifacts; owned the <b>Feishu notification pipeline and Human-in-the-loop approval integration</b> (<b>49 commits</b>), implementing Squad assignment group notifications, creator DM binding, requester CC mirroring, and unified review cards for stage gate approval and rework. (2) <b>Team Assistant Development &amp; Fornax Evaluation Optimization</b>: Built the Fornax offline evaluation system from scratch across <b>5 core benchmark suites (254 cases)</b> evaluating both answers and MCP/tool trajectories; authored Skills for thread mining, weekly badcase backflow, and rubric linting, calibrated evaluators (human agreement <b>88.4% → 96.8%</b>), and developed daily evaluation scheduling and per-case attribution backend services. Guided by evaluation insights, split a 500+ line main prompt into a 30-line entry + 10 domain modules, offloaded low-frequency rules to two-tier on-demand Skills (Skill entry <b>38k → 14k chars</b>, main prompt <b>-23.1%</b>), and aligned a <b>63k-char</b> static prefix for KV Cache reuse—raising accuracy from <b>51.6% to 97.6%</b>, cache hit rate to <b>80.5%</b>, cutting uncached input tokens by <b>37.0%–41.7%</b>, latency by <b>10.7%</b>, and timeouts by <b>50%+</b>, while handling <b>71%</b> of daily Oncall tickets with a <b>95%</b> resolution rate.</span>
+            <span class="lang-zh">（1）<b>研发需求交付 Harness 系统（基于开源 Multica 二开）</b>：参与「需求主单 → 阶段容器 → 阶段内 DAG 执行节点」后端工作流开发（Go + PostgreSQL），主要负责<b>飞书通知链路与 Human-in-the-loop（人工审批介入）环节</b>（<b>49 次提交</b>），完成工作流状态监听、Agent 小队接单群通知、创建人私聊绑定、需求提出人同步抄送及阶段产物摘要评审卡片统一渲染，打通后台异步 Agent 工作流与飞书群聊的人工审批闭环。（2）<b>团队助理研发与 Fornax 评测优化</b>：面向研发、产品、运营与 TO 在飞书群及 Oncall 群的规则查询与排障场景，<b>从零搭建 Fornax 离线评测体系</b>（覆盖 <b>5 个核心评测集共 254 题</b>，同时评估结果与工具调用过程），编写会话挖掘、每周 Badcase 增量回流与标注体检 Skill，校准判卷评估器（人机一致率 <b>88.4% → 96.8%</b>）并开发每日评测调度与逐题归因后端服务；结合评测定位的瓶颈收敛工具调用链路，将 500 多行主提示词拆为「30 行主入口 + 10 个业务模块」并下沉至两层按需读取 Skill（Skill 入口 <b>3.8 万字 → 1.4 万字</b>，主提示词缩短 <b>23.1%</b>），前置对齐 <b>6.3 万字</b>静态前缀复用 KV 缓存，使评测准确率从 <b>51.6% 提升至 97.6%</b>，缓存命中率达 <b>80.5%</b>，未命中缓存输入 Token 减少 <b>37.0%–41.7%</b>，单题耗时缩短 <b>10.7%</b>、超时率下降 <b>50%+</b>，支撑团队助理承接日常 <b>71%</b> 的 Oncall 工单且有效解决率达 <b>95%</b>。</span>
           </div>
         </div>
       </div>
