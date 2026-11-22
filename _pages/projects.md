@@ -75,7 +75,7 @@ nav_order: 1
             <span class="tech-tag">Go</span>
             <span class="tech-tag">PostgreSQL</span>
             <span class="tech-tag">Agent Runtime (ACP / Codex / MCP)</span>
-            <span class="tech-tag">Knowledge Distillation</span>
+            <span class="tech-tag">RAG / Skill</span>
           </div>
           <div class="exp-projects-group">
             <div class="exp-subproject">
