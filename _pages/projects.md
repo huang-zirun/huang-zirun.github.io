@@ -138,6 +138,52 @@ nav_order: 1
         </div>
       </div>
     </li>
+
+    <li>
+      <div class="row">
+        <div class="col col-sm-2 abbr">
+          <abbr
+            class="badge rounded w-100"
+            style="
+              --venue-bg-light: #FEE4E1;
+              --venue-text-light: #9F3236;
+              --venue-border-light: #F9C2BE;
+              --venue-bg-dark: #4A2628;
+              --venue-text-dark: #F4C4C2;
+              --venue-border-dark: #7D3C40;
+            "
+          >
+            <div>RUC</div>
+          </abbr>
+        </div>
+        <div class="col-sm-8">
+          <div class="title">
+            <span class="lang-en">Research Intern, MiaoShou Research Group</span>
+            <span class="lang-zh">科研实习生 · 中国人民大学妙手课题组</span>
+          </div>
+          <div class="author">
+            <span class="lang-en"><em>Huang Yuchang</em></span>
+            <span class="lang-zh"><em>黄宇场</em></span>
+          </div>
+          <div class="periodical">
+            <span class="lang-en"><em>Renmin University of China</em>, Dec 2025 – Present</span>
+            <span class="lang-zh"><em>中国人民大学 · 妙手课题组</em>，2025.12 – 至今</span>
+          </div>
+          <div class="project-tech-stack">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">PyTorch</span>
+            <span class="tech-tag">LoRA / Post-Training</span>
+            <span class="tech-tag">DeBERTa</span>
+            <span class="tech-tag">RAG</span>
+            <span class="tech-tag">Agent Workflow</span>
+          </div>
+          <div class="periodical">
+            <span class="lang-en">(1) <b>MiaoShou Framework (Execution-Grounded Empirical Paper Generation Agent)</b>: Refactored prototype scripts into a <em>Planner outline planning + statistical code execution + Agent chapter drafting &amp; verification</em> pipeline. Connected <b>6 economics and social science datasets</b> (CSMAR, CGSS, PSID, etc.) and <b>16+ econometric method plugins</b> (panel regression FE/RE, ARIMA, VAR, GARCH, PSM, RDD, etc.) to execute real Python statistical code and diagnostic tests (Hausman, ADF), storing tables, figures, and formulas in a unified Asset Pool; paired with dynamic outline planning, TF-IDF reference binding, rolling memory drafting, placeholder asset injection, and numerical fact-checking to generate complete empirical paper drafts in <b>~5 minutes</b>. Submitted a paper as <b>Second Author (advisor as First Author)</b> to <b><em>SCIENCE CHINA Information Sciences</em> (SCIS, Under Review)</b> and won <b>Second Prize at the 2026 Global AI Innovation, Governance, and Safety Competition</b>. (2) <b>Base Model Post-Training &amp; Fact Consistency for Quantitative Academic Text (Targeting ACL 2027)</b>: Curated <b>3,521 zero-overlap syntactic restructuring pairs</b> across <b>4 disciplines</b> (economics, CS, clinical biomedicine, statistical engineering) to fine-tune <code>Qwen3-4B-Base</code> via high-rank LoRA (<code>rank=128</code>) with single-epoch early stopping; constructed <b>12,580 contrastive samples</b> (multi-number cross-binding, subject-object reversal, polarity flips, qualifier deletions) to fine-tune an academic <code>DeBERTa-v3-Large</code> fact-consistency verifier (validation <b>AUROC 0.913 → 0.998</b>, human heavy inversion acceptance <b>49.2% → 98.3%</b>, <b>100% detection</b> of multi-number cross-binding), and jointly trained a multi-domain discriminator on <b>9,330 samples</b> (cutting false-positive rates on real human economics papers from <b>95.8% to 8.3%</b>). Achieved <b>100% numerical fidelity</b> across <b>465 test paragraphs</b> with sentence fallback rates reduced from <b>22.7%–26.1% to 0.89%–1.76%</b> and <b>80.0%–93.3%</b> joint pass rates across heterogeneous benchmarks.</span>
+            <span class="lang-zh">（1）<b>妙手（MiaoShou Framework）—— 基于统计计算证据的经管实证论文生成 Agent</b>：针对通用大模型依赖参数记忆或表面文本检索导致统计结论缺乏真实计算支撑、长文上下文溢出及编造引文的问题，将零散脚本重构为「Planner 大纲规划 + 统计脚本执行 + Agent 分章写作与核查」流水线。对接 CSMAR、CGSS、PSID 等 <b>6 个真实数据集</b>，封装 <b>16+ 种计量经济学方法插件</b>（面板回归 FE/RE、ARIMA、VAR、GARCH、PSM、RDD 等）执行 Python 统计检验并将图表公式存入统一资产池（Asset Pool），结合动态大纲规划、TF-IDF 真实文献绑定、占位符图表注入与数值回溯核对，在<b>约 5 分钟内</b>自动生成完整实证论文初稿；以<b>第二作者（导师一作）</b>投稿至 <b>SCI 期刊 <em>SCIENCE CHINA Information Sciences</em>（SCIS，在审）</b>，并获 <b>2026 全球人工智能创新·治理·安全大赛二等奖</b>。（2）<b>定量学术文本的基座后训练与事实一致性研究（在研，拟投 ACL 2027）</b>：围绕在还原人类学术写作分布的同时保证定量事实与统计数据零出错，清洗构建经管、计算机、临床生物医学与统计工程 <b>4 学科共 3,521 对</b>零重叠句式重组样本，对 <code>Qwen3-4B-Base</code> 进行高秩 LoRA（<code>rank=128</code>）单轮早停微调；构造 <b>12,580 条</b>含同句多数值交叉错配、主宾对调、方向写反与删改限定词的对比样本分层微调学术版 <code>DeBERTa-v3-Large</code> 核查模型（验证集 <b>AUROC 0.913 → 0.998</b>，人类大幅倒装样本通过率 <b>49.2% → 98.3%</b>，同句多数值错配 <b>100% 识别</b>），并联合 <b>9,330 条</b>学术与新闻样本训练多领域判别头（人类真实经管论文误报率从 <b>95.8% 降至 8.3%</b>），在 <b>465 段</b>跨学科定量测试集上实现 <b>100% 统计数据零出错</b>，单句退回重抽率从 <b>22.7%–26.1% 降至 0.89%–1.76%</b>，多架构判别基准综合通过率达 <b>80.0%–93.3%</b>。</span>
+          </div>
+        </div>
+      </div>
+    </li>
   </ol>
 
   <h2 class="bibliography">
