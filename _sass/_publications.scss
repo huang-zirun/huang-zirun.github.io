@@ -260,3 +260,111 @@ html[data-theme="dark"] .publications ol.bibliography li .abbr abbr {
 .citation-number {
   color: var(--global-theme-color);
 }
+
+/* Structured STAR (Context / Actions / Results) blocks for Internships & Projects */
+.exp-projects-group {
+  margin-top: 0.55rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.exp-subproject {
+  padding: 0.65rem 0.8rem;
+  border-left: 3px solid var(--global-divider-color);
+  background-color: rgba(128, 128, 128, 0.04);
+  border-radius: 0 6px 6px 0;
+
+  .exp-subproject-title {
+    font-weight: 700;
+    font-size: 0.96rem;
+    line-height: 1.45;
+    margin-bottom: 0.45rem;
+    color: var(--global-text-color);
+  }
+}
+
+.star-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.42rem;
+  margin: 0;
+  padding: 0;
+}
+
+.star-row {
+  font-size: 0.92rem;
+  line-height: 1.62;
+  color: var(--global-text-color);
+  text-align: left;
+  word-break: break-word;
+}
+
+.star-badge {
+  display: inline-block;
+  font-size: 0.76rem;
+  font-weight: 700;
+  line-height: 1.25;
+  padding: 0.14rem 0.45rem;
+  border-radius: 4px;
+  margin-right: 0.4rem;
+  vertical-align: baseline;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+
+  &.star-context {
+    background-color: #EEF2F6;
+    color: #475569;
+    border: 1px solid #CBD5E1;
+  }
+
+  &.star-action {
+    background-color: #E0EFFD;
+    color: #1E5A96;
+    border: 1px solid #B9D8F6;
+  }
+
+  &.star-result {
+    background-color: #DEF7F0;
+    color: #1E6B58;
+    border: 1px solid #B2E8D8;
+  }
+}
+
+html[data-theme="dark"] {
+  .exp-subproject {
+    background-color: rgba(255, 255, 255, 0.03);
+    border-left-color: #3E607A;
+  }
+
+  .star-badge {
+    &.star-context {
+      background-color: #2A323D;
+      color: #CBD5E1;
+      border-color: #475569;
+    }
+
+    &.star-action {
+      background-color: #243849;
+      color: #C8DFF2;
+      border-color: #3E607A;
+    }
+
+    &.star-result {
+      background-color: #223B35;
+      color: #C2E4DC;
+      border-color: #3D675D;
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  .exp-subproject {
+    padding: 0.55rem 0.65rem;
+  }
+
+  .star-row {
+    font-size: 0.9rem;
+    line-height: 1.58;
+  }
+}
