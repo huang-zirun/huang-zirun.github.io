@@ -39,10 +39,10 @@ nav_order: 1
         <div class="col col-sm-2 abbr">
           <img
             class="abbr-external-logo"
-            src="{{ '/assets/img/logos/bytedance.svg' | relative_url }}"
+            src="{{ '/assets/img/logos/volcengine.svg' | relative_url }}"
             width="22"
             height="22"
-            alt="ByteDance"
+            alt="Volcano Engine"
           />
           <abbr
             class="badge rounded w-100"
@@ -55,11 +55,12 @@ nav_order: 1
               --venue-border-dark: #3E607A;
             "
           >
-            <div>ByteDance</div>
+            <div>Volcano</div>
           </abbr>
         </div>
         <div class="col-sm-8">
           <div class="title">
+            <img src="{{ '/assets/img/logos/volcengine.svg' | relative_url }}" class="inline-org-logo" alt="Volcano Engine" />
             <span class="lang-en">Backend Development Intern, Volcano Engine</span>
             <span class="lang-zh">后端开发实习生 · 火山引擎</span>
           </div>
@@ -129,27 +130,28 @@ nav_order: 1
         <div class="col col-sm-2 abbr">
           <img
             class="abbr-external-logo"
-            src="{{ '/assets/img/logos/bytedance.svg' | relative_url }}"
+            src="{{ '/assets/img/logos/feishu.svg' | relative_url }}"
             width="22"
             height="22"
-            alt="ByteDance"
+            alt="Feishu"
           />
           <abbr
             class="badge rounded w-100"
             style="
-              --venue-bg-light: #E0EFFD;
-              --venue-text-light: #2F6AA2;
-              --venue-border-light: #C0DDF6;
-              --venue-bg-dark: #243849;
-              --venue-text-dark: #C8DFF2;
-              --venue-border-dark: #3E607A;
+              --venue-bg-light: #DEF7F0;
+              --venue-text-light: #2C7766;
+              --venue-border-light: #B7EBDD;
+              --venue-bg-dark: #243D37;
+              --venue-text-dark: #C2E4DC;
+              --venue-border-dark: #3D675D;
             "
           >
-            <div>ByteDance</div>
+            <div>Feishu</div>
           </abbr>
         </div>
         <div class="col-sm-8">
           <div class="title">
+            <img src="{{ '/assets/img/logos/feishu.svg' | relative_url }}" class="inline-org-logo" alt="Feishu" />
             <span class="lang-en">Backend Development Intern, Feishu (Lark)</span>
             <span class="lang-zh">后端开发实习生 · 飞书</span>
           </div>
@@ -217,6 +219,13 @@ nav_order: 1
     <li>
       <div class="row">
         <div class="col col-sm-2 abbr">
+          <img
+            class="abbr-external-logo"
+            src="{{ '/assets/img/logos/ruc.svg' | relative_url }}"
+            width="22"
+            height="22"
+            alt="RUC"
+          />
           <abbr
             class="badge rounded w-100"
             style="
@@ -233,6 +242,7 @@ nav_order: 1
         </div>
         <div class="col-sm-8">
           <div class="title">
+            <img src="{{ '/assets/img/logos/ruc.svg' | relative_url }}" class="inline-org-logo" alt="RUC" />
             <span class="lang-en">Research Intern, MiaoShou Research Group</span>
             <span class="lang-zh">科研实习生 · 中国人民大学妙手课题组</span>
           </div>

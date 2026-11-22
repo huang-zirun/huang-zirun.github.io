@@ -5,7 +5,10 @@
 \usepackage[top=0.5in,bottom=0.5in,left=0.68in,right=0.68in]{geometry}
 \usepackage{titlesec}
 \usepackage{enumitem}
+\usepackage{graphicx}
 \usepackage[hidelinks]{hyperref}
+
+\newcommand{\companylogo}[1]{\raisebox{-0.18\height}{\includegraphics[height=1.05em]{#1}}\hspace{3.5pt}}
 
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
@@ -46,19 +49,21 @@
 \section{Education}
 
 \textbf{Tianjin University, China} \hfill 2025.09 -- Present \\
-M.Eng. in Electronic Information \textbf{~$\cdot$~} \emph{Honors:} 2025 Graduate Academic Scholarship \\
+M.Eng. in Electronic Information \\
+\emph{Honors:} Tianjin University Graduate Academic Scholarship (2$\times$, 2025--2026) \\
 Research \& Engineering Focus: AI for Software Engineering (AI4SE), AI for Science (AI4Science)
 
 \vspace{3pt}
 
 \textbf{Guangdong University of Technology, Guangzhou, China} \hfill 2021.09 -- 2025.06 \\
-B.Eng. in Mechatronic Engineering \textbf{~$\cdot$~} \emph{Honors:} Outstanding Graduate (Class of 2025); University Excellence Scholarship (3$\times$)
+B.Eng. in Mechatronic Engineering \\
+\emph{Honors:} Outstanding Graduate (Class of 2025); University Excellence Scholarship (3$\times$)
 
 % ==================== PROFESSIONAL EXPERIENCE ====================
 \section{Professional Experience}
 
-\begin{itemize}[leftmargin=10pt]
-  \item \textbf{ByteDance Inc. -- Volcano Engine} \hfill 2026.10 -- Present \\
+\begin{itemize}[leftmargin=0pt,label={}]
+  \item \companylogo{../img/logos/volcengine.png}\textbf{ByteDance Inc. -- Volcano Engine} \hfill 2026.10 -- Present \\
   \textbf{Backend Development Intern} $\cdot$ \emph{Tech Stack: Go, PostgreSQL, Agent Runtime (ACP / Codex / MCP), Knowledge Distillation}
   \begin{itemize}[leftmargin=10pt,label=$\circ$,itemsep=2.5pt,topsep=1.5pt]
     \item \textbf{1. Automated Daily Evaluation Self-Repair Pipeline} \\
@@ -72,7 +77,7 @@ B.Eng. in Mechatronic Engineering \textbf{~$\cdot$~} \emph{Honors:} Outstanding 
     \textbf{[Results]} Enabled self-service cross-system rule verification and data/log troubleshooting for PM, Operations, and TO in Feishu groups, establishing a daily evaluation baseline and reducing R\&D support load during system integration.
   \end{itemize}
 
-  \item \textbf{ByteDance Inc. -- Feishu (Lark)} \hfill 2026.06 -- 2026.10 \\
+  \item \companylogo{../img/logos/feishu.png}\textbf{ByteDance Inc. -- Feishu (Lark)} \hfill 2026.06 -- 2026.10 \\
   \textbf{Backend Development Intern} $\cdot$ \emph{Tech Stack: Go, PostgreSQL, Multica, Agent Runtime (ACP / Codex / MCP)}
   \begin{itemize}[leftmargin=10pt,label=$\circ$,itemsep=2.5pt,topsep=1.5pt]
     \item \textbf{1. Requirement Delivery Harness (Built on Open-Source Multica)} \\
@@ -86,7 +91,7 @@ B.Eng. in Mechatronic Engineering \textbf{~$\cdot$~} \emph{Honors:} Outstanding 
     \textbf{[Results]} Raised benchmark accuracy from \textbf{51.6\% to 97.6\%} and KV Cache hit rate to \textbf{80.5\%}, cut uncached input tokens by \textbf{37.0\%--41.7\%}, reduced average latency by \textbf{10.7\%} ($\sim$50s), and cut timeouts by \textbf{50\%+}; enabled the assistant to handle \textbf{71\%} of daily Oncall tickets with a \textbf{95\%} resolution rate, resolving routine inquiries directly with PM, Operations, and TO.
   \end{itemize}
 
-  \item \textbf{Renmin University of China -- MiaoShou Research Group} \hfill 2025.12 -- Present \\
+  \item \companylogo{../img/logos/ruc.png}\textbf{Renmin University of China -- MiaoShou Research Group} \hfill 2025.12 -- Present \\
   \textbf{Research Intern} $\cdot$ \emph{Tech Stack: Python, PyTorch, LoRA / Post-Training, DeBERTa, RAG, Agent Workflow}
   \begin{itemize}[leftmargin=10pt,label=$\circ$,itemsep=2.5pt,topsep=1.5pt]
     \item \textbf{1. MiaoShou Framework: Execution-Grounded Empirical Paper Generation Agent} \\

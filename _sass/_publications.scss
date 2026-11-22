@@ -129,6 +129,17 @@
 
       .title {
         font-weight: bolder;
+
+        img.inline-org-logo {
+          height: 1.15rem !important;
+          width: 1.15rem !important;
+          max-width: 1.15rem !important;
+          max-height: 1.15rem !important;
+          object-fit: contain;
+          display: inline-block;
+          vertical-align: -0.18rem;
+          margin-right: 0.32rem;
+        }
       }
 
       .author {
