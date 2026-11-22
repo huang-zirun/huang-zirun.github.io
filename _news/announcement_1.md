@@ -4,4 +4,4 @@ date: 2025-09-01 09:00:00
 inline: true
 ---
 
-<span class="lang-en">Enrolled at <b>Tianjin University</b> to pursue an M.Eng. degree in Electronic Information (Control Engineering).</span><span class="lang-zh">入学<b>天津大学</b>，攻读电子信息（控制工程方向）专业型硕士学位。</span>
+<span class="lang-en">Enrolled at <b>Tianjin University</b> as a Master's student in Electronic Information.</span><span class="lang-zh">入学<b>天津大学</b>，攻读电子信息硕士研究生。</span>
